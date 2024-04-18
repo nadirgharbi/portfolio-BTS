@@ -1,9 +1,14 @@
+import { ThemeProvider } from "@/components/settings/theme-provider";
+import { ModeToggle } from "./components/ModeToggle";
 
-function App() {
+export function App() {
 	return (
-		<div className="flex flex-col items-center justify-center h-screen bg-slate-900">
-        <p className="text-white text-5xl font-bold">Hello</p>
-		</div>
+		<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+			<div className="h-screen flex flex-col gap-5 justify-center items-center bg-white dark:bg-slate-900 dark:text-white">
+				<ModeToggle />
+				<p className="text-5xl font-bold">Hello</p>
+			</div>
+		</ThemeProvider>
 	);
 }
 
