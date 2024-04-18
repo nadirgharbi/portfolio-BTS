@@ -18,6 +18,11 @@ module.exports = {
     },
     extend: {
       colors: {
+
+        "default-color": '#fafafa',
+        "primary-color": '#0f172a',
+        "secondary-color": '#D9A30F',
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

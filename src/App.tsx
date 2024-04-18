@@ -1,15 +1,14 @@
-import { ThemeProvider } from "@/components/settings/theme-provider";
-import { ModeToggle } from "./components/ModeToggle";
+import { ThemeProvider } from "@/components/theme/theme-provider";
+import { Outlet } from "react-router-dom";
+import { Header } from "@/components/pages/Header";
+import { Sidebar } from "./components/pages/Sidebar";
 
-export function App() {
+export const App = () => {
 	return (
 		<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-			<div className="h-screen flex flex-col gap-5 justify-center items-center bg-white dark:bg-slate-900 dark:text-white">
-				<ModeToggle />
-				<p className="text-5xl font-bold">Hello</p>
-			</div>
+			<Header />
+			<Sidebar />
+			<Outlet />
 		</ThemeProvider>
 	);
-}
-
-export default App;
+};
