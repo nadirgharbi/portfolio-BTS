@@ -22,12 +22,12 @@ npx tailwindcss init
 ```js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+	content: ["./src/**/*.{html,js}"],
+	theme: {
+		extend: {},
+	},
+	plugins: [],
+};
 ```
 
 ```css
@@ -60,18 +60,18 @@ npm i -D @types/node
 ```
 
 ```js
-import path from "path"
-import react from "@vitejs/plugin-react"
-import { defineConfig } from "vite"
- 
+import path from "path";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
+
 export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-})
+	plugins: [react()],
+	resolve: {
+		alias: {
+			"@": path.resolve(__dirname, "./src"),
+		},
+	},
+});
 ```
 
 ```bash
@@ -81,3 +81,7 @@ npx shadcn-ui@latest init
 ```bash
 npx shadcn-ui@latest add --all
 ```
+
+### Installation de react-simple-writer
+
+**Documentation Officiel de react-simple-writer : https://www.npmjs.com/package/react-simple-typewriter**

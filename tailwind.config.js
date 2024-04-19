@@ -13,9 +13,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        "default-color": "#e4e4e7",
-        "primary-color": "#09090b",
-        "secondary-color": "#3B3B98",
+        default: "#fafafb",
+        primary: "#09090b",
+        secondary: "#7070FF"
       },
       keyframes: {
         "accordion-down": {
@@ -26,10 +26,16 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "rotating": {
+          "0%": { transform: "rotate(0)" },
+          "20%": { transform: "rotate(14deg)" },
+          "100%": { transform: "rotate(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "rotating": "rotating 0.3s ease-out",
       },
     },
   },

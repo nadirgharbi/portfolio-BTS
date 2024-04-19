@@ -7,41 +7,44 @@ import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
 export const Sidebar = () => {
-  const location = useLocation();
-  const [active, setActive] = useState<string>(location.pathname);
-  const activeCss = "bg-secondary-color hover:bg-secondary-color/95 text-default-color";
-  const globalCss = "p-2 rounded-full transition-all hover:animate-rotating";
+	// hooks
+	const location = useLocation();
+	const [active, setActive] = useState<string>(location.pathname);
 
-  const sidebarItems = [
-    { path: "/", label: "Accueil", icon: <BsHouse size={32} />, iconFill: <BsHouseFill size={32} /> },
-    { path: "/about", label: "À Propos", icon: <BsPersonVcard size={32} />, iconFill: <BsPersonVcardFill size={32} /> },
-    { path: "/skills", label: "Compétences", icon: <BsPersonGear size={32} />, iconFill: <BsPersonFillGear size={32} /> },
-    { path: "/projects", label: "Projets", icon: <BsFileEarmarkCode size={32} />, iconFill: <BsFileEarmarkCodeFill size={32} /> },
-    { path: "/monitoring", label: "Veilles", icon: <BsBinoculars size={32} />, iconFill: <BsBinocularsFill size={32} /> },
-    { path: "/contact", label: "Contact", icon: <BsEnvelope size={32} />, iconFill: <BsEnvelopeFill size={32} /> },
-  ];
+	// css
+	const activeCss = "bg-secondary hover:bg-secondary/95 text-default";
+	const globalCss = "p-2 rounded-full transition-all duration-200 hover:animate-rotating";
 
-  useEffect(() => {
-    setActive(location.pathname);
-  }, [location.pathname]);
+	const sidebarItems = [
+		{ path: "/", label: "Accueil", icon: <BsHouse size={32} />, iconFill: <BsHouseFill size={32} /> },
+		{ path: "/about", label: "À Propos", icon: <BsPersonVcard size={32} />, iconFill: <BsPersonVcardFill size={32} /> },
+		{ path: "/skills", label: "Compétences", icon: <BsPersonGear size={32} />, iconFill: <BsPersonFillGear size={32} /> },
+		{ path: "/projects", label: "Projets", icon: <BsFileEarmarkCode size={32} />, iconFill: <BsFileEarmarkCodeFill size={32} /> },
+		{ path: "/monitoring", label: "Veilles", icon: <BsBinoculars size={32} />, iconFill: <BsBinocularsFill size={32} /> },
+		{ path: "/contact", label: "Contact", icon: <BsEnvelope size={32} />, iconFill: <BsEnvelopeFill size={32} /> },
+	];
 
-  return (
-    <div className="w-14 absolute h-screen flex items-center">
-      <div className="flex flex-col items-center justify-center gap-2 py-3 px-8 fixed z-[999] left-4 rounded-2xl w-14 bg-default-color dark:bg-primary-color text-primary-color dark:text-default-color border border-primary-color/20 dark:border-default-color/20">
-        {sidebarItems.map((item) => (
-          <NavLink to={item.path} className={`${globalCss} ${active === item.path ? activeCss : ""}`} data-tooltip-id="tooltip" data-tooltip-content={item.label} data-tooltip-place="right">
-            {active === item.path ? item.iconFill : item.icon} {/* On vérifie si le chemin courrant correspond au composant concernés */}
-          </NavLink>
-        ))}
+	useEffect(() => {
+		setActive(location.pathname);
+	}, [location.pathname]);
 
-        {/* Configuration de la bibliothèque de tooltips */}
-        <Tooltip id="tooltip" />
+	return (
+		<div className="w-14 absolute h-screen flex items-center">
+			<div className="flex flex-col items-center justify-center gap-2 py-3 px-8 fixed z-[999] left-4 rounded-2xl w-14 bg-default dark:bg-primary text-primary dark:text-default border border-primary/20 dark:border-default/20">
+				{sidebarItems.map((item) => (
+					<NavLink to={item.path} className={`${globalCss} ${active === item.path ? activeCss : ""}`} data-tooltip-id="tooltip" data-tooltip-content={item.label} data-tooltip-place="right">
+						{active === item.path ? item.iconFill : item.icon} {/* On vérifie si le chemin courrant correspond au composant concernés */}
+					</NavLink>
+				))}
 
-        <Separator />
+				{/* Configuration de la bibliothèque de tooltips */}
+				<Tooltip id="tooltip" />
 
-        {/* Dark/Light Mode */}
-        <ModeToggle />
-      </div>
-    </div>
-  );
+				<Separator />
+
+				{/* Dark/Light Mode */}
+				<ModeToggle />
+			</div>
+		</div>
+	);
 };
