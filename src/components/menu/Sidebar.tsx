@@ -9,7 +9,7 @@ import "react-tooltip/dist/react-tooltip.css";
 export const Sidebar = () => {
   const location = useLocation();
   const [active, setActive] = useState<string>(location.pathname);
-  const activeCss = "bg-secondary-color hover:bg-secondary-color/95 text-default-color rotate-[15deg]";
+  const activeCss = "bg-secondary-color hover:bg-secondary-color/95 text-default-color rotate-12";
   const globalCss = "p-2 rounded-full transition-transform";
 
   const sidebarItems = [
@@ -26,13 +26,14 @@ export const Sidebar = () => {
   }, [location.pathname]);
 
   return (
-    <div className="w-14 absolute h-screen flex items-center ">
+    <div className="w-14 absolute h-screen flex items-center">
       <div className="flex flex-col items-center justify-center gap-2 py-3 px-8 fixed z-[999] left-4 rounded-2xl w-14 bg-default-color dark:bg-primary-color text-primary-color dark:text-default-color border border-primary-color/20 dark:border-default-color/20">
         {sidebarItems.map((item) => (
           <NavLink to={item.path} className={`${globalCss} ${active === item.path ? activeCss : ""}`} data-tooltip-id="tooltip" data-tooltip-content={item.label} data-tooltip-place="right">
             {active === item.path ? item.iconFill : item.icon} {/* On vérifie si le chemin courrant correspond au composant concernés */}
           </NavLink>
         ))}
+
         {/* Configuration de la bibliothèque de tooltips */}
         <Tooltip id="tooltip" />
 
