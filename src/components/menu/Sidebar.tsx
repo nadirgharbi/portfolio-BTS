@@ -5,6 +5,9 @@ import { Separator } from "../ui/separator";
 import { ModeToggle } from "../theme/ModeToggle";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
+import { Download } from "lucide-react";
+import CVNadir from "../../assets/cv-nadir.pdf";
+import { Button } from "../ui/button";
 
 export const Sidebar = () => {
 	// hooks
@@ -40,8 +43,17 @@ export const Sidebar = () => {
 				{/* Configuration de la bibliothèque de tooltips */}
 				<Tooltip id="tooltip" />
 
-				<Separator />
+				<Separator decorative className="w-12" />
 
+				<Button variant="outline" size="icon" className="rounded-xl bg-secondary hover:bg-secondary/90 dark:bg-secondary dark:hover:bg-secondary/75 border border-secondary/20 dark:border-secondary/20 text-default hover:text-default">
+					<a download href={CVNadir} data-tooltip-id="tooltip" data-tooltip-content={"Télécharger mon CV"} data-tooltip-place="right">
+						<Download className="h-[1.4rem] w-[1.4rem]" />
+					</a>{" "}
+				</Button>
+
+				{/* <a download href={CVNadir} className={globalCss} data-tooltip-id="tooltip" data-tooltip-content={"Télécharger mon CV"} data-tooltip-place="right">
+					<Download size={32} />
+				</a> */}
 				{/* Dark/Light Mode */}
 				<ModeToggle />
 			</div>
