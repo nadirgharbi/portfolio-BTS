@@ -19,7 +19,8 @@ export const Home = () => {
           pour être meilleur.
         </p>
       </div>
-		<Button className="border bg-default-color/5 rounded-md">Contacter</Button>
+		<Button className="border bg-default-color text-primary-color rounded-md">À Propos De Moi</Button>
+		<Button className="border bg-default-color/5 rounded-md">Mon CV</Button>
     </div>
   );
 };
