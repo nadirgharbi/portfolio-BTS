@@ -1,6 +1,6 @@
 export const About = () => {
 	return (
-		<div className="h-screen flex flex-col gap-5 justify-center items-center text-slate-900 dark:text-white bg-white dark:bg-slate-900">
+		<div className="h-screen flex flex-col justify-center items-center gap-5 text-primary-color dark:text-default-color bg-white dark:bg-primary-color">
 			<p className="text-5xl font-bold">About</p>
 		</div>
 	);
