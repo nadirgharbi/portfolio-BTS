@@ -1,7 +1,7 @@
-// Color themes
-export const colorsThemes = 'red';
-
-// Legales
-const legals = {
-    
-}
+/**
+ * Mentions Legales
+ * 
+ * Icones : https://react-icons.github.io/react-icons/
+ * Polices d'ecriture : https://www.fontshare.com/ 
+ * Librairies UI : https://ui.shadcn.com/
+*/
