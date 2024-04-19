@@ -9,7 +9,7 @@ import "react-tooltip/dist/react-tooltip.css";
 export const Sidebar = () => {
   const location = useLocation();
   const [active, setActive] = useState<string>(location.pathname);
-  const activeCss = "bg-secondary-color hover:bg-secondary-color/95 text-default-color rotate-12";
+  const activeCss = "bg-secondary-color hover:bg-secondary-color/95 text-default-color animate-rotating";
   const globalCss = "p-2 rounded-full transition-transform";
 
   const sidebarItems = [

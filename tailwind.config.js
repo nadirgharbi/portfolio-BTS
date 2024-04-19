@@ -1,12 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
     container: {
@@ -18,10 +13,9 @@ module.exports = {
     },
     extend: {
       colors: {
-
-        "default-color": '#e4e4e7',
-        "primary-color": '#09090b',
-        "secondary-color": '#3B3B98',
+        "default-color": "#e4e4e7",
+        "primary-color": "#09090b",
+        "secondary-color": "#3B3B98",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -71,17 +65,18 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "rotating" : {
-          from: {rotate : 0},
-          to: {rotate : 360}
-        }
+        rotating: {
+          "0%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(10deg)" },
+          "100%": { transform: "rotate(0deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "rotating" : "rotating 0.5s infinite"
+        rotating: "rotating 0.2s ease",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
