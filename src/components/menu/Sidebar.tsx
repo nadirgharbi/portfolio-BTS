@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BsHouse, BsHouseFill, BsPersonVcard, BsPersonVcardFill, BsPersonGear, BsPersonFillGear, BsFileEarmarkCode, BsFileEarmarkCodeFill, BsBinoculars, BsBinocularsFill, BsEnvelope, BsEnvelopeFill } from "react-icons/bs";
+import { BsHouse, BsHouseFill, BsPersonVcard, BsPersonVcardFill, BsPersonGear, BsPersonFillGear, BsFileEarmarkCode, BsFileEarmarkCodeFill, BsBinoculars, BsBinocularsFill, BsEnvelope, BsEnvelopeFill, BsThreeDots, BsThreeDotsVertical, BsXLg } from "react-icons/bs";
 import { NavLink, useLocation } from "react-router-dom";
 import { Separator } from "../ui/separator";
 import { ModeToggle } from "../theme/ModeToggle";
@@ -9,14 +9,20 @@ import { Download } from "lucide-react";
 import CVNadir from "../../assets/cv-nadir.pdf";
 import { Button } from "../ui/button";
 
+// TODO: todo responsive
+
 export const Sidebar = () => {
 	// hooks
 	const location = useLocation();
 	const [active, setActive] = useState<string>(location.pathname);
+	const [openedMenu, setOpenedMenu] = useState<boolean>(false);
 
 	// css
-	const activeCss = "bg-secondary hover:bg-secondary/95 text-default";
-	const globalCss = "p-2 rounded-full transition-all duration-200 hover:animate-rotating";
+	const activeCss = "bg-secondary hover:bg-secondary/95 text-default"; // Style pour l'element actif du menu
+	const globalCss = "p-2 rounded-full transition-all duration-200 hover:animate-rotating"; // Style global qui s'applique a tous les elements non actif
+
+	const iconThreeDotsCss = "text-primary dark:text-default transition-all duration-300"; // Style pour l'icone "3 points"
+	const iconCrossCss = `text-primary dark:text-default transition-all duration-300 transform  `; // Style pour l'icone "X"
 
 	const sidebarItems = [
 		{ path: "/", label: "Accueil", icon: <BsHouse size={32} />, iconFill: <BsHouseFill size={32} /> },
@@ -27,36 +33,51 @@ export const Sidebar = () => {
 		{ path: "/contact", label: "Contact", icon: <BsEnvelope size={32} />, iconFill: <BsEnvelopeFill size={32} /> },
 	];
 
+	const handleOpenMenu = () => {
+		setOpenedMenu((prev) => !prev);
+	};
+
 	useEffect(() => {
 		setActive(location.pathname);
 	}, [location.pathname]);
 
 	return (
-		<div className="w-14 absolute h-screen flex items-center">
-			<div className="flex flex-col items-center justify-center gap-2 py-3 px-8 fixed z-[999] left-4 rounded-2xl w-14 bg-default dark:bg-primary text-primary dark:text-default border border-primary/20 dark:border-default/20">
-				{sidebarItems.map((item) => (
-					<NavLink to={item.path} className={`${globalCss} ${active === item.path ? activeCss : ""}`} data-tooltip-id="tooltip" data-tooltip-content={item.label} data-tooltip-place="right">
-						{active === item.path ? item.iconFill : item.icon} {/* On vérifie si le chemin courrant correspond au composant concernés */}
-					</NavLink>
-				))}
+		<>
+			{/* {{Responsive}} Layer opacity when menu opened in responsive */}
+			<div className={`lg:hidden ${openedMenu ? "block" : "hidden"} bg-primary/50 fixed z-10 h-screen w-screen`}></div>
 
-				{/* Configuration de la bibliothèque de tooltips */}
-				<Tooltip id="tooltip" />
-
-				<Separator decorative className="w-12" />
-
-				<Button variant="outline" size="icon" className="rounded-xl bg-secondary hover:bg-secondary/90 dark:bg-secondary dark:hover:bg-secondary/75 border border-secondary/20 dark:border-secondary/20 text-default hover:text-default">
-					<a download href={CVNadir} data-tooltip-id="tooltip" data-tooltip-content={"Télécharger mon CV"} data-tooltip-place="right">
-						<Download className="h-[1.4rem] w-[1.4rem]" />
-					</a>{" "}
+			<div className="w-14 absolute top-5 lg:top-auto right-8 z-[999] h-screen flex lg:items-center">
+				{/* {{Responsive}} Bouton qui affiche le menu */}
+				<Button variant={"link"} className="flex no-underline border-0 fixed lg:hidden" onClick={handleOpenMenu}>
+					{openedMenu ? <BsXLg className={`${iconCrossCss} animate-open-menu`} size={32} /> : <BsThreeDotsVertical className={`${iconThreeDotsCss} animate-close-menu`} size={32} />}{" "}
 				</Button>
 
-				{/* <a download href={CVNadir} className={globalCss} data-tooltip-id="tooltip" data-tooltip-content={"Télécharger mon CV"} data-tooltip-place="right">
-					<Download size={32} />
-				</a> */}
-				{/* Dark/Light Mode */}
-				<ModeToggle />
+				{/* Menu */}
+				<div
+					className={`flex flex-col items-center justify-center gap-2 py-3 px-8 fixed z-[999] top-20 right-6 lg:top-auto lg:left-4 rounded-2xl w-14 bg-default dark:bg-primary text-primary dark:text-default border-0 lg:border lg:border-primary/20 lg:dark:border-default/20 ${
+						openedMenu ? "block transition-all animate-fade-in-scale" : " hidden lg:flex"
+					}`}>
+					{sidebarItems.map((item) => (
+						<NavLink to={item.path} className={`${globalCss} ${active === item.path ? activeCss : ""}`} data-tooltip-id="tooltip" data-tooltip-content={item.label} data-tooltip-place="right">
+							{active === item.path ? item.iconFill : item.icon} {/* On vérifie si le chemin courrant correspond au composant concernés */}
+						</NavLink>
+					))}
+
+					{/* Configuration de la bibliothèque de tooltips */}
+					<Tooltip id="tooltip" />
+
+					<Separator decorative className="w-12" />
+
+					<Button variant="outline" size="icon" className="rounded-xl bg-secondary hover:bg-secondary/90 dark:bg-secondary dark:hover:bg-secondary/75 border border-secondary/20 dark:border-secondary/20 text-default hover:text-default">
+						<a download href={CVNadir} data-tooltip-id="tooltip" data-tooltip-content={"Télécharger mon CV"} data-tooltip-place="right">
+							<Download className="h-[1.4rem] w-[1.4rem]" />
+						</a>{" "}
+					</Button>
+
+					{/* Dark/Light Mode */}
+					<ModeToggle />
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
