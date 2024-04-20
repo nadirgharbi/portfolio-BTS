@@ -9,8 +9,6 @@ import { Download } from "lucide-react";
 import CVNadir from "../../assets/cv-nadir.pdf";
 import { Button } from "../ui/button";
 
-// TODO: todo responsive
-
 export const Sidebar = () => {
 	// hooks
 	const location = useLocation();

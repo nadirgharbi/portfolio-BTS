@@ -23,7 +23,7 @@ export const Home = () => {
 						Hey, je suis <span className="font-black text-secondary">Nadir</span>
 					</p>
 					<p className="font-bold">
-						<Typewriter words={words} typeSpeed={40} deleteSpeed={80} cursor loop />
+						<Typewriter words={words} typeSpeed={40} deleteSpeed={70} delaySpeed={950} cursor loop />
 					</p>
 
 					{/* Badges */}
