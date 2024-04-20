@@ -26,7 +26,7 @@ export const Sidebar = () => {
 
 	const sidebarItems = [
 		{ path: "/", label: "Accueil", icon: <BsHouse size={32} />, iconFill: <BsHouseFill size={32} /> },
-		{ path: "/about", label: "À Propos", icon: <BsPersonVcard size={32} />, iconFill: <BsPersonVcardFill size={32} /> },
+		{ path: "/about", label: "À Propos de moi", icon: <BsPersonVcard size={32} />, iconFill: <BsPersonVcardFill size={32} /> },
 		{ path: "/skills", label: "Compétences", icon: <BsPersonGear size={32} />, iconFill: <BsPersonFillGear size={32} /> },
 		{ path: "/projects", label: "Projets", icon: <BsFileEarmarkCode size={32} />, iconFill: <BsFileEarmarkCodeFill size={32} /> },
 		{ path: "/monitoring", label: "Veilles", icon: <BsBinoculars size={32} />, iconFill: <BsBinocularsFill size={32} /> },

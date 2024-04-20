@@ -1,4 +1,5 @@
-@import url('https://api.fontshare.com/v2/css?f[]=general-sans@200,201,300,301,400,401,500,501,600,601,700,701&display=swap" rel="stylesheet');
+/* @import url('https://api.fontshare.com/v2/css?f[]=general-sans@200,201,300,301,400,401,500,501,600,601,700,701&display=swap" rel="stylesheet'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,4 +7,6 @@
 
 * {
     /* font-family: 'General Sans', sans-serif; */
+    /* font-family: 'Switzer', sans-serif; */
+    font-family: "Inter", sans-serif;
 }

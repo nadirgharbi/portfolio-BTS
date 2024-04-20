@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import { App } from "./App";
-import { Home } from "./components/pages/Home";
-import { About } from "./components/pages/About";
-import { Skills } from "./components/pages/Skills";
-import { Projects } from "./components/pages/Projects";
-import { Monitoring } from "./components/pages/Monitoring";
-import { Contact } from "./components/pages/Contact";
+import { Home } from "./views/Home";
+import { About } from "./views/About";
+import { Skills } from "./views/Skills";
+import { Projects } from "./views/Projects";
+import { Monitoring } from "./views/Monitoring";
+import { Contact } from "./views/Contact";
 
 export const router = createBrowserRouter([
 	{

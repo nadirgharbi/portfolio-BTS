@@ -1,0 +1,44 @@
+{
+	"monitorings": [
+		{
+			"id": "1",
+			"title": "Nouverlle version du framework Vuejs 3.4.23",
+			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt minus sint est autem ut? Corporis dolorem aliquid id reprehenderit.",
+			"date": "2021-08-22",
+			"imageUrl": "https://cdn.pathtosuccess.global/DV_GlobalPassback_Update_970x250.jpg",
+			"source": "https://www.lemonde.fr/"
+		},
+		{
+			"id": "2",
+			"title": "Nouvelle étude révèle les effets du changement climatique sur la biodiversité",
+			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt minus sint est autem ut? Corporis dolorem aliquid id reprehenderit.",
+			"date": "2022-05-10",
+			"imageUrl": "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
+			"source": "https://www.example.com/"
+		},
+		{
+			"id": "3",
+			"title": "Lancement de la mission spatiale XYZ vers Mars",
+			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt minus sint est autem ut? Corporis dolorem aliquid id reprehenderit.",
+			"date": "2023-11-30",
+			"imageUrl": "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+			"source": "https://www.example.com/"
+		},
+		{
+			"id": "4",
+			"title": "Nouvelle découverte archéologique révèle des vestiges antiques exceptionnels",
+			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt minus sint est autem ut? Corporis dolorem aliquid id reprehenderit.",
+			"date": "2024-02-15",
+			"imageUrl": "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg",
+			"source": "https://www.example.com/"
+		},
+		{
+			"id": "5",
+			"title": "Festival international de musique électronique reporté en raison de la pandémie",
+			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt minus sint est autem ut? Corporis dolorem aliquid id reprehenderit.",
+			"date": "2024-04-05",
+			"imageUrl": "https://example.com/image5.jpg",
+			"source": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+		}
+	]
+}
