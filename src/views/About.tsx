@@ -3,8 +3,63 @@ import { BsCake2, BsFire, BsPatchCheck, BsPersonCheck } from "react-icons/bs";
 import { Badge } from "../components/ui/badge";
 import { Separator } from "../components/ui/separator";
 import { Experience } from "@/components/etc/Exeperience";
+import { SetStateAction, useEffect, useState } from "react";
+import { Loader, Loader2 } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
+import { CountingToParams } from "@/types";
 
 export const About = () => {
+	// const [isLoading, setIsLoading] = useState(true);
+	// useEffect(() => {
+	// 	setTimeout(() => {
+	// 		setIsLoading(false);
+	// 	}, 1000);
+	// }, []);
+
+	const [ageNumber, setAgeNumber] = useState<number>(0);
+	const [projectsNumber, setProjectsNumber] = useState<number>(0);
+	const [experienceNumber, setExperienceNumber] = useState<number>(0);
+
+	// Compteur automatique pour augmenter l'age
+	useEffect(() => {
+		// pour l'age
+		const interval = setInterval(() => {
+			if (ageNumber < 23) {
+				setAgeNumber((prev) => prev + 1);
+			} else {
+				clearInterval(interval);
+			}
+		}, 50); // Interval de 30ms seconde
+
+		return () => clearInterval(interval);
+	}, [ageNumber]);
+
+	useEffect(() => {
+		// pour le nombre de projets
+		const interval = setInterval(() => {
+			if (projectsNumber < 10) {
+				setProjectsNumber((prev) => prev + 1);
+			} else {
+				clearInterval(interval);
+			}
+		}, 100); // Interval de 30ms seconde
+
+		return () => clearInterval(interval);
+	}, [projectsNumber]);
+
+	useEffect(() => {
+		// pour les annees d'experiences
+		const interval = setInterval(() => {
+			if (experienceNumber < 2) {
+				setExperienceNumber((prev) => prev + 1);
+			} else {
+				clearInterval(interval);
+			}
+		}, 300); // Interval de 30ms seconde
+
+		return () => clearInterval(interval);
+	}, [experienceNumber]);
+
 	return (
 		<div className="h-full px-24 lg:px-32 py-40 text-primary dark:text-default bg-white dark:bg-primary">
 			{/* presentation section */}
@@ -35,25 +90,25 @@ export const About = () => {
 					<Separator className="-my-5" />
 
 					{/* Icon + numbers */}
-					<div className="flex gap-40">
+					<div className="grid grid-cols-3 gap-0">
 						<div className="flex  items-center gap-5 ">
 							<BsCake2 size={60} />
 							<div className="leading-5">
-								<p className="text-4xl font-extrabold">23</p>
+								<p className="text-4xl font-extrabold">{ageNumber}</p>
 								<p className="font-light">ans</p>
 							</div>
 						</div>
 						<div className="flex items-center gap-5 ">
 							<BsPatchCheck size={60} />
 							<div className="leading-5">
-								<p className="text-4xl font-extrabold">+ 10</p>
+								<p className="text-4xl font-extrabold">+ {projectsNumber}</p>
 								<p className="font-light">projets réalisés</p>
 							</div>
 						</div>
 						<div className="flex items-center gap-5 ">
 							<BsPersonCheck size={60} />
 							<div className="leading-5">
-								<p className="text-4xl font-extrabold">2</p>
+								<p className="text-4xl font-extrabold">{experienceNumber}</p>
 								<p className="font-light">années d’expérience</p>
 							</div>
 						</div>
@@ -66,8 +121,7 @@ export const About = () => {
 				</div>
 			</div>
 
-			{/* experiences et parcours scolaire section */}
-			<div className="flex flex-col items-center lg:flex-row lg:items-start justify-center gap-20 py-32 px-96 relative z-[999]">
+			<div className="flex flex-col items-center lg:flex-row lg:items-start justify-center gap-20 py-32 px-96 relative z-[999] animate-fade-up">
 				{/* Left part */}
 				<div className="flex flex-col gap-12">
 					<div>
@@ -77,7 +131,7 @@ export const About = () => {
 				</div>
 
 				{/* Right part */}
-				<div>
+				<div className="flex flex-col gap-12">
 					<div>
 						<p className="text-xl font-bold py-6">Parcours Scolaire</p>
 						<Experience />

@@ -1,6 +1,13 @@
 import { FunctionComponentElement, ReactPortal } from "react";
 import { IconBaseProps, IconType } from "react-icons/lib";
 
+// Type
+export type CountingToParams = {
+	initValue: number;
+	maxValue: number;
+	speed: number;
+};
+
 // Props
 export interface TimelineProps {
 	title: string;

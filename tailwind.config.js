@@ -28,7 +28,7 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "rotating": {
+        rotating: {
           "0%": { transform: "rotate(0)" },
           "20%": { transform: "rotate(14deg)" },
           "100%": { transform: "rotate(0)" },
@@ -53,16 +53,29 @@ module.exports = {
           from: { opacity: "0" },
           to: { opacity: "100" }
         },
+        loading: {
+          from: { transform: "rotate(0)" },
+          to: { transform: "rotate(360deg)" },
+        },
+        "fade-up": {
+          from: { transform: "translateY(-20px)", opacity: "0" },
+          to: { transform: "translateY(0)", opacity: "100" },
+
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "rotating": "rotating 0.3s ease-out",
+        rotating: "rotating 0.3s ease-out",
         "open-menu": "open-menu 0.1s",
         "close-menu": "close-menu 0.1s",
         "fade-in-scale": "fade-in-scale 0.2s ease-in",
         "fade-out-scale": "fade-out-scale 0.2s ease-out",
         "fade-in-scale-bg": "fade-in-scale-bg 0.1s linear",
+        loading: "loading 1.5s ease infinite",
+        "fade-up": "fade-up 0.8s ease-in-out",
+
+
       },
     },
   },
