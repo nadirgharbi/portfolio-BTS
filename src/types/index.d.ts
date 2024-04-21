@@ -25,5 +25,20 @@ export interface StudyTimelineProps {
 
 /** Pour plusieurs etudes */
 export interface StudiesProps {
-	studies: Array<StudyTimelineProps>;
+	studies: studiesData;
+}
+
+/** Pour un seul projet */
+export interface ProjectProps {
+	title: string;
+	description: string;
+	tags: string[];
+	imageUrl: string;
+	hrefLink: string;
+	finished: boolean;
+}
+
+/** Pour plusieurs projets */
+export interface ProjectsProps {
+	projects: Array<ProjectProps>;
 }

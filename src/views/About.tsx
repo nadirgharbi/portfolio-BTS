@@ -121,31 +121,26 @@ export const About = () => {
 				</div>
 			</div>
 
-			<div className="grid grid-cols-2 gap-20 py-32 px-96 relative z-[999] animate-fade-up">
+			<div className="flex justify-center gap-10 py-32 relative z-[999] animate-fade-up">
 				{/* Left part */}
 				<div className="flex flex-col gap-12">
-					<div>
+					<div className="max-w-3xl">
 						<p className="text-xl font-bold py-6">Experience</p>
-						<Experiences experiences={experiencesData}/>
+						<Experiences experiences={experiencesData} />
 					</div>
 				</div>
 
 				{/* Right part */}
 				<div className="flex flex-col gap-12">
-					<div>
+					<div className="max-w-3xl">
 						<p className="text-xl font-bold py-6">Parcours Scolaire</p>
-						<Studies studies={studiesData}/>
+						<Studies studies={studiesData} />
 					</div>
 				</div>
 			</div>
 
-			{/* <div className="flex items-center justify-center gap-20 py-32">
-				<div>
-					<p className="text-2xl font-bold">Parcours Scolaire</p>
-				</div>
-				<div>
-					<p className="text-2xl font-bold">Experience</p>
-				</div>
+			{/* <div className="flex justify-center">
+				<p className="text-xl font-bold">BTS SIO</p>
 			</div> */}
 		</div>
 	);

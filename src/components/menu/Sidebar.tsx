@@ -57,8 +57,8 @@ export const Sidebar = () => {
 					className={`flex flex-col items-center justify-center gap-2 py-3 px-8 fixed z-[999] top-20 right-6 lg:top-auto lg:left-4 rounded-2xl w-14 bg-default dark:bg-primary text-primary dark:text-default border-0 lg:border lg:border-primary/20 lg:dark:border-default/20 ${
 						openedMenu ? "block transition-all animate-fade-in-scale" : " hidden lg:flex"
 					}`}>
-					{sidebarItems.map((item) => (
-						<NavLink to={item.path} className={`${globalCss} ${active === item.path ? activeCss : ""}`} data-tooltip-id="tooltip" data-tooltip-content={item.label} data-tooltip-place="right">
+					{sidebarItems.map((item, key) => (
+						<NavLink to={item.path} className={`${globalCss} ${active === item.path ? activeCss : ""}`} data-tooltip-id="tooltip" data-tooltip-content={item.label} data-tooltip-place="right" key={key}>
 							{active === item.path ? item.iconFill : item.icon} {/* On vérifie si le chemin courrant correspond au composant concernés */}
 						</NavLink>
 					))}

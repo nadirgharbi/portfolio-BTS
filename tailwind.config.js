@@ -60,8 +60,11 @@ module.exports = {
         "fade-up": {
           from: { transform: "translateY(-15px)", opacity: "0" },
           to: { transform: "translateY(0)", opacity: "100" },
-
-        }
+        },
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(calc(-250px * 14))' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -74,7 +77,7 @@ module.exports = {
         "fade-in-scale-bg": "fade-in-scale-bg 0.1s linear",
         loading: "loading 1.5s ease infinite",
         "fade-up": "fade-up 0.6s ease-in-out",
-
+        scroll: 'scroll 40s linear infinite',
 
       },
     },

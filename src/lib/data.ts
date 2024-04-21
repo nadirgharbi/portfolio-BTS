@@ -129,6 +129,6 @@ export const studiesData = [
 		period: "2018 - 2019",
 		status: "Diplomé"
 	},
-];
+] as const;
 
 export const skillsData: string[] = ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Python", "Tailwind", "Figma", "Git", "GitLab", "PHP", "MySQL", "Java", "Django"] as const;
