@@ -1,32 +1,17 @@
+import { ExperienceTimelineProps } from "@/types";
 import { Timeline } from "flowbite-react";
-import { useTransition } from "react";
 
-export const Experience = () => {
+export const Experience: React.FC<ExperienceTimelineProps> = ({ title, location, description, date }) => {
 	return (
 		<>
 			<Timeline>
 				<Timeline.Item>
 					<Timeline.Point />
-					<Timeline.Content className="hover:bg-primary/5 dark:hover:bg-default/5 py-1 px-3 rounded-lg">
-						<Timeline.Time>February 2022</Timeline.Time>
-						<Timeline.Title>Application UI code in Tailwind CSS</Timeline.Title>
-						<Timeline.Body>Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</Timeline.Body>
-					</Timeline.Content>
-				</Timeline.Item>
-				<Timeline.Item>
-					<Timeline.Point />
-					<Timeline.Content className="hover:bg-primary/5 dark:hover:bg-default/5 py-1 px-3 rounded-lg">
-						<Timeline.Time>March 2022</Timeline.Time>
-						<Timeline.Title>Marketing UI design in Figma</Timeline.Title>
-						<Timeline.Body>All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.</Timeline.Body>
-					</Timeline.Content>
-				</Timeline.Item>
-				<Timeline.Item>
-					<Timeline.Point />
-					<Timeline.Content className="hover:bg-primary/5 dark:hover:bg-default/5 py-1 px-3 rounded-lg">
-						<Timeline.Time>April 2022</Timeline.Time>
-						<Timeline.Title>E-Commerce UI code in Tailwind CSS</Timeline.Title>
-						<Timeline.Body>Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</Timeline.Body>
+					<Timeline.Content className="transition-all duration-300 hover:bg-primary/5 dark:hover:bg-default/5 py-1 px-3 rounded-lg">
+						<Timeline.Time>{date}</Timeline.Time>
+						<Timeline.Title>{title}</Timeline.Title>
+						<Timeline.Title className="font-semibold text-base">{location}</Timeline.Title>
+						<Timeline.Body>{description}</Timeline.Body>
 					</Timeline.Content>
 				</Timeline.Item>
 			</Timeline>

@@ -58,7 +58,7 @@ module.exports = {
           to: { transform: "rotate(360deg)" },
         },
         "fade-up": {
-          from: { transform: "translateY(-20px)", opacity: "0" },
+          from: { transform: "translateY(-15px)", opacity: "0" },
           to: { transform: "translateY(0)", opacity: "100" },
 
         }
@@ -73,7 +73,7 @@ module.exports = {
         "fade-out-scale": "fade-out-scale 0.2s ease-out",
         "fade-in-scale-bg": "fade-in-scale-bg 0.1s linear",
         loading: "loading 1.5s ease infinite",
-        "fade-up": "fade-up 0.8s ease-in-out",
+        "fade-up": "fade-up 0.6s ease-in-out",
 
 
       },

@@ -98,22 +98,36 @@ export const projectsData = [
 
 export const studiesData = [
 	{
-		title: "BTS SIO OPTION SLAM",
+		title: "BTS SIO",
+		description: "BTS Services Informatiques aux organisations (option Solutions Logicielles et Applications Metiers) ",
 		school: "Maestris",
 		location: "Toulon",
 		period: "2022 - Actuellement",
+		status: "En cours"
 	},
 	{
-		title: "LICENCE INFORMATIQUE",
+		title: "Licence Informatique",
+		description: "Niveau L1 Informatique - Parcours Informatique",
 		school: "Université de Toulon",
 		location: "La Garde",
 		period: "2019 - 2022",
+		status: "Niveau"
 	},
 	{
 		title: "BAC STI2D",
+		description: "BAC Sciences et Technologies de l'Industrie et du Développement Durable",
 		school: "Lycée Rouvière",
 		location: "Toulon",
 		period: "2018 - 2019",
+		status: "Diplomé"
+	},
+	{
+		title: "Brevet des collèges",
+		description: "Brevet des collèges",
+		school: "Collège Django Reinhardt",
+		location: "Toulon",
+		period: "2018 - 2019",
+		status: "Diplomé"
 	},
 ];
 

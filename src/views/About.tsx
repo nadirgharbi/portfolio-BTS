@@ -3,10 +3,10 @@ import { BsCake2, BsFire, BsPatchCheck, BsPersonCheck } from "react-icons/bs";
 import { Badge } from "../components/ui/badge";
 import { Separator } from "../components/ui/separator";
 import { Experience } from "@/components/etc/Exeperience";
-import { SetStateAction, useEffect, useState } from "react";
-import { Loader, Loader2 } from "lucide-react";
-import { Skeleton } from "@/components/ui/skeleton";
-import { CountingToParams } from "@/types";
+import { useEffect, useState } from "react";
+import { Experiences } from "@/components/etc/Experiences";
+import { experiencesData, studiesData } from "@/lib/data";
+import { Studies } from "@/components/etc/Studies";
 
 export const About = () => {
 	// const [isLoading, setIsLoading] = useState(true);
@@ -121,12 +121,12 @@ export const About = () => {
 				</div>
 			</div>
 
-			<div className="flex flex-col items-center lg:flex-row lg:items-start justify-center gap-20 py-32 px-96 relative z-[999] animate-fade-up">
+			<div className="grid grid-cols-2 gap-20 py-32 px-96 relative z-[999] animate-fade-up">
 				{/* Left part */}
 				<div className="flex flex-col gap-12">
 					<div>
 						<p className="text-xl font-bold py-6">Experience</p>
-						<Experience />
+						<Experiences experiences={experiencesData}/>
 					</div>
 				</div>
 
@@ -134,7 +134,7 @@ export const About = () => {
 				<div className="flex flex-col gap-12">
 					<div>
 						<p className="text-xl font-bold py-6">Parcours Scolaire</p>
-						<Experience />
+						<Studies studies={studiesData}/>
 					</div>
 				</div>
 			</div>
