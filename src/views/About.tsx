@@ -139,6 +139,10 @@ export const About = () => {
 				</div>
 			</div>
 
+			<div className="flex justify-center gap-10 py-32 relative z-[999] animate-fade-up">
+				hello
+			</div>
+
 			{/* <div className="flex justify-center">
 				<p className="text-xl font-bold">BTS SIO</p>
 			</div> */}

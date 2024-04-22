@@ -65,6 +65,18 @@ module.exports = {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(calc(-250px * 14))' },
         },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        marquee2: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+        swipe: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -78,7 +90,8 @@ module.exports = {
         loading: "loading 1.5s ease infinite",
         "fade-up": "fade-up 0.6s ease-in-out",
         scroll: 'scroll 40s linear infinite',
-
+        'marquee-infinite': 'marquee 20s linear infinite',
+        swipe: "swipe 20s linear infinite"
       },
     },
   },
