@@ -1,5 +1,5 @@
 /** Pour une seule experiences */
-export interface ExperienceTimelineProps {
+interface ExperienceTimelineProps {
 	title: string;
 	location: string;
 	description: string;
@@ -9,12 +9,12 @@ export interface ExperienceTimelineProps {
 }
 
 /** Pour plusieurs experiences */
-export interface ExeperiencesProps {
+interface ExeperiencesProps {
 	experiences: Array<ExperienceTimelineProps>;
 }
 
 /** Pour une seule etude */
-export interface StudyTimelineProps {
+ interface StudyTimelineProps {
 	title: string;
 	description: string;
 	school: string;
@@ -24,12 +24,12 @@ export interface StudyTimelineProps {
 }
 
 /** Pour plusieurs etudes */
-export interface StudiesProps {
+ interface StudiesProps {
 	studies: studiesData;
 }
 
 /** Pour un seul projet */
-export interface ProjectProps {
+ interface ProjectProps {
 	title: string;
 	description: string;
 	tags: string[];
@@ -39,6 +39,6 @@ export interface ProjectProps {
 }
 
 /** Pour plusieurs projets */
-export interface ProjectsProps {
+ interface ProjectsProps {
 	projects: Array<ProjectProps>;
 }

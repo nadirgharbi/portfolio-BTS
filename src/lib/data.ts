@@ -12,7 +12,7 @@ import pytris from "@/assets/pytris.png";
 import snakegame from "@/assets/snakegame.png";
 import tictactoeReact from "@/assets/tictactoe-react.png";
 
-export const experiencesData = [
+ const experiencesData = [
 	{
 		title: "Développeur React & React Native",
 		location: "AVIS2SANTE - Six-Fours-Les-Plages",
@@ -43,7 +43,7 @@ export const experiencesData = [
 	},
 ];
 
-export const projectsData = [
+ const projectsData = [
 	{
 		title: "TicTacToe React",
 		description: "Ce projet suit la même logique que le Morpyon réalisé en Python, mais d'une manière différente. Ce jeu, développé avec le framework React, est directement accessible depuis le navigateur et offre une expérience plus agréable. ",
@@ -96,7 +96,7 @@ export const projectsData = [
 	// },
 ];
 
-export const studiesData = [
+ const studiesData = [
 	{
 		title: "BTS SIO",
 		description: "BTS Services Informatiques aux organisations (option Solutions Logicielles et Applications Metiers) ",
@@ -131,4 +131,6 @@ export const studiesData = [
 	},
 ] as const;
 
-export const skillsData: string[] = ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Python", "Tailwind", "Figma", "Git", "GitLab", "PHP", "MySQL", "Java", "Django"] as const;
+ const skillsData: string[] = ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Python", "Tailwind", "Figma", "Git", "GitLab", "PHP", "MySQL", "Java", "Django"] as const;
+
+ export {experiencesData, projectsData, studiesData, skillsData}
