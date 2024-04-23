@@ -10,9 +10,9 @@ import { useRef, useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 
 export const Projects = () => {
-	const logoCSS = "text-primary/75 dark:text-default/75 w-16 h-16";
+	const logoCSS = "text-primary/75 dark:text-default/75 w-20 h-20";
 
-	const logosFirstRow = [
+	const logoSkills = [
 		<FaReact className={logoCSS} />,
 		<FaJs className={logoCSS} />,
 		<BiLogoTypescript className={logoCSS} />,
@@ -32,18 +32,6 @@ export const Projects = () => {
 		<SiInsomnia className={logoCSS} />,
 		<SiRuby className={logoCSS} />,
 	];
-
-	const logosSecondRow = [
-		<SiIntellijidea className={logoCSS} />,
-		<FaSymfony className={logoCSS} />,
-		<FaJava className={logoCSS} />,
-		<SiPostman className={logoCSS} />,
-		<FaCss3 className={logoCSS} />,
-		<FaGitlab className={logoCSS} />,
-		<FaDocker className={logoCSS} />,
-		<SiInsomnia className={logoCSS} />,
-		<SiRuby className={logoCSS} />,
-	]
 
 	useEffect(() => {
 		// Sélectionne tous les éléments avec la classe CSS '.scroller'
@@ -77,7 +65,7 @@ export const Projects = () => {
 			<div className="w-2/3 -space-y-10">
 				<div className="scroller" data-direction={"left"}>
 					<ul className="tag-list scroller__inner">
-						{logosFirstRow.map((logo) => (
+						{logoSkills.map((logo) => (
 							<li>{logo}</li>
 						))}
 					</ul>
@@ -85,7 +73,7 @@ export const Projects = () => {
 				
 			</div>
 
-			<div className="py-20">
+			<div className="py-20 px-64">
 				<ProjectsGroup projects={projectsData} />
 			</div>
 		</div>
