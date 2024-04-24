@@ -14,7 +14,7 @@ interface ExeperiencesProps {
 }
 
 /** Pour une seule etude */
- interface StudyTimelineProps {
+interface StudyTimelineProps {
 	title: string;
 	description: string;
 	school: string;
@@ -24,21 +24,32 @@ interface ExeperiencesProps {
 }
 
 /** Pour plusieurs etudes */
- interface StudiesProps {
+interface StudiesProps {
 	studies: Array<studiesData>;
 }
 
 /** Pour un seul projet */
- interface ProjectProps {
+interface ProjectProps {
 	title: string;
 	description: string;
 	tags: string[];
 	imageUrl: string;
 	hrefLink: string;
-	finished: boolean;
+	finished?: boolean;
 }
 
 /** Pour plusieurs projets */
- interface ProjectsProps {
+interface ProjectsProps {
 	projects: Array<ProjectProps>;
+}
+
+/** Pour une seule carte informative dans la page contact */
+interface ContactInfoProps {
+	icon: IconType;
+	label?: string;
+}
+
+/** Pour plusieurs cartes informatives dans la page contact */
+interface ContactInfosProps {
+	infos: Array<ContactInfoProps>
 }

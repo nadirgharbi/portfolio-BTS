@@ -42,8 +42,8 @@ module.exports = {
           to: { opacity: "100" },
         },
         "fade-in-scale": {
-          from: { transform: "scale(0.9)", opacity: "0" },
-          to: { transform: "scale(1)", opacity: "100" }
+          from: { transform: "scale(0.95) translateY(-30px)", opacity: "0" },
+          to: { transform: "scale(1) translateY(0px)", opacity: "100" }
         },
         "fade-out-scale": {
           from: { transform: "scale(1)", opacity: "100" },
@@ -73,7 +73,7 @@ module.exports = {
         rotating: "rotating 0.3s ease-out",
         "open-menu": "open-menu 0.1s",
         "close-menu": "close-menu 0.1s",
-        "fade-in-scale": "fade-in-scale 0.2s ease-in",
+        "fade-in-scale": "fade-in-scale 0.3s ease-out",
         "fade-out-scale": "fade-out-scale 0.2s ease-out",
         "fade-in-scale-bg": "fade-in-scale-bg 0.1s linear",
         loading: "loading 1.5s ease infinite",

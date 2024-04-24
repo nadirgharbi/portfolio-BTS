@@ -5,6 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { Download } from "lucide-react";
 import CVNadir from "@/assets/cv-nadir.pdf";
+import { Tooltip } from "react-tooltip";
 
 export const Home = () => {
 	const words = ["Développeur Front", "Application Web & Mobile", "UX/UI Designer", "Étudiant en alternance"];
@@ -54,11 +55,12 @@ export const Home = () => {
 						Épreuve E4
 					</Button>
 					<div className="flex gap-2">
-						<Button variant={"outline"} className="flex gap-2" size={"icon"}>
-							<BsLinkedin />
+						<Tooltip id="tooltip-social"/>
+						<Button variant={"outline"} className="flex gap-2" size={"icon"}  data-tooltip-id="tooltip-social" data-tooltip-content={"LinkedIn"} data-tooltip-place="bottom">
+							<BsLinkedin size={16}/>
 						</Button>
-						<Button variant={"outline"} className="flex gap-2" size={"icon"}>
-							<BsGithub />
+						<Button variant={"outline"} className="flex gap-2" size={"icon"} data-tooltip-id="tooltip-social" data-tooltip-content={"Github"} data-tooltip-place="bottom">
+							<BsGithub size={16}/>
 						</Button>
 					</div>
 				</div>

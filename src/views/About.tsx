@@ -66,8 +66,8 @@ export const About = () => {
 			{/* PRESENTATION / INTRO */}
 			<div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-20 relative ">
 				{/* Left part */}
-				<div className="flex flex-col gap-12 max-w-6xl">
-					<div className="space-y-6 text-center md:text-start">
+				<div className="flex flex-col gap-12 ">
+					<div className="space-y-6 text-center md:text-start w-full md:max-w-6xl">
 						<p className="text-3xl md:text-4xl font-extrabold">À Propos de moi</p>
 						<p className="text-lg leading-relaxed">
 							Je suis{" "}
@@ -91,26 +91,26 @@ export const About = () => {
 					<Separator className="-my-5" />
 
 					{/* Icon + numbers */}
-					<div className="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-3 gap-12 lg:gap-0">
+					<div className="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-3 gap-12 lg:gap-24">
 						<div className="flex flex-col text-center md:text-start md:flex-row items-center gap-5">
 							<BsCake2 size={60} className="" />
 							<div className="leading-5">
 								<p className="text-4xl font-extrabold">{ageNumber}</p>
-								<p className="font-light">ans</p>
+								<p className="font-light text-nowrap">ans</p>
 							</div>
 						</div>
 						<div className="flex flex-col text-center md:text-start md:flex-row items-center gap-5">
 							<BsPatchCheck size={60} className="" />
 							<div className="leading-5">
 								<p className="text-4xl font-extrabold">+ {projectsNumber}</p>
-								<p className="font-light">projets réalisés</p>
+								<p className="font-light text-nowrap">projets réalisés</p>
 							</div>
 						</div>
 						<div className="flex flex-col text-center md:text-start md:flex-row items-center gap-5">
 							<BsPersonCheck size={60} className="" />
 							<div className="leading-5">
 								<p className="text-4xl font-extrabold">{experienceNumber}</p>
-								<p className="font-light">années d’expérience</p>
+								<p className="font-light text-nowrap">années d’expérience</p>
 							</div>
 						</div>
 					</div>
@@ -118,18 +118,18 @@ export const About = () => {
 
 				{/* Right part */}
 				<div>
-					<img src={myPic} alt="my-picture-profile" className="w-64 outline outline-2 outline-secondary rounded-full selection:bg-transparent" />
+					<img src={myPic} alt="my-picture-profile" className="w-48 lg:w-64 outline outline-2 outline-secondary rounded-full selection:bg-transparent animate-fade-up" />
 				</div>
 			</div>
 
 			{/* BANNER SCROLLER */}
 			<div className="flex flex-col justify-center items-center gap-10 pt-40 relative w-full md:w-2/3 mx-auto">
-				<p className="text-2xl dark:text-default/75"></p>
+			<p className="text-2xl lg:text-xl text-center lg:text-start font-bold py-6">Compétences</p>
 				<BannerScroller />
 			</div>
 
 			{/* EXPERIENCES AND STUDIES */}
-			<div className="flex flex-col lg:flex-row justify-center gap-10 py-32 relative animate-fade-up">
+			<div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 py-32 relative animate-fade-up">
 				{/* Left part */}
 				<div className="flex flex-col gap-12">
 					<div className="max-w-3xl">
@@ -139,9 +139,9 @@ export const About = () => {
 				</div>
 
 				{/* Right part */}
-				<div className="flex flex-col gap-12">
+				<div className="flex flex-col md:items-start gap-12">
 					<div className="max-w-3xl">
-						<p className="text-2xl lg:text-xl text-center lg:text-start font-bold py-6">Parcours Scolaire</p>
+						<p className="text-2xl lg:text-xl text-center md:text-start font-bold py-6">Parcours Scolaire</p>
 						<Studies studies={studiesData} />
 					</div>
 				</div>
