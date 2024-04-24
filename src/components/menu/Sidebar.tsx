@@ -12,12 +12,10 @@ import { Button } from "../ui/button";
 // TODO: todo responsive
 
 export const Sidebar = () => {
-	// hooks
 	const location = useLocation();
 	const [active, setActive] = useState<string>(location.pathname);
 	const [openedMenu, setOpenedMenu] = useState<boolean>(false);
 
-	// css
 	const activeCss = "bg-secondary hover:bg-secondary/95 text-default"; // Style pour l'element actif du menu
 	const globalCss = "p-2 rounded-full transition-all duration-200 hover:animate-rotating"; // Style global qui s'applique a tous les elements non actif
 
@@ -33,6 +31,9 @@ export const Sidebar = () => {
 		{ path: "/contact", label: "Contact", icon: <BsEnvelope size={32} />, iconFill: <BsEnvelopeFill size={32} /> },
 	];
 
+	const [isScrolled, setIsScrolled] = useState(false);
+	const changeNav = `${isScrolled ? "fixed" : "absolute py-10"}`;
+
 	const handleOpenMenu = () => {
 		setOpenedMenu((prev) => !prev);
 	};
@@ -41,6 +42,26 @@ export const Sidebar = () => {
 		setActive(location.pathname);
 	}, [location.pathname]);
 
+	useEffect(() => {
+		const handleScroll = () => {
+			const scrollPosition = window.scrollY;
+			console.log(window.scrollY);
+			const threshold = 500;
+
+			if (scrollPosition > threshold) {
+				setIsScrolled(true);
+			} else if (scrollPosition == 0) {
+				setIsScrolled(false);
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
 	return (
 		<>
 			{/* {{Responsive}} Layer opacity when menu opened in responsive */}
@@ -48,7 +69,7 @@ export const Sidebar = () => {
 
 			<div className="w-14 absolute top-5 lg:top-auto right-8 z-[999] h-screen flex lg:items-center">
 				{/* {{Responsive}} Bouton qui affiche le menu */}
-				<Button variant={"link"} className="flex no-underline border-0 fixed lg:hidden" onClick={handleOpenMenu}>
+				<Button variant={"link"} className={`flex no-underline border-0 lg:hidden transition-all ` + changeNav} onClick={handleOpenMenu}>
 					{openedMenu ? <BsXLg className={`${iconCrossCss} animate-open-menu`} size={32} /> : <BsThreeDotsVertical className={`${iconThreeDotsCss} animate-close-menu`} size={32} />}{" "}
 				</Button>
 

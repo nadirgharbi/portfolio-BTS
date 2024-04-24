@@ -27,15 +27,15 @@ export const Contact = () => {
 	];
 
 	return (
-		<div className="h-screen flex flex-col justify-center items-center gap-5 text-primary dark:text-default bg-white dark:bg-primary">
-			<p className="text-4xl font-bold">Contactez Moi</p>
+		<div className="h-full flex flex-col justify-center items-center px-6 lg:px-32 py-40 space-y-10 text-primary dark:text-default bg-white dark:bg-primary">
+			<p className="text-3xl font-bold text-center">Contactez Moi</p>
 
 			{/* Information */}
-			<div className="w-1/2 animate-fade-up">
+			<div className="w-full lg:w-4/5 animate-fade-up">
 				<ContactInfos infos={infos} />
 			</div>
 
-			<div className="w-1/2 animate-fade-up">
+			<div className="w-full lg:w-4/5 animate-fade-up">
 				<Card className="">
 					<CardHeader>
 						<CardTitle>Contactez-moi</CardTitle>
@@ -78,7 +78,7 @@ export const Contact = () => {
 				</Card>
 			</div>
 
-			<div className="flex gap-2 w-1/2 animate-fade-up">
+			<div className="flex justify-center md:justify-start gap-2 w-full lg:w-4/5 animate-fade-up">
 				<Tooltip id="tooltip-social" />
 				<Button variant={"outline"} className="flex gap-2" size={"icon"} data-tooltip-id="tooltip-social" data-tooltip-content={"LinkedIn"} data-tooltip-place="bottom">
 					<BsLinkedin size={16} />

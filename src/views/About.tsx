@@ -124,7 +124,7 @@ export const About = () => {
 
 			{/* BANNER SCROLLER */}
 			<div className="flex flex-col justify-center items-center gap-10 pt-40 relative w-full md:w-2/3 mx-auto">
-			<p className="text-2xl lg:text-xl text-center lg:text-start font-bold py-6">Compétences</p>
+				<p className="text-2xl lg:text-xl text-center lg:text-start font-bold py-6">Compétences</p>
 				<BannerScroller />
 			</div>
 
@@ -146,12 +146,6 @@ export const About = () => {
 					</div>
 				</div>
 			</div>
-
-			<div className="flex justify-center gap-10 py-32 relative z-[999] animate-fade-up">hello</div>
-
-			{/* <div className="flex justify-center">
-				<p className="text-xl font-bold">BTS SIO</p>
-			</div> */}
 		</div>
 	);
 };

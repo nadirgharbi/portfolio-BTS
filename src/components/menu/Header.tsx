@@ -8,7 +8,7 @@ export const Header = () => {
 	const location = useLocation();
 
 	const [isScrolled, setIsScrolled] = useState(false);
-	const changeNav = `${isScrolled ? "backdrop-blur-xl bg-default/50 dark:bg-primary/50 fixed shadow dark:shadow-default/10 px-40 " : "top-5 absolute px-8 "}`;
+	const changeNav = `${isScrolled ? "backdrop-blur-xl bg-default/50 dark:bg-primary/50 fixed shadow dark:shadow-default/10 px-8 lg:px-40 " : "top-5 absolute px-8 "}`;
 
 	useEffect(() => {
 		const handleScroll = () => {
