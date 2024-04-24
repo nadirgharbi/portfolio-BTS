@@ -1,4 +1,3 @@
-import { StudiesProps } from "@/types";
 import React from "react";
 import { Study } from "./Study";
 

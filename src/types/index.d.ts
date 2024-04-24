@@ -25,7 +25,7 @@ interface ExeperiencesProps {
 
 /** Pour plusieurs etudes */
  interface StudiesProps {
-	studies: studiesData;
+	studies: Array<studiesData>;
 }
 
 /** Pour un seul projet */

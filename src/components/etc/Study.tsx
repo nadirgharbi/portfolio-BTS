@@ -1,5 +1,4 @@
 import React from "react";
-import { StudyTimelineProps } from "@/types";
 import { Timeline } from "flowbite-react";
 import { Badge } from "../ui/badge";
 

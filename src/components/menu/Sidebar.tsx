@@ -44,7 +44,7 @@ export const Sidebar = () => {
 	return (
 		<>
 			{/* {{Responsive}} Layer opacity when menu opened in responsive */}
-			<div className={`lg:hidden ${openedMenu ? "block" : "hidden"} bg-primary/50 fixed z-10 h-screen w-screen`}></div>
+			<div className={`lg:hidden ${openedMenu ? "block" : "hidden"} bg-primary fixed z-[999] w-screen`}></div>
 
 			<div className="w-14 absolute top-5 lg:top-auto right-8 z-[999] h-screen flex lg:items-center">
 				{/* {{Responsive}} Bouton qui affiche le menu */}

@@ -10,7 +10,7 @@ export const Home = () => {
 	const words = ["Développeur Front", "Application Web & Mobile", "UX/UI Designer", "Étudiant en alternance"];
 	return (
 		<>
-			<div className="h-screen flex flex-col justify-center items-center gap-5 lg:px-32 text-center text-primary dark:text-default bg-white dark:bg-primary">
+			<div className="h-screen flex flex-col justify-center items-center gap-5 px-4 lg:px-32 text-center text-primary dark:text-default bg-white dark:bg-primary">
 				{/* PP Image */}
 				<div>
 					<img src={myPic} alt="my-picture-profile" className="w-48 outline outline-4 outline-secondary rounded-full selection:bg-transparent" />
@@ -19,15 +19,15 @@ export const Home = () => {
 
 				{/* Introduction */}
 				<div className="flex flex-col items-center text-2xl gap-3">
-					<p className="text-4xl">
+					<p className="text-3xl md:text-4xl">
 						Hey, je suis <span className="font-black text-secondary">Nadir</span>
 					</p>
-					<p className="font-bold">
+					<p className="text-xl md:text-2xl font-bold">
 						<Typewriter words={words} typeSpeed={40} deleteSpeed={70} delaySpeed={950} cursor loop />
 					</p>
 
 					{/* Badges */}
-					<p className="flex flex-col lg:flex-row lg:gap-2">
+					<p className="flex flex-col md:flex-row md:gap-2 text-lg md:text-xl">
 						J'adore construire des{" "}
 						<div className="space-x-1">
 							<Badge variant={"outline"} className="border-indigo-400 dark:border-indigo-400 bg-zinc-200 dark:bg-zinc-800 font-mono">

@@ -12,7 +12,7 @@ import pytris from "@/assets/pytris.png";
 import snakegame from "@/assets/snakegame.png";
 import tictactoeReact from "@/assets/tictactoe-react.png";
 
- const experiencesData = [
+const experiencesData = [
 	{
 		title: "Développeur React & React Native",
 		location: "AVIS2SANTE - Six-Fours-Les-Plages",
@@ -43,7 +43,7 @@ import tictactoeReact from "@/assets/tictactoe-react.png";
 	},
 ];
 
- const projectsData = [
+const projectsData = [
 	{
 		title: "TicTacToe React",
 		description: "Ce projet suit la même logique que le Morpyon réalisé en Python, mais d'une manière différente. Ce jeu, développé avec le framework React, est directement accessible depuis le navigateur et offre une expérience plus agréable. ",
@@ -96,14 +96,14 @@ import tictactoeReact from "@/assets/tictactoe-react.png";
 	// },
 ];
 
- const studiesData = [
+const studiesData = [
 	{
 		title: "BTS SIO",
 		description: "BTS Services Informatiques aux organisations (option Solutions Logicielles et Applications Metiers) ",
 		school: "Maestris",
 		location: "Toulon",
 		period: "2022 - Actuellement",
-		status: "En cours"
+		status: "En cours",
 	},
 	{
 		title: "Licence Informatique",
@@ -111,7 +111,7 @@ import tictactoeReact from "@/assets/tictactoe-react.png";
 		school: "Université de Toulon",
 		location: "La Garde",
 		period: "2019 - 2022",
-		status: "Niveau"
+		status: "Niveau",
 	},
 	{
 		title: "BAC STI2D",
@@ -119,7 +119,7 @@ import tictactoeReact from "@/assets/tictactoe-react.png";
 		school: "Lycée Rouvière",
 		location: "Toulon",
 		period: "2018 - 2019",
-		status: "Diplomé"
+		status: "Diplomé",
 	},
 	{
 		title: "Brevet des collèges",
@@ -127,10 +127,10 @@ import tictactoeReact from "@/assets/tictactoe-react.png";
 		school: "Collège Django Reinhardt",
 		location: "Toulon",
 		period: "2018 - 2019",
-		status: "Diplomé"
+		status: "Diplomé",
 	},
-] as const;
+];
 
- const skillsData: string[] = ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Python", "Tailwind", "Figma", "Git", "GitLab", "PHP", "MySQL", "Java", "Django"] as const;
+const skillsData: string[] = ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Python", "Tailwind", "Figma", "Git", "GitLab", "PHP", "MySQL", "Java", "Django"];
 
- export {experiencesData, projectsData, studiesData, skillsData}
+export { experiencesData, projectsData, studiesData, skillsData };
