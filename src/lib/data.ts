@@ -6,11 +6,12 @@
  * Librairies UI : https://ui.shadcn.com/
  */
 
-import crmProject from "@/assets/crmproject.png";
-import tictactoe from "@/assets/tic-tac-toe-img.png";
-import pytris from "@/assets/pytris.png";
-import snakegame from "@/assets/snakegame.png";
-import tictactoeReact from "@/assets/tictactoe-react.png";
+import crmProject from "@/assets/crm.png";
+import tictactoe from "@/assets/tic-tac-toe.png";
+import pytris from "@/assets/tetris.png";
+import snakegame from "@/assets/snake.png";
+import tictactoeReact from "@/assets/tic-tac-toe.png";
+import chess from "@/assets/chess.png";
 
 const experiencesData = [
 	{
@@ -81,6 +82,14 @@ const projectsData = [
 		description: "J'ai réalisé ce projet lors de mon année en licence. C'est donc l'un de mes premiers projets aboutis en Python.",
 		tags: ["Python", "PyGame", "Git", "Arcade", "POO"],
 		imageUrl: snakegame,
+		hrefLink: "https://github.com/nadirgharbi/PySnake",
+		finished: true,
+	},
+	{
+		title: "Chess Movement Shower",
+		description: "J'ai réalisé ce projet lors de mon année en licence. C'est donc l'un de mes premiers projets aboutis en Python.",
+		tags: ["Python", "PyGame", "Git", "Arcade", "POO"],
+		imageUrl: chess,
 		hrefLink: "https://github.com/nadirgharbi/PySnake",
 		finished: true,
 	},

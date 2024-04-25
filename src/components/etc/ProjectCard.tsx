@@ -1,28 +1,15 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "flowbite-react";
 import { Badge } from "../ui/badge";
 import { NavLink } from "react-router-dom";
 
 export const ProjectCard: React.FC<ProjectProps> = ({ title, description, tags, imageUrl, hrefLink, finished }) => {
-	return (
-		<>
-			<NavLink to={hrefLink} target="_blank">
-				<Card className="">
-					<CardHeader className="p-0">
-						<img src={imageUrl} alt={imageUrl} className="w-full h-[300px] object-cover rounded" />
-					</CardHeader>
-					<CardContent className="flex flex-col gap-3 py-6">
-						<CardTitle>{title}</CardTitle>
-						<CardDescription className="min-h-[100px]">{description}</CardDescription>
-					</CardContent>
-					<CardFooter>
-						<div className="flex gap-2 py-2">
-							{tags.map((tag: string, key: number) => (
-								<Badge variant={"outline"} className="rounded-lg text-sm py-2 border-primary dark:border-default border-opacity-20 dark:border-opacity-20" key={key}>{tag}</Badge>
-							))}
-						</div>
-					</CardFooter>
-				</Card>
-			</NavLink>
-		</>
-	);
+  return (
+    <>
+      <Card className="max-w-xs md:max-w-md pt-16 mb-20">
+        <img src={imageUrl} alt={imageUrl} className="w-32 absolute -translate-y-40 lg:-translate-y-52 xl:-translate-y-44" />
+        <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+        <p className="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+      </Card>
+    </>
+  );
 };
