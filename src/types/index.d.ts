@@ -35,7 +35,8 @@ interface ProjectProps {
 	tags: string[];
 	imageUrl: string;
 	hrefLink: string;
-	finished?: boolean;
+	hasSource: boolean
+	finished: boolean
 }
 
 /** Pour plusieurs projets */

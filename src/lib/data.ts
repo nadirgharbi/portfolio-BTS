@@ -1,17 +1,11 @@
-/**
- * Mentions Legales
- *
- * Icones : https://react-icons.github.io/react-icons/
- * Polices d'ecriture : https://www.fontshare.com/
- * Librairies UI : https://ui.shadcn.com/
- */
-
 import crmProject from "@/assets/crm.png";
-import tictactoe from "@/assets/tic-tac-toe.png";
+import tictactoePy from "@/assets/tic-tac-toe-py.png";
 import pytris from "@/assets/tetris.png";
 import snakegame from "@/assets/snake.png";
 import tictactoeReact from "@/assets/tic-tac-toe.png";
 import chess from "@/assets/chess.png";
+import legalConnectLogo from "@/assets/fingerprint.png";
+import MonmedecinMobile from "@/assets/mobile-phone.png";
 
 // Arrays
 const experiencesData = [
@@ -47,51 +41,75 @@ const experiencesData = [
 
 const projectsData = [
 	{
-		title: "TicTacToe React",
-		description: "Ce projet suit la même logique que le Morpyon réalisé en Python, mais d'une manière différente. Ce jeu, développé avec le framework React, est directement accessible depuis le navigateur et offre une expérience plus agréable. ",
-		tags: ["React", "Vite Js", "TailwindCSS", "Retro"],
+		title: "LegalConnect",
+		description: "LegalConnect est une solution de téléconsultation juridique. Cette solution facilite les rendez-vous entre les professionnels et leurs clients. Elle offre un système de visioconférence, une prise de rendez-vous et une meilleure gestion.",
+		tags: ["React", "Typescript", "Symfony", "API"],
+		imageUrl: legalConnectLogo,
+		hrefLink: "https://www.gharbi.slameductoul.ovh/",
+		hasSource: true,
+		finished: false,
+	},
+	{
+		title: "monmedecin.org",
+		description: "Monmedecin.org est une plateforme de téléconsultation qui permet de prendre rendez-vous avec un praticien près de chez soi ou en téléconsultation. Pour ma part, je travaille sur ce projet en tant que développeur React et React Native.",
+		tags: ["ReactNative", "React", "Symfony", "Scrum", "GitLab"],
+		imageUrl: MonmedecinMobile,
+		hrefLink: "https://landing.monmedecin.org/",
+		hasSource: true,
+		finished: true,
+	},
+	{
+		title: "TicTacToe.jsx",
+		description: "Un TicTacToe version web ! Une version améliorée du projet tictactoe.py avec la possibilité de se connecter à un compte afin de conserver le score des parties précédentes.",
+		tags: ["React", "ViteJS", "TailwindCSS", "AdonisJS"],
 		imageUrl: tictactoeReact,
 		hrefLink: "https://tictactoe-react-nine.vercel.app/",
+		hasSource: true,
 		finished: true,
 	},
 	{
 		title: "CRM NGSTech",
 		description: "Mon premier projet au sein de l'entreprise NGSTech. Grâce à une méthode agile et des outils performants, j'ai pu acquérir d'énormes compétences.",
-		tags: ["React", "Laravel", "MySQL", "Agile"],
+		tags: ["React", "Laravel", "MySQL", "Scrum"],
 		imageUrl: crmProject,
 		hrefLink: "",
+		hasSource: false,
 		finished: true,
 	},
 	{
-		title: "Morpyon.py",
-		description: "Morpyon est une version du célèbre jeu de Morpion que j'ai réalisée en tant que projet personnel.",
-		tags: ["Python", "PyGame", "Git", "POO"],
-		imageUrl: tictactoe,
+		title: "tictactoe.py",
+		description: "tictactoe.py est une version du célèbre jeu du TicTacToe que j'ai réalisée en tant que projet personnel.",
+		tags: ["Python", "PyGame", "Morpion", "2 joueurs"],
+		imageUrl: tictactoePy,
 		hrefLink: "https://github.com/nadirgharbi/TicTacToe",
+		hasSource: true,
 		finished: true,
 	},
 	{
 		title: "tetris.py",
-		description: "Tout comme le projet Morpyon, ce projet personnel a été réalisé avec le langage Python et ses diverses librairies.",
-		tags: ["Python", "PyGame", "Git", "Arcade", "POO"],
+		description: "Tout comme le projet Morpyon, ce projet reprend le célèbre jeu Tetris. Il a été réalisé avec le langage Python et ses diverses librairies.",
+		tags: ["Python", "PyGame", "Tetris", "Arcade", "POO"],
 		imageUrl: pytris,
 		hrefLink: "https://github.com/nadirgharbi/Pytris",
+		hasSource: true,
 		finished: true,
 	},
 	{
-		title: "PySnake.py",
+		title: "snake.py",
 		description: "J'ai réalisé ce projet lors de mon année en licence. C'est donc l'un de mes premiers projets aboutis en Python.",
-		tags: ["Python", "PyGame", "Git", "Arcade", "POO"],
+		tags: ["Python", "PyGame", "Snake", "Arcade"],
 		imageUrl: snakegame,
 		hrefLink: "https://github.com/nadirgharbi/PySnake",
+		hasSource: true,
 		finished: true,
 	},
 	{
-		title: "Chess Movement Shower",
-		description: "J'ai réalisé ce projet lors de mon année en licence. C'est donc l'un de mes premiers projets aboutis en Python.",
-		tags: ["Python", "PyGame", "Git", "Arcade", "POO"],
+		title: "Validate Move Shower",
+		description: "Un de mes premiers projets qui consiste uniquement à afficher les coups légaux en échecs lors de la sélection d'un pion.",
+		tags: ["Python", "Tkinter", "Chess"],
 		imageUrl: chess,
-		hrefLink: "https://github.com/nadirgharbi/PySnake",
+		hrefLink: "",
+		hasSource: false,
 		finished: true,
 	},
 ];

@@ -66,6 +66,13 @@ module.exports = {
           to: {
             transform: "translate(calc(-50% - 0.5rem))"
           }
+        },
+        "not-found": {
+          "0%" : { transform: "rotate(0)" },
+          "25%" : { transform: "rotate(3deg)" },
+          "50%" : { transform: "rotate(0)" },
+          "75%" : { transform: "rotate(3deg)" },
+          "100%" : { transform: "rotate(0)" },
         }
       },
       animation: {
@@ -79,7 +86,8 @@ module.exports = {
         loading: "loading 1.5s ease infinite",
         "fade-up": "fade-up 0.6s ease-in-out",
         scroll: "scroll 80s linear infinite",
-        "fade-in": "fade-in 1s"
+        "fade-in": "fade-in 1s",
+        "not-found": "not-found 0.7s ease-in-out",
 
       },
     },

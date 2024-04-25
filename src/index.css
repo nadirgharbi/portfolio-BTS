@@ -1,4 +1,3 @@
-/* @import url('https://api.fontshare.com/v2/css?f[]=general-sans@200,201,300,301,400,401,500,501,600,601,700,701&display=swap" rel="stylesheet'); */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 @tailwind base;
@@ -10,7 +9,44 @@
 /* ============================= */
 
 * {
-    /* font-family: 'General Sans', sans-serif; */
-    /* font-family: 'Switzer', sans-serif; */
+
     font-family: "Inter", sans-serif;
+}
+
+/* =============================== */
+/* ========== SCROLLBAR ========== */
+/* =============================== */
+
+/* MAIN SCROLL BAR*/
+::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: #dadada;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 3px;
+    background-color: #929292;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: 0 0 1px #09090b22;
+    background-color: #7070FFdd;
+}
+
+/* DIV SCROLL BAR */
+div::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: #dadada;
+}
+
+div::-webkit-scrollbar {
+    width: 7px;
+    height: 3px;
+    background-color: #929292;
+}
+
+div::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: 0 0 1px #09090b22;
+    background-color: #313131;
 }
