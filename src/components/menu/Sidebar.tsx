@@ -70,7 +70,7 @@ export const Sidebar = () => {
 			<div className="w-14 absolute top-5 lg:top-auto right-8 z-[999] h-screen flex lg:items-center">
 				{/* {{Responsive}} Bouton qui affiche le menu */}
 				<Button variant={"link"} className={`flex no-underline border-0 lg:hidden transition-all ` + changeNav} onClick={handleOpenMenu}>
-					{openedMenu ? <BsXLg className={`${iconCrossCss} animate-open-menu`} size={32} /> : <BsThreeDotsVertical className={`${iconThreeDotsCss} animate-close-menu`} size={32} />}{" "}
+					{openedMenu ? <BsXLg className={`${iconCrossCss} animate-open-menu`} size={32} /> : <BsThreeDotsVertical className={`${iconThreeDotsCss} animate-fade-in`} size={32} />}{" "}
 				</Button>
 
 				{/* Menu */}

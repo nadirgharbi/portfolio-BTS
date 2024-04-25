@@ -37,7 +37,8 @@ module.exports = {
           from: { transform: "rotate(45deg)", opacity: "50" },
           to: { transform: "rotate(90deg)", opacity: "100" },
         },
-        "close-menu": {
+        
+        "fade-in": {
           from: { opacity: "0" },
           to: { opacity: "100" },
         },
@@ -72,13 +73,14 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
         rotating: "rotating 0.3s ease-out",
         "open-menu": "open-menu 0.1s",
-        "close-menu": "close-menu 0.1s",
         "fade-in-scale": "fade-in-scale 0.3s ease-out",
         "fade-out-scale": "fade-out-scale 0.2s ease-out",
         "fade-in-scale-bg": "fade-in-scale-bg 0.1s linear",
         loading: "loading 1.5s ease infinite",
         "fade-up": "fade-up 0.6s ease-in-out",
-        scroll: "scroll 80s linear infinite"
+        scroll: "scroll 80s linear infinite",
+        "fade-in": "fade-in 1s"
+
       },
     },
   },

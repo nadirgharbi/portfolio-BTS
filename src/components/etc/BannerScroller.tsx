@@ -31,27 +31,6 @@ export const BannerScroller = () => {
 		{ icon: <SiRuby className={logoCSS} />, alt: "Ruby" }, // Ruby
 	] as const;
 
-	// const logoSkills = [
-	// 	"React", // React
-	// 	"Javascript", // Javascript
-	// 	"Typescript", // Typescript
-	// 	"HTML", // HTML
-	// 	"Git", // Git
-	// 	"MySQL", // MySQL
-	// 	"VScode", // VScode
-	// 	"Figma", // Figma
-	// 	"TailwindCSS", // TailwindCSS
-	// 	"IntelliJ", // IntelliJ
-	// 	"Symfony", // Symfony
-	// 	"Java", // Java
-	// 	"Postman", // Postman
-	// 	"CSS3", // CSS3
-	// 	"Gitlab", // Gitlab
-	// 	"Docker", // Docker
-	// 	"Insomnia", // Insomnia
-	// 	"Ruby", // Ruby
-	// ] as const;
-
 	useEffect(() => {
 		// Sélectionne tous les éléments avec la classe CSS '.scroller'
 		const scrollers = document.querySelectorAll<HTMLElement>(".scroller");
@@ -79,7 +58,7 @@ export const BannerScroller = () => {
 
 	return (
 		<>
-			<div className="scroller max-w-full self-center overflow-hidden md:[mask:linear-gradient(90deg,_transparent,_white_20%,_white_80%,_transparent)]" data-direction={"left"} data-animated={dataAnimated}>
+			<div className="scroller max-w-full self-center overflow-hidden md:[mask:linear-gradient(90deg,_transparent,_white_20%,_white_80%,_transparent)] animate-fade-in" data-direction={"left"} data-animated={dataAnimated}>
 				<ul className="scroller__inner flex flex-wrap gap-16 w-max animate-scroll">
 					{logoSkills.map((logo) => (
 						<li className="">{logo.icon}</li>
