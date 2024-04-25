@@ -13,6 +13,7 @@ import snakegame from "@/assets/snake.png";
 import tictactoeReact from "@/assets/tic-tac-toe.png";
 import chess from "@/assets/chess.png";
 
+// Arrays
 const experiencesData = [
 	{
 		title: "Développeur React & React Native",
@@ -93,16 +94,6 @@ const projectsData = [
 		hrefLink: "https://github.com/nadirgharbi/PySnake",
 		finished: true,
 	},
-	// {
-	// 	title: "Flappy Bird",
-	// 	description: "Afin d'améliorer mon niveau en programmation orientée objet (POO), j'ai décidé de développer le jeu Flappy Bird en Python.",
-	// 	tags: ["Pygame", "POO", "Mobile", "Challenge"],
-	// 	imageUrl: flappyBird,
-	// 	hrefLink: "",
-	// 	finished: false,
-	// 	loading: true,
-	// 	// Changer les etats de finished et loading lorsque le projet est terminer
-	// },
 ];
 
 const studiesData = [
@@ -142,4 +133,5 @@ const studiesData = [
 
 const skillsData: string[] = ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Python", "Tailwind", "Figma", "Git", "GitLab", "PHP", "MySQL", "Java", "Django"];
 
+// Exports
 export { experiencesData, projectsData, studiesData, skillsData };

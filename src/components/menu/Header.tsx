@@ -13,7 +13,6 @@ export const Header = () => {
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollPosition = window.scrollY;
-			console.log(window.scrollY);
 			const threshold = 500;
 
 			if (scrollPosition > threshold) {

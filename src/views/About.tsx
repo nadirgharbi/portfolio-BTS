@@ -62,7 +62,7 @@ export const About = () => {
 	}, [experienceNumber]);
 
 	return (
-		<div className="h-full px-6 lg:px-32 py-40 text-primary dark:text-default bg-white dark:bg-primary">
+		<div className={"max-h-full flex flex-col items-center justify-center px-6 lg:px-32 py-40 text-primary dark:text-default bg-white dark:bg-primary"}>
 			{/* PRESENTATION / INTRO */}
 			<div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-20 relative ">
 				{/* Left part */}
@@ -123,7 +123,7 @@ export const About = () => {
 			</div>
 
 			{/* BANNER SCROLLER */}
-			<div className="flex flex-col justify-center items-center gap-10 pt-40 relative w-full md:w-2/3 mx-auto">
+			<div className="flex flex-col justify-center items-center gap-10 pt-20 relative w-full md:w-2/3 mx-auto">
 				<p className="text-2xl lg:text-xl text-center lg:text-start font-bold py-6">Compétences</p>
 				<BannerScroller />
 			</div>

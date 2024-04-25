@@ -25,7 +25,6 @@ export const Sidebar = () => {
 	const sidebarItems = [
 		{ path: "/", label: "Accueil", icon: <BsHouse size={32} />, iconFill: <BsHouseFill size={32} /> },
 		{ path: "/about", label: "À Propos de moi", icon: <BsPersonVcard size={32} />, iconFill: <BsPersonVcardFill size={32} /> },
-		{ path: "/skills", label: "Compétences", icon: <BsPersonGear size={32} />, iconFill: <BsPersonFillGear size={32} /> },
 		{ path: "/projects", label: "Projets", icon: <BsFileEarmarkCode size={32} />, iconFill: <BsFileEarmarkCodeFill size={32} /> },
 		{ path: "/monitoring", label: "Veilles", icon: <BsBinoculars size={32} />, iconFill: <BsBinocularsFill size={32} /> },
 		{ path: "/contact", label: "Contact", icon: <BsEnvelope size={32} />, iconFill: <BsEnvelopeFill size={32} /> },
@@ -45,7 +44,6 @@ export const Sidebar = () => {
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollPosition = window.scrollY;
-			console.log(window.scrollY);
 			const threshold = 500;
 
 			if (scrollPosition > threshold) {
