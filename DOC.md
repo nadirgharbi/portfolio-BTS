@@ -4,7 +4,7 @@ Mentions Legales et informations
 React : https://react.dev/
 Typescript : https://www.typescriptlang.org/
 Tailwindcss : https://tailwindcss.com/
-Adonis JS : https://adonisjs.com/
+Adonis JS : https://v5-docs.adonisjs.com/guides/introduction
 Base de donnee : https://www.mysql.com/
 
 => Icones :
