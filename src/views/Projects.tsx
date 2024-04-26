@@ -26,7 +26,7 @@ export const Projects = () => {
 			) : (
 				<div className="space-y-2">
 					<img src={notFound} alt={notFound} className="w-40 mx-auto animate-not-found" />
-					<p className="text-lg text-start">Aucun resultat trouves...</p>
+					<p className="text-lg text-start">Aucun résultat trouvés...</p>
 				</div>
 			)}
 		</div>

@@ -1,56 +1,70 @@
 /** Pour une seule experiences */
 interface ExperienceTimelineProps {
-	title: string;
-	location: string;
-	description: string;
-	date: string;
-	latest?: boolean;
-	tags?: string[];
+  title: string;
+  location: string;
+  description: string;
+  date: string;
+  latest?: boolean;
+  tags?: string[];
 }
 
 /** Pour plusieurs experiences */
 interface ExeperiencesProps {
-	experiences: Array<ExperienceTimelineProps>;
+  experiences: Array<ExperienceTimelineProps>;
 }
 
 /** Pour une seule etude */
 interface StudyTimelineProps {
-	title: string;
-	description: string;
-	school: string;
-	location: string;
-	period: string;
-	status: "Diplomé" | "Niveau" | "En cours";
+  title: string;
+  description: string;
+  school: string;
+  location: string;
+  period: string;
+  status: "Diplomé" | "Niveau" | "En cours";
 }
 
 /** Pour plusieurs etudes */
 interface StudiesProps {
-	studies: Array<studiesData>;
+  studies: Array<studiesData>;
 }
 
 /** Pour un seul projet */
 interface ProjectProps {
-	title: string;
-	description: string;
-	tags: string[];
-	imageUrl: string;
-	hrefLink: string;
-	hasSource: boolean
-	finished: boolean
+  title: string;
+  description: string;
+  tags: string[];
+  imageUrl: string;
+  hrefLink: string;
+  hasSource: boolean;
+  finished: boolean;
 }
 
 /** Pour plusieurs projets */
 interface ProjectsProps {
-	projects: Array<ProjectProps>;
+  projects: Array<ProjectProps>;
 }
 
 /** Pour une seule carte informative dans la page contact */
 interface ContactInfoProps {
-	icon: IconType;
-	label?: string;
+  icon: IconType;
+  label?: string;
 }
 
 /** Pour plusieurs cartes informatives dans la page contact */
 interface ContactInfosProps {
-	infos: Array<ContactInfoProps>
+  infos: Array<ContactInfoProps>;
+}
+
+interface MonitoringProps {
+  id: number;
+  titre: string;
+  description: string;
+  datePublication: Date;
+  auteur: string;
+  lien: string;
+  imageUrl: string;
+}
+
+interface MonitoringsProps {
+  veilles: Array<MonitoringProps>;
 }
