@@ -27,7 +27,7 @@ export const Contact = () => {
 	];
 
 	return (
-		<div className={"max-h-full flex flex-col items-center justify-center px-6 lg:px-32 py-40 gap-10 text-primary dark:text-default bg-white dark:bg-primary"}>
+		<div className={"min-h-screen flex flex-col items-center justify-center px-6 lg:px-32 py-40 gap-10 text-primary dark:text-default bg-white dark:bg-primary"}>
 			<p className="text-3xl md:text-4xl font-extrabold">Contactez-Moi</p>
 
 			{/* Information */}

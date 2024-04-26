@@ -13,7 +13,7 @@ export const Home = () => {
     <>
       <div className="h-screen flex flex-col justify-center items-center gap-5 px-4 py-12 lg:px-32 text-center text-primary dark:text-default bg-white dark:bg-primary">
         {/* PP Image */}
-        <div className="animate-fade-up">
+        <div className="animate-fade-in-scale">
           <img src={myPic} alt="my-picture-profile" className="w-48 outline outline-4 outline-secondary rounded-full selection:bg-transparent" />
           <p className="absolute translate-x-28 -translate-y-10 text-5xl selection:bg-transparent">👋🏽</p>
         </div>
