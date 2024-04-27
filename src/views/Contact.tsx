@@ -8,9 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Tooltip } from "react-tooltip";
-import { resend } from "@/lib/resend";
-import GithubAccessTokenEmail from "../../emails/GithubEmail";
-import { redirect } from "react-router-dom";
 
 type ContactInfosType = {
 	name: string;
@@ -41,19 +38,6 @@ export const Contact = () => {
 
 	const onSubmitContact = () => {
 		console.log(contactInfos);
-	};
-
-	const actionForm = async (formData: FormData) => {
-		const email = formData.get("email") as string;
-		await resend.emails.send({
-			from: "nadirgharbi100@gmail.com",
-			to: email,
-			subject: "Email verification",
-			react: GithubAccessTokenEmail({
-				username: "nadirou"
-			}),
-		});
-		redirect("/")
 	};
 
 	return (
