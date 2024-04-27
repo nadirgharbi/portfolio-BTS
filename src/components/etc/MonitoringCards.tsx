@@ -11,7 +11,7 @@ export const MonitoringCards: React.FC<MonitoringsProps> = ({ veilles }) => {
 	const [sortBy, setSortBy] = useState<string>("Trier par");
 
 	// States for pagination
-	const [itemsPerPage, setItemsPerPage] = useState<number>(5);
+	const [itemsPerPage, setItemsPerPage] = useState<number>(8);
 	const [currentPage, setCurrentPage] = useState<number>(1);
 
 	const onPageChange = (page: number) => setCurrentPage(page); // Change current page
