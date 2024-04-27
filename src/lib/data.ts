@@ -6,6 +6,7 @@ import tictactoeReact from "@/assets/tic-tac-toe.png";
 import chess from "@/assets/chess.png";
 import legalConnectLogo from "@/assets/fingerprint.png";
 import MonmedecinMobile from "@/assets/mobile-phone.png";
+import todoIcon from "@/assets/to-do-list.png";
 
 // Arrays
 const experiencesData = [
@@ -46,6 +47,15 @@ const projectsData = [
 		tags: ["React", "Typescript", "Symfony", "API"],
 		imageUrl: legalConnectLogo,
 		hrefLink: "https://www.gharbi.slameductoul.ovh/",
+		hasSource: true,
+		finished: false,
+	},
+	{
+		title: "Todolist",
+		description: "Comment ne pas se passer de la Todolist quand on debute dans le developpement web. Pour le moment, le projet est attente mais toujours en cours de realisation. Une version Beta est disponible sur Github.",
+		tags: ["React", "Typescript", "Vercel", "JsonServer"],
+		imageUrl: todoIcon,
+		hrefLink: "https://react-todo-vite.vercel.app/",
 		hasSource: true,
 		finished: false,
 	},
