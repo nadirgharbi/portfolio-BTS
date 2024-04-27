@@ -74,7 +74,7 @@ export const Sidebar = () => {
 
 				{/* Menu */}
 				<div
-					className={`flex flex-col items-center justify-center gap-2 py-3 px-8 fixed z-[999] top-20 right-6 lg:top-auto lg:left-4 rounded-2xl w-14 bg-default dark:bg-primary text-primary dark:text-default border border-primary/15 dark:border-default/15 ${
+					className={`flex flex-col items-center justify-center gap-2 py-3 px-8 fixed z-[999] top-24 right-6 lg:top-auto lg:left-4 rounded-2xl w-14 bg-default dark:bg-primary text-primary dark:text-default border border-primary/15 dark:border-default/15 ${
 						openedMenu ? "block transition-all animate-fade-in-scale" : " hidden lg:flex"
 					}`}>
 					{sidebarItems.map((item, key) => (

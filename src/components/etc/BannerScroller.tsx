@@ -6,7 +6,7 @@ import { SiIntellijidea, SiInsomnia, SiPostman, SiRuby, SiAdonisjs } from "react
 import { NavLink } from "react-router-dom";
 
 export const BannerScroller = () => {
-	const dataAnimated: boolean = true;
+	const [dataAnimated, setDataAnimated] = useState<boolean>(true);
 
 	const logoCSS: string = "text-primary/75 dark:text-default/75 w-20 h-20" as const;
 
@@ -60,9 +60,9 @@ export const BannerScroller = () => {
 
 	return (
 		<>
-			<div className="scroller max-w-full self-center overflow-hidden md:[mask:linear-gradient(90deg,_transparent,_white_20%,_white_80%,_transparent)] animate-fade-in" data-direction={"left"} data-animated={dataAnimated}>
+			<div className={`scroller max-w-full self-center overflow-hidden md:[mask:linear-gradient(90deg,_transparent,_white_20%,_white_80%,_transparent)] animate-fade-in`} data-animated={dataAnimated}>
 				<NavLink to={"/skills"}>
-					<ul className="scroller__inner flex flex-wrap gap-16 w-max animate-scroll">
+					<ul className="scroller__inner flex flex-wrap gap-16 w-max animate-scroll transition-all hover:opacity-75">
 						{logoSkills.map((logo) => (
 							<li className="">{logo.icon}</li>
 						))}

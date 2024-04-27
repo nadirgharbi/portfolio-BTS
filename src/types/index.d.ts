@@ -55,14 +55,16 @@ interface ContactInfosProps {
   infos: Array<ContactInfoProps>;
 }
 
+// Same datas for 
 interface MonitoringProps {
   id: number;
   titre: string;
   description: string;
   datePublication: Date;
-  auteur: string;
+  source: string;
   lien: string;
   imageUrl: string;
+  category: string;
 }
 
 interface MonitoringsProps {

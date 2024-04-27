@@ -3,12 +3,12 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 export const ContactInfo: React.FC<ContactInfoProps> = ({ icon, label }) => {
 	return (
 		<>
-			<Card className="bg-default dark:bg-primary relative z-[900]">
-				<CardHeader className="flex gap-2 items-center justify-center">{icon}</CardHeader>
-				<CardContent className="text-center text-sm font-bold">
+			<div className="relative z-[902] space-y-3 mt-10 "> 
+				<p className="flex gap-2 items-center justify-center">{icon}</p>
+				<div className="text-center text-sm font-bold text-wrap">
 					<p>{label}</p>
-				</CardContent>
-			</Card>
+				</div>
+			</div>
 		</>
 	);
 };
