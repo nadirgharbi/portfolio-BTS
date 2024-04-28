@@ -6,11 +6,13 @@ import { Skills } from "./views/Skills";
 import { Projects } from "./views/Projects";
 import { Monitoring } from "./views/Monitoring";
 import { Contact } from "./views/Contact";
+import { NotFound } from "./views/NotFound";
 
 export const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <App />,
+		errorElement: <NotFound />,
 		children: [
 			{
 				path: "/",

@@ -18,7 +18,7 @@ export const MonitoringCards: React.FC<MonitoringsProps> = ({ veilles }) => {
 	// Displaying in current page
 	const startIndex = (currentPage - 1) * itemsPerPage;
 	const endIndex = startIndex + itemsPerPage;
-	const visibleVeilles = veilles.slice(startIndex, endIndex);
+	const visibleVeilles = veilles ? veilles.slice(startIndex, endIndex) : []
 
 	// Sort By conditions
 	if (sortBy === "ABC") {
