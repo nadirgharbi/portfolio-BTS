@@ -141,7 +141,7 @@ export const Contact = () => {
 									</div>
 									<div className="space-y-3 mt-5">
 										{/* Check if form is not empty and load the Google reCAPTCHA */}
-										{checkForm() && <ReCAPTCHA sitekey="6Ld5Y8kpAAAAAPhrYkHuH_863G4kvtrxWhlVN4EO" onChange={(value) => setCaptchaVal(value)} />}
+										{checkForm() && <ReCAPTCHA sitekey="6LdtYckpAAAAAKf_TVa_-sVmIFTRCkV_lIREjz4s" onChange={(value) => setCaptchaVal(value)} />}
 
 										{/* Button Submit */}
 										<Button className="disabled:bg-default/80" type="submit" disabled={isSubmitting}>
