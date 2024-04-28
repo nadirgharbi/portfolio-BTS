@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BsHouse, BsHouseFill, BsPersonVcard, BsPersonVcardFill, BsPersonGear, BsPersonFillGear, BsFileEarmarkCode, BsFileEarmarkCodeFill, BsBinoculars, BsBinocularsFill, BsEnvelope, BsEnvelopeFill, BsThreeDots, BsThreeDotsVertical, BsXLg } from "react-icons/bs";
+import { BsHouse, BsHouseFill, BsPersonVcard, BsPersonVcardFill, BsPersonGear, BsPersonFillGear, BsFileEarmarkCode, BsFileEarmarkCodeFill, BsBinoculars, BsBinocularsFill, BsEnvelope, BsEnvelopeFill, BsThreeDotsVertical, BsXLg } from "react-icons/bs";
 import { NavLink, useLocation } from "react-router-dom";
 import { Separator } from "../ui/separator";
 import { ModeToggle } from "../theme/ModeToggle";
@@ -8,8 +8,6 @@ import "react-tooltip/dist/react-tooltip.css";
 import { Download } from "lucide-react";
 import CVNadir from "../../assets/cv-nadir.pdf";
 import { Button } from "../ui/button";
-
-// TODO: todo responsive
 
 export const Sidebar = () => {
 	const location = useLocation();
