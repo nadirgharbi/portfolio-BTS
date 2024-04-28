@@ -47,11 +47,17 @@ export const Contact = () => {
 		},
 	];
 
+	const checkForm = () => {
+		return Boolean(contactInfos.name) && Boolean(contactInfos.email) && Boolean(contactInfos.subject) && Boolean(contactInfos.message);
+	};
+
+	// Submit the form
 	const handleSubmit = (e: any) => {
 		e.preventDefault();
 
 		if (catpchaVal) {
 			setIsSubmitting(true);
+
 			// Identification au compte EmailJS
 			const serviceID = "service_svvxweo";
 			const templateID = "template_x0rt2fk";
@@ -70,19 +76,20 @@ export const Contact = () => {
 			emailjs
 				.send(serviceID, templateID, templateParams, publicKey)
 				.then((response) => {
-					console.log("Email envoye !", response);
+					console.log("Email envoyé !", response);
 					setContactInfos({ name: "", email: "", subject: "", message: "" });
-					toast.success("Votre message a été envoyé avec succès !"); // toast messages
+					toast.success("Votre message a été envoyé avec succès !");
 				})
 				.catch((error) => {
-					toast.error("Erreur lors de l'envoi du mail. Source de l'erreur :" + error); // toast messages
+					toast.error("Erreur lors de l'envoi du mail. Source de l'erreur :" + error);
 					console.error("Erreur lors de l'envoi du mail", error);
 				})
 				.finally(() => {
-					setIsSubmitting(true); // j'ai ajouter ceci pour remettre les valeurs initial mais ca ne veux pas
-					setCaptchaVal(null); // j'ai ajouter ceci pour remettre les valeurs initial mais ca ne veux pas
-					window.location.reload();
+					setIsSubmitting(false); // Remettre le bouton à l'état initial
+					setCaptchaVal(null); // Réinitialiser la valeur du captcha
 				});
+		} else {
+			toast.error("Veuillez valider le captcha avant d'envoyer le message !");
 		}
 	};
 
@@ -142,8 +149,8 @@ export const Contact = () => {
 										</div>
 									</div>
 									<div className="space-y-3 mt-5">
-										{/* Google reCAPTCHA */}
-										<ReCAPTCHA sitekey="6Ld5Y8kpAAAAAPhrYkHuH_863G4kvtrxWhlVN4EO" onChange={(value) => setCaptchaVal(value)} />
+										{/* Check if form is not empty and load the Google reCAPTCHA */}
+										{checkForm() && <ReCAPTCHA sitekey="6Ld5Y8kpAAAAAPhrYkHuH_863G4kvtrxWhlVN4EO" onChange={(value) => setCaptchaVal(value)} />}
 
 										{/* Button Submit */}
 										<Button className="disabled:bg-default/80" type="submit" disabled={isSubmitting}>
