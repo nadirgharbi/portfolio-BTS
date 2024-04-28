@@ -10,8 +10,9 @@ import { Button } from "@/components/ui/button";
 import { Tooltip } from "react-tooltip";
 import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "sonner";
+import ReCAPTCHA from "react-google-recaptcha";
 import { redirect } from "react-router-dom";
-// import ReCAPTCHA from "react-google-recaptcha";
+import { Spinner } from "flowbite-react";
 
 type ContactInfosType = {
 	name: string;
@@ -22,10 +23,13 @@ type ContactInfosType = {
 
 export const Contact = () => {
 	// Disabled button when send mail
-	const [disabledButton, setDisabledButton] = useState(false);
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	// Contact form datas
 	const [contactInfos, setContactInfos] = useState<ContactInfosType>({ name: "", email: "", subject: "", message: "" });
+
+	// Catpcha Value
+	const [catpchaVal, setCaptchaVal] = useState<string | null>(null);
 
 	// Contact details
 	const infos = [
@@ -45,37 +49,42 @@ export const Contact = () => {
 
 	const handleSubmit = (e: any) => {
 		e.preventDefault();
-		// Identification au compte EmailJS
-		const serviceID = "service_svvxweo";
-		const templateID = "template_x0rt2fk";
-		const publicKey = "MjIfD4GxiBI5JkGqA";
 
-		// Parametre pour indiquer les informations du formulaire
-		const templateParams = {
-			from_name: contactInfos.name,
-			from_email: contactInfos.email,
-			to_name: "Nadirou",
-			subject: contactInfos.subject,
-			message: contactInfos.message,
-		};
+		if (catpchaVal) {
+			setIsSubmitting(true);
+			// Identification au compte EmailJS
+			const serviceID = "service_svvxweo";
+			const templateID = "template_x0rt2fk";
+			const publicKey = "MjIfD4GxiBI5JkGqA";
 
-		// Requete qui effectue l'envoie du mail
-		emailjs
-			.send(serviceID, templateID, templateParams, publicKey)
-			.then((response) => {
-				console.log("Email envoye !", response);
-				setContactInfos({ name: "", email: "", subject: "", message: "" });
-				toast.success("Votre message a été envoyé avec succès !"); // toast messages
-			})
-			.catch((error) => {
-				toast.error("Erreur lors de l'envoi du mail. Source de l'erreur :" + error); // toast messages
-				console.error("Erreur lors de l'envoi du mail", error);
-			});
+			// Parametre pour indiquer les informations du formulaire
+			const templateParams = {
+				from_name: contactInfos.name,
+				from_email: contactInfos.email,
+				to_name: "Nadirou",
+				subject: contactInfos.subject,
+				message: contactInfos.message,
+			};
+
+			// Requete qui effectue l'envoie du mail
+			emailjs
+				.send(serviceID, templateID, templateParams, publicKey)
+				.then((response) => {
+					console.log("Email envoye !", response);
+					setContactInfos({ name: "", email: "", subject: "", message: "" });
+					toast.success("Votre message a été envoyé avec succès !"); // toast messages
+				})
+				.catch((error) => {
+					toast.error("Erreur lors de l'envoi du mail. Source de l'erreur :" + error); // toast messages
+					console.error("Erreur lors de l'envoi du mail", error);
+				})
+				.finally(() => {
+					setIsSubmitting(true); // j'ai ajouter ceci pour remettre les valeurs initial mais ca ne veux pas
+					setCaptchaVal(null); // j'ai ajouter ceci pour remettre les valeurs initial mais ca ne veux pas
+					window.location.reload();
+				});
+		}
 	};
-
-	function onChange(value: string) {
-		console.log("Captcha value:", value);
-	}
 
 	return (
 		<>
@@ -132,14 +141,17 @@ export const Contact = () => {
 											<Textarea required value={contactInfos.message} placeholder="Votre message ..." name="message" maxLength={512} className="max-h-40" onChange={(e) => setContactInfos((prev) => ({ ...prev, message: e.target.value }))} />
 										</div>
 									</div>
-									{/* <ReCAPTCHA sitekey="6Ld5Y8kpAAAAAPhrYkHuH_863G4kvtrxWhlVN4EO" onChange={onChange} /> */}
+									<div className="space-y-3 mt-5">
+										{/* Google reCAPTCHA */}
+										<ReCAPTCHA sitekey="6Ld5Y8kpAAAAAPhrYkHuH_863G4kvtrxWhlVN4EO" onChange={(value) => setCaptchaVal(value)} />
 
-									<Button className="" onSubmit={handleSubmit}>
-										Envoyer
-									</Button>
+										{/* Button Submit */}
+										<Button className="disabled:bg-default/80" type="submit" disabled={isSubmitting}>
+											{isSubmitting ? "Envoi en cours" : "Envoyer"}
+										</Button>
+									</div>
 								</form>
 							</CardContent>
-							<CardFooter className="flex flex-col gap-4 items-start"></CardFooter>
 						</Card>
 					</div>
 
