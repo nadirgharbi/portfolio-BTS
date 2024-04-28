@@ -6,7 +6,6 @@ import { BsGithub, BsLinkedin, BsReddit } from "react-icons/bs";
 import { Download } from "lucide-react";
 import CVNadir from "@/assets/cv-nadir.pdf";
 import { Tooltip } from "react-tooltip";
-import { redirect } from "react-router-dom";
 
 export const Home = () => {
 	const words = ["Développeur Front", "Application Web & Mobile", "UX/UI Designer", "Étudiant en alternance"];
