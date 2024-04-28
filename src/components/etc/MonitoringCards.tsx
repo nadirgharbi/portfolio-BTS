@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardContent, CardFooter } from "../ui/card";
 import { Button } from "../ui/button";
-import { Badge } from "flowbite-react";
+import { Badge, CustomFlowbiteTheme, PaginationProps } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { Pagination } from "flowbite-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -27,6 +27,33 @@ export const MonitoringCards: React.FC<MonitoringsProps> = ({ veilles }) => {
 	} else if (sortBy === "CAT") {
 		veilles.sort((veille, nextVeille) => veille.category.localeCompare(nextVeille.category));
 	}
+
+	const customPagination: CustomFlowbiteTheme["pagination"] = {
+		base: "",
+		layout: {
+			table: {
+				base: "text-lg text-primary dark:text-default",
+				span: "font-semibold text-primary dark:text-white",
+			},
+		},
+		pages: {
+			base: "xs:mt-0 mt-2 inline-flex gap-2 items-center -space-x-px ",
+			showIcon: "inline-flex",
+			previous: {
+				base: "transition-all ml-0 rounded-lg bg-transparent p-3 leading-tight text-primary/80 enabled:hover:bg-primary/5 enabled:hover:primary dark:bg-primary dark:text-default enabled:dark:hover:bg-default/10 enabled:dark:hover:text-default",
+				icon: "h-5 w-5",
+			},
+			next: {
+				base: "transition-all ml-0 rounded-lg bg-transparent p-3 leading-tight text-primary/80 enabled:hover:bg-primary/5 enabled:hover:primary dark:bg-primary dark:text-default enabled:dark:hover:bg-default/10 enabled:dark:hover:text-default",
+				icon: "h-5 w-5",
+			},
+			selector: {
+				base: "transition-all rounded-lg w-12 bg-transparent p-3 leading-tight text-primary enabled:hover:bg-primary/5 enabled:hover:text-primary dark:text-default enabled:dark:hover:bg-default/10 enabled:dark:hover:text-white",
+				active: "transition-all ring-1 ring-primary/20 dark:ring-default/20 bg-transparent text-primary hover:bg-primary/5 hover:ring-0 hover:text-primary  dark:bg-transparent dark:text-default",
+				disabled: "transition-all cursor-not-allowed opacity-50",
+			},
+		},
+	};
 
 	return (
 		<>
@@ -85,7 +112,7 @@ export const MonitoringCards: React.FC<MonitoringsProps> = ({ veilles }) => {
 			</div>
 
 			{/* Pagination */}
-			<Pagination className="relative bottom-0 -my-12" currentPage={currentPage} totalPages={Math.ceil(veilles.length / itemsPerPage)} onPageChange={onPageChange} showIcons />
+			<Pagination className="relative bottom-0 -my-12 " theme={customPagination} currentPage={currentPage} totalPages={Math.ceil(veilles.length / itemsPerPage)} onPageChange={onPageChange} showIcons></Pagination>
 		</>
 	);
 };

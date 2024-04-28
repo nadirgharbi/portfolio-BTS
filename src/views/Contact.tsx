@@ -11,7 +11,7 @@ import { Tooltip } from "react-tooltip";
 import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "sonner";
 import { redirect } from "react-router-dom";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 type ContactInfosType = {
 	name: string;
@@ -73,7 +73,7 @@ export const Contact = () => {
 			});
 	};
 
-	function onChange(value) {
+	function onChange(value: string) {
 		console.log("Captcha value:", value);
 	}
 
@@ -132,7 +132,7 @@ export const Contact = () => {
 											<Textarea required value={contactInfos.message} placeholder="Votre message ..." name="message" maxLength={512} className="max-h-40" onChange={(e) => setContactInfos((prev) => ({ ...prev, message: e.target.value }))} />
 										</div>
 									</div>
-									<ReCAPTCHA sitekey="6Ld5Y8kpAAAAAPhrYkHuH_863G4kvtrxWhlVN4EO" onChange={onChange} />
+									{/* <ReCAPTCHA sitekey="6Ld5Y8kpAAAAAPhrYkHuH_863G4kvtrxWhlVN4EO" onChange={onChange} /> */}
 
 									<Button className="" onSubmit={handleSubmit}>
 										Envoyer
