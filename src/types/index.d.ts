@@ -1,72 +1,98 @@
+/* =================================== */
+/* ============= EXPERIENCES ========= */
+/* =================================== */
+
 /** Pour une seule experiences */
 interface ExperienceTimelineProps {
-  title: string;
-  location: string;
-  description: string;
-  date: string;
-  latest?: boolean;
-  tags?: string[];
+	title: string;
+	location: string;
+	description: string;
+	date: string;
+	latest?: boolean;
+	tags?: string[];
 }
 
 /** Pour plusieurs experiences */
 interface ExeperiencesProps {
-  experiences: Array<ExperienceTimelineProps>;
+	experiences: Array<ExperienceTimelineProps>;
 }
+
+/* ================================ */
+/* ============= STUDIES ========== */
+/* ================================ */
 
 /** Pour une seule etude */
 interface StudyTimelineProps {
-  title: string;
-  description: string;
-  school: string;
-  location: string;
-  period: string;
-  status: "Diplomé" | "Niveau" | "En cours";
+	title: string;
+	description: string;
+	school: string;
+	location: string;
+	period: string;
+	status: "Diplomé" | "Niveau" | "En cours";
 }
 
 /** Pour plusieurs etudes */
 interface StudiesProps {
-  studies: Array<studiesData>;
+	studies: Array<studiesData>;
 }
+
+/* ================================ */
+/* ============= PROJECTS ========= */
+/* ================================ */
 
 /** Pour un seul projet */
 interface ProjectProps {
-  title: string;
-  description: string;
-  tags: string[];
-  imageUrl: string;
-  hrefLink: string;
-  hasSource: boolean;
-  finished: boolean;
+	title: string;
+	description: string;
+	tags: string[];
+	imageUrl: string;
+	hrefLink: string;
+	hasSource: boolean;
 }
 
 /** Pour plusieurs projets */
 interface ProjectsProps {
-  projects: Array<ProjectProps>;
+	projects: Array<ProjectProps>;
 }
 
-/** Pour une seule carte informative dans la page contact */
-interface ContactInfoProps {
-  icon: IconType;
-  label?: string;
-}
+/* ================================ */
+/* ========== MONITORING ========== */
+/* ================================ */
 
-/** Pour plusieurs cartes informatives dans la page contact */
-interface ContactInfosProps {
-  infos: Array<ContactInfoProps>;
-}
-
-// Same datas for 
+// Same datas for
 interface MonitoringProps {
-  id: number;
-  titre: string;
-  description: string;
-  datePublication: Date;
-  source: string;
-  lien: string;
-  imageUrl: string;
-  category: string;
+	id: number;
+	titre: string;
+	description: string;
+	datePublication: Date;
+	source: string;
+	lien: string;
+	imageUrl: string;
+	category: string;
 }
 
 interface MonitoringsProps {
-  veilles: Array<MonitoringProps>;
+	veilles: Array<MonitoringProps>;
 }
+
+/* ============================= */
+/* ========== CONTACT ========== */
+/* ============================= */
+
+/** Pour une seule coordonnee dans la page contact */
+interface ContactInfoProps {
+	icon: IconType;
+	label?: string;
+}
+
+/** Pour plusieurs coordonnees dans la page contact */
+interface ContactInfosProps {
+	infos: Array<ContactInfoProps>;
+}
+
+type ContactInfosType = {
+	name: string;
+	email: string;
+	subject: string;
+	message: string;
+};

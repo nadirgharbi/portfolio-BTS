@@ -1,13 +1,11 @@
-import { useRef, useEffect, useState, ReactPortal, ReactNode } from "react";
-import { FaCss3, FaFigma, FaGit, FaGitlab, FaHtml5, FaJava, FaJs, FaPhp, FaPython, FaReact, FaSymfony, FaDocker } from "react-icons/fa6";
+import { useEffect, ReactNode } from "react";
+import { FaCss3, FaFigma, FaGit, FaGitlab, FaHtml5, FaJava, FaJs, FaPython, FaReact, FaSymfony, FaDocker } from "react-icons/fa6";
 import { BiLogoTypescript, BiLogoTailwindCss, BiLogoVisualStudio } from "react-icons/bi";
 import { GrMysql } from "react-icons/gr";
 import { SiIntellijidea, SiInsomnia, SiPostman, SiRuby, SiAdonisjs } from "react-icons/si";
 import { NavLink } from "react-router-dom";
 
 export const BannerScroller = () => {
-	const [dataAnimated, setDataAnimated] = useState<boolean>(true);
-
 	const logoCSS: string = "text-primary/75 dark:text-default/75 w-20 h-20" as const;
 
 	const logoSkills: Array<{ icon: ReactNode; alt: string }> = [
@@ -60,7 +58,7 @@ export const BannerScroller = () => {
 
 	return (
 		<>
-			<div className={`scroller max-w-full self-center overflow-hidden md:[mask:linear-gradient(90deg,_transparent,_white_20%,_white_80%,_transparent)] animate-fade-in`} data-animated={dataAnimated}>
+			<div className={`scroller max-w-full self-center overflow-hidden md:[mask:linear-gradient(90deg,_transparent,_white_20%,_white_80%,_transparent)] animate-fade-in`}>
 				<NavLink to={"/skills"}>
 					<ul className="scroller__inner flex flex-wrap gap-16 w-max animate-scroll transition-all hover:opacity-75">
 						{logoSkills.map((logo) => (

@@ -1,7 +1,7 @@
-import { ChangeEvent, useRef, useState } from "react";
+import { useState } from "react";
 import { ContactInfos } from "@/components/etc/ContactInfos";
-import { BsEnvelope, BsPhone, BsPin, BsGithub, BsLinkedin, BsDiscord, BsReddit } from "react-icons/bs";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { BsEnvelope, BsPhone, BsPin, BsGithub, BsLinkedin, BsReddit } from "react-icons/bs";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -11,15 +11,6 @@ import { Tooltip } from "react-tooltip";
 import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "sonner";
 import ReCAPTCHA from "react-google-recaptcha";
-import { redirect } from "react-router-dom";
-import { Spinner } from "flowbite-react";
-
-type ContactInfosType = {
-	name: string;
-	email: string;
-	subject: string;
-	message: string;
-};
 
 export const Contact = () => {
 	// Disabled button when send mail

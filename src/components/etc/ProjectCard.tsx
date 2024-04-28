@@ -1,10 +1,9 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader } from "../ui/card";
+import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import { Badge } from "../ui/badge";
-import { NavLink } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Tooltip } from "react-tooltip";
 
-export const ProjectCard: React.FC<ProjectProps> = ({ title, description, tags, imageUrl, hrefLink, hasSource, finished }) => {
+export const ProjectCard: React.FC<ProjectProps> = ({ title, description, tags, imageUrl, hrefLink, hasSource }) => {
   return (
     <>
       <Card className="flex flex-col justify-between max-w-md pt-12 mb-20 bg-default hover:bg-primary/5 dark:bg-primary dark:hover:bg-default/5 transition-all rounded-lg relative z-[900]">

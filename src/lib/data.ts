@@ -48,7 +48,6 @@ const projectsData = [
 		imageUrl: legalConnectLogo,
 		hrefLink: "https://www.gharbi.slameductoul.ovh/",
 		hasSource: true,
-		finished: false,
 	},
 	{
 		title: "Todolist",
@@ -57,7 +56,6 @@ const projectsData = [
 		imageUrl: todoIcon,
 		hrefLink: "https://react-todo-vite.vercel.app/",
 		hasSource: true,
-		finished: false,
 	},
 	{
 		title: "monmedecin.org",
@@ -66,7 +64,6 @@ const projectsData = [
 		imageUrl: MonmedecinMobile,
 		hrefLink: "https://landing.monmedecin.org/",
 		hasSource: true,
-		finished: true,
 	},
 	{
 		title: "TicTacToe.jsx",
@@ -75,7 +72,6 @@ const projectsData = [
 		imageUrl: tictactoeReact,
 		hrefLink: "https://tictactoe-react-nine.vercel.app/",
 		hasSource: true,
-		finished: true,
 	},
 	{
 		title: "CRM NGSTech",
@@ -84,7 +80,6 @@ const projectsData = [
 		imageUrl: crmProject,
 		hrefLink: "",
 		hasSource: false,
-		finished: true,
 	},
 	{
 		title: "tictactoe.py",
@@ -93,7 +88,6 @@ const projectsData = [
 		imageUrl: tictactoePy,
 		hrefLink: "https://github.com/nadirgharbi/TicTacToe",
 		hasSource: true,
-		finished: true,
 	},
 	{
 		title: "tetris.py",
@@ -102,7 +96,6 @@ const projectsData = [
 		imageUrl: pytris,
 		hrefLink: "https://github.com/nadirgharbi/Pytris",
 		hasSource: true,
-		finished: true,
 	},
 	{
 		title: "snake.py",
@@ -111,7 +104,6 @@ const projectsData = [
 		imageUrl: snakegame,
 		hrefLink: "https://github.com/nadirgharbi/PySnake",
 		hasSource: true,
-		finished: true,
 	},
 	{
 		title: "Validate Move Shower",
@@ -120,7 +112,6 @@ const projectsData = [
 		imageUrl: chess,
 		hrefLink: "",
 		hasSource: false,
-		finished: true,
 	},
 ];
 

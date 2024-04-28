@@ -1,9 +1,8 @@
 import { ProjectsGroup } from "@/components/etc/ProjectsGroup";
 import { projectsData } from "@/lib/data";
-import emptyIcon from "@/assets/empty-box.png";
 import notFound from "@/assets/find.png";
 import { Input } from "@/components/ui/input";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export const Projects = () => {
 	const [inputValue, setInputValue] = useState("");

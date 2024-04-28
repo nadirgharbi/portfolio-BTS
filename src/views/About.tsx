@@ -1,52 +1,14 @@
 import myPic from "@/assets/me.png";
-import { BsCake2, BsFire, BsPatchCheck, BsPersonCheck } from "react-icons/bs";
+import { BsCake2, BsPatchCheck, BsPersonCheck } from "react-icons/bs";
 import { Badge } from "../components/ui/badge";
 import { Separator } from "../components/ui/separator";
-import { Experience } from "@/components/etc/Exeperience";
 import { useEffect, useState } from "react";
 import { Experiences } from "@/components/etc/Experiences";
 import { experiencesData, studiesData } from "@/lib/data";
 import { Studies } from "@/components/etc/Studies";
 import { BannerScroller } from "@/components/etc/BannerScroller";
 
-import { FaCss3, FaFigma, FaGit, FaGitlab, FaHtml5, FaJava, FaJs, FaPhp, FaPython, FaReact, FaSymfony, FaDocker } from "react-icons/fa6";
-import { BiLogoTypescript, BiLogoTailwindCss, BiLogoVisualStudio } from "react-icons/bi";
-import { GrMysql } from "react-icons/gr";
-import { SiIntellijidea, SiInsomnia, SiPostman, SiRuby, SiAdonisjs } from "react-icons/si";
-import { Button } from "@/components/ui/button";
-
 export const About = () => {
-	// const [isLoading, setIsLoading] = useState(true);
-	// useEffect(() => {
-	// 	setTimeout(() => {
-	// 		setIsLoading(false);
-	// 	}, 1000);
-	// }, []);
-
-	const logoCSS: string = "text-primary/75 dark:text-default/75 w-20 h-20" as const;
-
-	const logoSkills = [
-		{ icon: <FaReact className={logoCSS} />, alt: "React" }, // React
-		{ icon: <FaJs className={logoCSS} />, alt: "Javascript" }, // Javascript
-		{ icon: <BiLogoTypescript className={logoCSS} />, alt: "Typescript" }, // Typescript
-		{ icon: <FaHtml5 className={logoCSS} />, alt: "HTML" }, // HTML
-		{ icon: <SiAdonisjs className={logoCSS} />, alt: "Adonis" }, // Adonis
-		{ icon: <FaGit className={logoCSS} />, alt: "Git" }, // Git
-		{ icon: <GrMysql className={logoCSS} />, alt: "MySQL" }, // MySQL
-		{ icon: <BiLogoVisualStudio className={logoCSS} />, alt: "VS code" }, // VS code
-		{ icon: <FaFigma className={logoCSS} />, alt: "Figma" }, // Figma
-		{ icon: <BiLogoTailwindCss className={logoCSS} />, alt: "TailwindCSS" }, // TailwindCSS
-		{ icon: <SiIntellijidea className={logoCSS} />, alt: "IntelliJ" }, // IntelliJ
-		{ icon: <FaSymfony className={logoCSS} />, alt: "Symfony" }, // Symfony
-		{ icon: <FaJava className={logoCSS} />, alt: "Java" }, // Java
-		{ icon: <SiPostman className={logoCSS} />, alt: "Postman" }, // Postman
-		{ icon: <FaCss3 className={logoCSS} />, alt: "CSS3" }, // CSS3
-		{ icon: <FaGitlab className={logoCSS} />, alt: "Gitlab" }, // Gitlab
-		{ icon: <FaDocker className={logoCSS} />, alt: "Docker" }, // Docker
-		{ icon: <SiInsomnia className={logoCSS} />, alt: "Insomnia" }, // Insomnia
-		{ icon: <SiRuby className={logoCSS} />, alt: "Ruby" }, // Ruby
-	] as const;
-
 	const [ageNumber, setAgeNumber] = useState<number>(0);
 	const [projectsNumber, setProjectsNumber] = useState<number>(0);
 	const [experienceNumber, setExperienceNumber] = useState<number>(0);

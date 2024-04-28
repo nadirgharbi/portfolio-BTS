@@ -1,7 +1,6 @@
-import { BannerScroller } from "@/components/etc/BannerScroller";
-import { useRef, useEffect, useState, ReactPortal, ReactNode } from "react";
-import { FaCss3, FaFigma, FaGit, FaGitlab, FaHtml5, FaJava, FaJs, FaPhp, FaPython, FaReact, FaSymfony, FaDocker } from "react-icons/fa6";
-import { BiLogoTypescript, BiLogoTailwindCss, BiLogoVisualStudio, BiCode } from "react-icons/bi";
+import { useEffect, useState, ReactNode } from "react";
+import { FaCss3, FaFigma, FaGit, FaGitlab, FaHtml5, FaJava, FaJs, FaPython, FaReact, FaSymfony, FaDocker } from "react-icons/fa6";
+import { BiLogoTailwindCss, BiLogoVisualStudio, BiCode } from "react-icons/bi";
 import { GrMysql } from "react-icons/gr";
 import { SiIntellijidea, SiInsomnia, SiPostman, SiRuby, SiAdonisjs, SiTypescript } from "react-icons/si";
 import { BsGear } from "react-icons/bs";
