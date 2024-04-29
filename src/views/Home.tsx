@@ -8,7 +8,7 @@ import CVNadir from "@/assets/cv-nadir.pdf";
 import { Tooltip } from "react-tooltip";
 
 export const Home = () => {
-	const words = ["Développeur Front", "Application Web & Mobile", "UX/UI Designer", "Étudiant en alternance"];
+	const words = ["Développeur Front", "Applications Web & Mobile", "UX/UI Designer", "Étudiant en alternance"];
 	return (
 		<>
 			<div className="h-screen flex flex-col justify-center items-center gap-5 px-4 py-12 lg:px-32 text-center text-primary dark:text-default bg-white dark:bg-primary">
