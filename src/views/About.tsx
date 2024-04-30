@@ -110,17 +110,17 @@ export const About = () => {
 
 				{/* Right part */}
 				<div>
-					<img src={myPic} alt="my-picture-profile" className="w-48 lg:w-64 outline outline-2 outline-secondary rounded-full selection:bg-transparent animate-fade-up" />
+					<img src={myPic} alt="my-picture-profile" className="w-48 lg:w-64 ring-4 ring-secondary rounded-full selection:bg-transparent animate-fade-up" />
 				</div>
 			</div>
 
 			{/* BANNER SCROLLER */}
-			<div className="flex flex-col justify-center items-center gap-10 mt-32 relative w-full md:w-2/3 mx-auto">
+			<div className="flex flex-col justify-center items-center gap-10 mt-32 relative w-full lg:w-2/3 mx-auto">
 				<BannerScroller />
 			</div>
 
 			{/* EXPERIENCES AND STUDIES */}
-			<div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 py-32 relative animate-fade-up">
+			<div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 py-32 relative z-[900] animate-fade-up">
 				{/* Left part */}
 				<div className="flex flex-col gap-12">
 					<div className="max-w-3xl">
@@ -130,7 +130,7 @@ export const About = () => {
 				</div>
 
 				{/* Right part */}
-				<div className="flex flex-col md:items-start gap-12">
+				<div className="flex flex-col md:items-start gap-12 relative z-[900]">
 					<div className="max-w-3xl">
 						<p className="text-2xl lg:text-xl text-center md:text-start font-bold py-6">Parcours Scolaire</p>
 						<Studies studies={studiesData} />

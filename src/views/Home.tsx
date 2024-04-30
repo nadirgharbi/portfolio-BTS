@@ -14,7 +14,7 @@ export const Home = () => {
 			<div className="h-screen flex flex-col justify-center items-center gap-5 px-4 py-12 lg:px-32 text-center text-primary dark:text-default bg-white dark:bg-primary">
 				{/* PP Image */}
 				<div className="animate-fade-in-scale">
-					<img src={myPic} alt="my-picture-profile" className="w-48 outline outline-4 outline-secondary rounded-full selection:bg-transparent" />
+					<img src={myPic} alt="my-picture-profile" className="w-48 ring-4 ring-secondary rounded-full selection:bg-transparent" />
 					<p className="absolute translate-x-28 -translate-y-10 text-5xl selection:bg-transparent">👋🏽</p>
 				</div>
 
@@ -51,9 +51,6 @@ export const Home = () => {
 						Télécharger mon CV
 						<Download size={18} />
 					</a>
-					<Button variant={"outline"} className="flex gap-2">
-						Épreuve E4
-					</Button>
 					<div className="flex gap-2">
 						<Tooltip id="tooltip-social" />
 						<Button variant={"outline"} className="flex gap-2" size={"icon"} data-tooltip-id="tooltip-social" data-tooltip-content={"LinkedIn"} data-tooltip-place="bottom" onClick={() => window.open("https://www.linkedin.com/in/nadirgharbi8310/", "_blank")}>
