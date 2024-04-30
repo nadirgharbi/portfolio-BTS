@@ -1,11 +1,9 @@
 import { Card, CardHeader, CardContent, CardFooter } from "../ui/card";
 import { Button } from "../ui/button";
-import { Badge, CustomFlowbiteTheme, Spinner } from "flowbite-react";
+import { Badge, CustomFlowbiteTheme } from "flowbite-react";
 import { useState } from "react";
 import { Pagination } from "flowbite-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Skeleton } from "../ui/skeleton";
-import { Suspense } from "react";
 
 export const MonitoringCards: React.FC<MonitoringsProps> = ({ veilles }) => {
   // States for sort by

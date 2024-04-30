@@ -1,4 +1,4 @@
-import { useEffect, useState, ReactNode } from "react";
+import { useState, ReactNode } from "react";
 import { FaCss3, FaFigma, FaGit, FaGitlab, FaHtml5, FaJava, FaJs, FaPython, FaReact, FaSymfony, FaDocker } from "react-icons/fa6";
 import { BiLogoTailwindCss, BiLogoVisualStudio, BiCode } from "react-icons/bi";
 import { GrMysql } from "react-icons/gr";
