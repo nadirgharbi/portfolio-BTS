@@ -100,7 +100,7 @@ export const Contact = () => {
             <Card className="bg-default dark:bg-primary relative z-[900]">
               <CardHeader>
                 <CardTitle>Contactez-moi</CardTitle>
-                <CardDescription>Envoyer moi un message pour prendre contact, je vous repondrai brievement.</CardDescription>
+                <CardDescription>Envoyez-moi un message pour prendre contact, je vous repondrai rapidement.</CardDescription>
               </CardHeader>
               <CardContent>
                 {/* Contact form */}

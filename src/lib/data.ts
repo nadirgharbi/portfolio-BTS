@@ -7,7 +7,7 @@ import chess from "@/assets/chess.png";
 import legalConnectLogo from "@/assets/fingerprint.png";
 import MonmedecinMobile from "@/assets/mobile-phone.png";
 import todoIcon from "@/assets/to-do-list.png";
-import IconAPI from "@/assets/api.png"
+import IconAPI from "@/assets/api.png";
 
 // Arrays
 const experiencesData = [
@@ -28,7 +28,7 @@ const experiencesData = [
   {
     title: "Stagiaire développeur Full Stack",
     location: "ECHOES - La Crau",
-    description: "Pendant une periode d'une semaine, j'ai effectué un stage dans l'entreprise ECHOES, une entreprise specialise dans le stockage de donnees de parc automobiles.",
+    description: "Pendant une periode d'une semaine, j'ai effectué un stage dans l'entreprise ECHOES, une entreprise specialisée dans le stockage de données de parcs automobiles.",
     date: "Novembre 2022",
     latest: false,
   },
@@ -52,7 +52,7 @@ const projectsData = [
   },
   {
     title: "API AdonisJS",
-    description: "J'ai développé une API avec le framework AdonisJS afin de pouvoir communiquer avec le serveur et ainsi intéragir avec ma bases de données. Cela me permet d'utiliser mon API pour plusieurs projet différents.",
+    description: "J'ai développé une API avec le framework AdonisJS afin de pouvoir communiquer avec le serveur et ainsi intéragir avec ma bases de données. Cela me permet d'utiliser mon API pour plusieurs projets différents.",
     tags: ["React", "Typescript", "AdonisJS", "NodeJS", "NGINX"],
     imageUrl: IconAPI,
     hrefLink: "",
@@ -60,7 +60,7 @@ const projectsData = [
   },
   {
     title: "Todolist",
-    description: "Comment ne pas se passer de la Todolist quand on debute dans le developpement web. ",
+    description: "Comment ne pas se passer de la Todolist quand on debute dans le developpement web. Cette Todolist possède un système d'authentification avec lequelle il est possible de s'identifier et d'enregistrer des taches. ",
     tags: ["React", "Typescript", "Adonis"],
     imageUrl: todoIcon,
     hrefLink: "https://todo.nadir-gharbi.fr/",
@@ -116,7 +116,7 @@ const projectsData = [
   },
   {
     title: "Validate Move Shower",
-    description: "Un de mes premiers projets qui consiste uniquement à afficher les coups légaux en échecs lors de la sélection d'un pion.",
+    description: "Un de mes premiers projets qui consiste uniquement à afficher les coups légaux aux échecs lors de la sélection d'un pion.",
     tags: ["Python", "Tkinter", "Chess"],
     imageUrl: chess,
     hrefLink: "",
