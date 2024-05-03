@@ -15,29 +15,34 @@ export const Skills = () => {
   // For logos
   const logoCSS: string = "text-primary/75 dark:text-default/75 w-14 h-14" as const;
   const logoSkills: Array<{ icon: ReactNode; alt: string; typeTech: "Framework" | "Language" | "Tools" }> = [
+    // premiere ligne
 	  { icon: <FaReact className={logoCSS} />, alt: "ReactJS", typeTech: "Framework" }, // React
 	  { icon: <FaJs className={logoCSS} />, alt: "Javascript", typeTech: "Language" }, // Javascript
 	  { icon: <SiTypescript className={logoCSS} />, alt: "Typescript", typeTech: "Language" }, // Typescript
 	  { icon: <FaHtml5 className={logoCSS} />, alt: "HTML", typeTech: "Language" }, // HTML
-	  { icon: <FaGitlab className={logoCSS} />, alt: "Gitlab", typeTech: "Tools" }, // Gitlab
-	  { icon: <FaPython className={logoCSS} />, alt: "Python", typeTech: "Language" }, // Python
-	  { icon: <SiAdonisjs className={logoCSS} />, alt: "AdonisJS", typeTech: "Framework" }, // Adonis
-    { icon: <FaGit className={logoCSS} />, alt: "Git", typeTech: "Tools" }, // Git
-    { icon: <GrMysql className={logoCSS} />, alt: "MySQL", typeTech: "Language" }, // MySQL
-    { icon: <BiLogoVisualStudio className={logoCSS} />, alt: "VS code", typeTech: "Tools" }, // VS code
     { icon: <FaCss3 className={logoCSS} />, alt: "CSS3", typeTech: "Language" }, // CSS3
-    { icon: <SiInsomnia className={logoCSS} />, alt: "Insomnia", typeTech: "Tools" }, // Insomnia
+    { icon: <FaGit className={logoCSS} />, alt: "Git", typeTech: "Tools" }, // Git
+	  { icon: <FaPython className={logoCSS} />, alt: "Python", typeTech: "Language" }, // Python
     { icon: <BiLogoTailwindCss className={logoCSS} />, alt: "TailwindCSS", typeTech: "Framework" }, // TailwindCSS
-    { icon: <FaFigma className={logoCSS} />, alt: "Figma", typeTech: "Tools" }, // Figma
+    
+    // deuxieme ligne
+    { icon: <BiLogoVisualStudio className={logoCSS} />, alt: "VS code", typeTech: "Tools" }, // VS code
+	  { icon: <FaGitlab className={logoCSS} />, alt: "Gitlab", typeTech: "Tools" }, // Gitlab
+    { icon: <GrMysql className={logoCSS} />, alt: "MySQL", typeTech: "Language" }, // MySQL
+	  { icon: <SiAdonisjs className={logoCSS} />, alt: "AdonisJS", typeTech: "Framework" }, // Adonis
+    { icon: <SiInsomnia className={logoCSS} />, alt: "Insomnia", typeTech: "Tools" }, // Insomnia
     { icon: <FaSymfony className={logoCSS} />, alt: "Symfony", typeTech: "Framework" }, // Symfony
+    { icon: <FaFigma className={logoCSS} />, alt: "Figma", typeTech: "Tools" }, // Figma
     { icon: <FaJava className={logoCSS} />, alt: "Java", typeTech: "Language" }, // Java
-    { icon: <SiIntellijidea className={logoCSS} />, alt: "IntelliJ", typeTech: "Tools" }, // IntelliJ
+
+    // troisieme ligne
     { icon: <SiPostman className={logoCSS} />, alt: "Postman", typeTech: "Tools" }, // Postman
+    { icon: <SiIntellijidea className={logoCSS} />, alt: "IntelliJ", typeTech: "Tools" }, // IntelliJ
+    { icon: <SiLaravel className={logoCSS} />, alt: "Laravel ", typeTech: "Framework" }, // Laravel 
     { icon: <FaDocker className={logoCSS} />, alt: "Docker", typeTech: "Tools" }, // Docker
     { icon: <SiRuby className={logoCSS} />, alt: "Ruby", typeTech: "Language" }, // Ruby
     { icon: <SiNginx className={logoCSS} />, alt: "Nginx", typeTech: "Tools" }, // Nginx
     { icon: <SiNodedotjs  className={logoCSS} />, alt: "NodeJS ", typeTech: "Tools" }, // NodeJS 
-    { icon: <SiLaravel className={logoCSS} />, alt: "Laravel ", typeTech: "Framework" }, // Laravel 
   ] as const;
 
   return (

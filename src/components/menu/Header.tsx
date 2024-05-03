@@ -1,5 +1,5 @@
-import logoDark from "@/assets/logo-dark.png";
-import logoLight from "@/assets/logo-light.png";
+import logoDark from "../../../public/logo-dark.png";
+import logoLight from "../../../public/logo-light.png";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -30,8 +30,8 @@ export const Header = () => {
 	return (
 		<div className={`flex w-full items-center gap-8 z-[999] transition-all duration-500 top-0 py-4 ` + changeNav}>
 			<NavLink to={"/"}>
-				<img src={logoLight} className={`w-16 absolute scale-100 transition-all dark:scale-0 selection:bg-transparent`} />
-				<img src={logoDark} className={`w-16 scale-0 transition-all dark:scale-100 selection:bg-transparent`} />
+				<img src={logoLight} className={`w-14 absolute scale-100 transition-all dark:scale-0 selection:bg-transparent`} />
+				<img src={logoDark} className={`w-14 scale-0 transition-all dark:scale-100 selection:bg-transparent`} />
 			</NavLink>
 		</div>
 	);

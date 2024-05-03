@@ -47,7 +47,7 @@ const projectsData = [
     description: "LegalConnect est une solution de téléconsultation juridique. Cette solution facilite les rendez-vous entre les professionnels et leurs clients. Elle offre un système de visioconférence, une prise de rendez-vous et une meilleure gestion.",
     tags: ["React", "Typescript", "Symfony", "API"],
     imageUrl: legalConnectLogo,
-    hrefLink: "https://www.gharbi.slameductoul.ovh/",
+    hrefLink: "https://gharbi.slameductoul.ovh/",
     hasSource: true,
   },
   {
@@ -63,7 +63,7 @@ const projectsData = [
     description: "Comment ne pas se passer de la Todolist quand on debute dans le developpement web. Cette Todolist possède un système d'authentification avec lequelle il est possible de s'identifier et d'enregistrer des taches. ",
     tags: ["React", "Typescript", "Adonis"],
     imageUrl: todoIcon,
-    hrefLink: "https://todo.nadir-gharbi.fr/",
+    hrefLink: "https://mytodo.nadir-gharbi.fr/",
     hasSource: true,
   },
   {
