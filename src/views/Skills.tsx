@@ -10,7 +10,6 @@ import { Tooltip } from "react-tooltip";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import BTSE4 from "@/assets/GHARBI-NADIR-BTSSIDOPROFE4-2024.pdf";
-import { Separator } from "@/components/ui/separator";
 
 export const Skills = () => {
 	// For tabs
