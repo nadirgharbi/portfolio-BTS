@@ -84,7 +84,6 @@ export const Skills = () => {
 
 				{/* CTA TABLEAU */}
 				<div className="flex flex-col justify-center items-center mt-28 animate-fade-up rounded-2xl ">
-        <Separator decorative className="w-screen mb-16"/>
 					<div className="flex flex-col justify-center items-center text-center gap-5 md:w-2/3 ">
 						<p className="text-3xl font-extrabold tracking-tighter">Epreuve E4</p>
 						<p>Telechargez mon tableau de competence pour en savoir plus sur mes réalisations professionnelles ainsi que les compétences qui ont été mises en œuvre</p>
