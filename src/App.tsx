@@ -2,6 +2,7 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Outlet } from "react-router-dom";
 import { Header } from "@/components/menu/Header";
 import { Sidebar } from "./components/menu/Sidebar";
+import { Footer } from "./components/menu/Footer";
 
 export const App = () => {
 	return (
@@ -13,6 +14,7 @@ export const App = () => {
 				<Header />
 				<Sidebar />
 				<Outlet />
+				<Footer />
 			</div>
 
 			{/* Div gradient right */}

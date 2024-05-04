@@ -54,7 +54,7 @@ export const About = () => {
 	}, [experienceNumber]);
 
 	return (
-		<div className={"max-h-full flex flex-col items-center justify-center px-6 lg:px-32 py-40 text-primary dark:text-default bg-white dark:bg-primary"}>
+		<div className={"max-h-full flex flex-col items-center justify-center px-6 lg:px-32 pt-40 text-primary dark:text-default bg-white dark:bg-primary"}>
 			{/* PRESENTATION / INTRO */}
 			<div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-20 relative ">
 				{/* Left part */}
@@ -120,7 +120,7 @@ export const About = () => {
 			</div>
 
 			{/* EXPERIENCES AND STUDIES */}
-			<div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 py-32 relative z-[900] animate-fade-up">
+			<div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 pt-32 relative z-[900] animate-fade-up">
 				{/* Left part */}
 				<div className="flex flex-col gap-12">
 					<div className="max-w-3xl">
