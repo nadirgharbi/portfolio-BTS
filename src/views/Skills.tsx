@@ -52,7 +52,7 @@ export const Skills = () => {
 		<>
 			<div className="min-h-screen flex flex-col items-center px-6 lg:px-32 pt-40 gap-12 text-primary dark:text-default bg-white dark:bg-primary overflow-x-hidden">
 				<Tooltip id="tooltip-skills" />
-				<p className="text-3xl md:text-4xl font-extrabold">Compétences</p>
+				<p className="text-3xl md:text-4xl font-extrabold ">Compétences</p>
 				<div className={`grid grid-cols-2 md:grid-cols-4 gap-12 p-12 w-screen md:w-auto md:relative z-[900] `}>
 					<button className={`grid justify-items-center items-center gap-2 font-semibold relative z-[100] ${activeTab == "All" ? "text-secondary" : "text-primary dark:text-default"}`} onClick={() => setActiveTab("All")}>
 						<HiOutlineSquares2X2 size={34} />
@@ -84,8 +84,8 @@ export const Skills = () => {
 				{/* CTA TABLEAU */}
 				<div className="flex flex-col justify-center items-center mt-28 animate-fade-up rounded-2xl ">
 					<div className="flex flex-col justify-center items-center text-center gap-5 md:w-2/3 ">
-						<p className="text-3xl font-extrabold tracking-tighter">Epreuve E4</p>
-						<p>Telechargez mon tableau de competence pour en savoir plus sur mes réalisations professionnelles ainsi que les compétences qui ont été mises en œuvre</p>
+						<p className="text-3xl font-extrabold">Epreuve E4</p>
+						<p className="text-default/80 font-light">Telechargez mon tableau de competence pour en savoir plus sur mes réalisations professionnelles ainsi que les compétences qui ont été mises en œuvre</p>
 						<a href={BTSE4} download>
 							<Button className="flex gap-2 !bg-secondary hover:!bg-secondary/90 !text-default">
 								<Download size={18} />

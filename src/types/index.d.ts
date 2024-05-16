@@ -64,7 +64,7 @@ interface MonitoringProps {
 	id: number;
 	titre: string;
 	description: string;
-	datePublication: Date;
+	datePublication: any;
 	source: string;
 	lien: string;
 	imageUrl: string;

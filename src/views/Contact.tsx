@@ -68,8 +68,8 @@ export const Contact = () => {
         .send(serviceID, templateID, templateParams, publicKey)
         .then((response) => {
           console.log("Email envoyé !", response);
-          setContactInfos({ name: "", email: "", subject: "", message: "" });
           toast.success("Votre message a été envoyé avec succès !");
+          setContactInfos({ name: "", email: "", subject: "", message: "" });
         })
         .catch((error) => {
           toast.error("Erreur lors de l'envoi du mail. Source de l'erreur :" + error);
