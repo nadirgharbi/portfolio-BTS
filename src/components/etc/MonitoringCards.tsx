@@ -8,7 +8,7 @@ import moment from "moment";
 
 export const MonitoringCards: React.FC<MonitoringsProps> = ({ veilles }) => {
 	// States for sort by
-	const [sortBy, setSortBy] = useState<string>("Trier par");
+	// const [sortBy, setSortBy] = useState<string>("Trier par");
 
 	// States for pagination
 	const [itemsPerPage, setItemsPerPage] = useState<number>(8);
