@@ -8,6 +8,7 @@ import legalConnectLogo from "@/assets/fingerprint.png";
 import MonmedecinMobile from "@/assets/mobile-phone.png";
 import todoIcon from "@/assets/to-do-list.png";
 import IconAPI from "@/assets/api.png";
+import LandingPage from "@/assets/landing-page.png"
 
 // Arrays
 const experiencesData = [
@@ -84,11 +85,19 @@ const projectsData = [
   },
   {
     title: "CRM NGSTech",
-    description: "Mon premier projet au sein de l'entreprise NGSTech. Grâce à une méthode agile et des outils performants, j'ai pu acquérir d'énormes compétences.",
+    description: "Mon premier (gros) projet au sein de l'entreprise NGSTech. Grâce à une méthode agile et des outils performants, j'ai pu acquérir d'énormes compétences.",
     tags: ["React", "Laravel", "MySQL", "Scrum"],
     imageUrl: crmProject,
     hrefLink: "",
     hasSource: false,
+  },
+  {
+    title: "Landing Page NGSTech",
+    description: "Lors de mon alternance au sein de NGSTECH, j'ai pu réaliser une landing page épurée et responsive avec le CMS WordPress.",
+    tags: ["WordPress", "HTML", "CSS", "Figma", "UI/UX"],
+    imageUrl: LandingPage,
+    hrefLink: "https://ngstech-conseil.com/",
+    hasSource: true,
   },
   {
     title: "tictactoe.py",

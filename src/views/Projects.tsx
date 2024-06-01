@@ -21,7 +21,9 @@ export const Projects = () => {
 
 			{/* Affichage des projets entrer par l'utilisateur */}
 			{projectsResult.length > 0 ? (
+				<>
 				<ProjectsGroup projects={projectsResult} />
+				</>
 			) : (
 				<div className="space-y-2">
 					<img src={notFound} alt={notFound} className="w-40 mx-auto animate-not-found" />

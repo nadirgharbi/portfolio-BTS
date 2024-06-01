@@ -73,6 +73,10 @@ module.exports = {
           "50%" : { transform: "rotate(0)" },
           "75%" : { transform: "rotate(3deg)" },
           "100%" : { transform: "rotate(0)" },
+        },
+        spin: {
+          from: {transform: 'rotate(0)'},
+          to: {transform: 'rotate(360deg)'},
         }
       },
       animation: {
@@ -88,6 +92,7 @@ module.exports = {
         scroll: "scroll 80s linear infinite",
         "fade-in": "fade-in 1s",
         "not-found": "not-found 0.7s ease-in-out",
+        "spin": "spin 1.5s linear infinite",
 
       },
     },

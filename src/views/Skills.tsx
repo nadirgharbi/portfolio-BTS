@@ -2,7 +2,7 @@ import { useState, ReactNode } from "react";
 import { FaCss3, FaFigma, FaGit, FaGitlab, FaHtml5, FaJava, FaJs, FaPython, FaReact, FaSymfony, FaDocker } from "react-icons/fa6";
 import { BiLogoTailwindCss, BiLogoVisualStudio, BiCode } from "react-icons/bi";
 import { GrMysql } from "react-icons/gr";
-import { SiIntellijidea, SiInsomnia, SiPostman, SiRuby, SiAdonisjs, SiTypescript, SiNginx, SiNodedotjs, SiLaravel } from "react-icons/si";
+import { SiIntellijidea, SiInsomnia, SiPostman, SiRuby, SiAdonisjs, SiTypescript, SiNginx, SiNodedotjs, SiLaravel, SiCsharp } from "react-icons/si";
 import { BsGear } from "react-icons/bs";
 import { VscTools } from "react-icons/vsc";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
@@ -46,6 +46,7 @@ export const Skills = () => {
 		{ icon: <SiRuby className={logoCSS} />, alt: "Ruby", typeTech: "Language" }, // Ruby
 		{ icon: <SiNginx className={logoCSS} />, alt: "Nginx", typeTech: "Tools" }, // Nginx
 		{ icon: <SiNodedotjs className={logoCSS} />, alt: "NodeJS ", typeTech: "Tools" }, // NodeJS
+		{ icon: <SiCsharp  className={logoCSS} />, alt: "C# ", typeTech: "Language" }, // NodeJS
 	] as const;
 
 	return (
@@ -82,7 +83,7 @@ export const Skills = () => {
 
 
 				{/* CTA TABLEAU */}
-				<div className="flex flex-col justify-center items-center mt-28 animate-fade-up rounded-2xl ">
+				<div className="flex flex-col justify-center items-center my-28 animate-fade-up rounded-2xl ">
 					<div className="flex flex-col justify-center items-center text-center gap-5 md:w-2/3 ">
 						<p className="text-3xl font-extrabold">Epreuve E4</p>
 						<p className="text-default/80 font-light">Telechargez mon tableau de competence pour en savoir plus sur mes réalisations professionnelles ainsi que les compétences qui ont été mises en œuvre</p>

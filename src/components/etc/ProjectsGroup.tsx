@@ -1,4 +1,5 @@
 import { ProjectCard } from "./ProjectCard";
+import ProjectComingSoon from "./ProjectComingSoon";
 
 export const ProjectsGroup: React.FC<ProjectsProps> = ({ projects }) => {
 	return (
@@ -6,6 +7,7 @@ export const ProjectsGroup: React.FC<ProjectsProps> = ({ projects }) => {
 			{projects.map((project, key) => (
 				<ProjectCard {...project} key={key} />
 			))}
+			<ProjectComingSoon />
 		</div>
 	);
 };
