@@ -86,7 +86,7 @@ export const Skills = () => {
 				<div className="flex flex-col justify-center items-center my-28 animate-fade-up rounded-2xl ">
 					<div className="flex flex-col justify-center items-center text-center gap-5 md:w-2/3 ">
 						<p className="text-3xl font-extrabold">Epreuve E4</p>
-						<p className="text-default/80 font-light">Telechargez mon tableau de competence pour en savoir plus sur mes réalisations professionnelles ainsi que les compétences qui ont été mises en œuvre</p>
+						<p className="text dark:text-default/80 font-light">Telechargez mon tableau de competence pour en savoir plus sur mes réalisations professionnelles ainsi que les compétences qui ont été mises en œuvre</p>
 						<a href={BTSE4} download>
 							<Button className="flex gap-2 !bg-secondary hover:!bg-secondary/90 !text-default">
 								<Download size={18} />
