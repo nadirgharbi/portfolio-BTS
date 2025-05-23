@@ -50,9 +50,9 @@ export const Contact = () => {
       setIsSubmitting(true);
 
       // Identification au compte EmailJS
-      const serviceID = "service_svvxweo";
+      const serviceID = "service_g188fo1";
       const templateID = "template_x0rt2fk";
-      const publicKey = "MjIfD4GxiBI5JkGqA";
+      const publicKey = "vWH-wbYkpIWQKIXlm";
 
       // Parametre pour indiquer les informations du formulaire
       const templateParams = {

@@ -1,5 +1,18 @@
 import { useEffect, useState } from "react";
-import { BsHouse, BsHouseFill, BsPersonVcard, BsPersonVcardFill, BsPersonGear, BsPersonFillGear, BsFileEarmarkCode, BsFileEarmarkCodeFill, BsBinoculars, BsBinocularsFill, BsEnvelope, BsEnvelopeFill, BsThreeDotsVertical, BsXLg } from "react-icons/bs";
+import {
+	BsHouse,
+	BsHouseFill,
+	BsPersonVcard,
+	BsPersonVcardFill,
+	BsPersonGear,
+	BsPersonFillGear,
+	BsFileEarmarkCode,
+	BsFileEarmarkCodeFill,
+	BsEnvelope,
+	BsEnvelopeFill,
+	BsThreeDotsVertical,
+	BsXLg,
+} from "react-icons/bs";
 import { NavLink, useLocation } from "react-router-dom";
 import { Separator } from "../ui/separator";
 import { ModeToggle } from "../theme/ModeToggle";
@@ -25,7 +38,7 @@ export const Sidebar = () => {
 		{ path: "/about", label: "À Propos de moi", icon: <BsPersonVcard size={32} />, iconFill: <BsPersonVcardFill size={32} /> },
 		{ path: "/skills", label: "Compétences ", icon: <BsPersonGear size={32} />, iconFill: <BsPersonFillGear size={32} /> },
 		{ path: "/projects", label: "Projets", icon: <BsFileEarmarkCode size={32} />, iconFill: <BsFileEarmarkCodeFill size={32} /> },
-		{ path: "/monitoring", label: "Veilles", icon: <BsBinoculars size={32} />, iconFill: <BsBinocularsFill size={32} /> },
+		// { path: "/monitoring", label: "Veilles", icon: <BsBinoculars size={32} />, iconFill: <BsBinocularsFill size={32} /> },
 		{ path: "/contact", label: "Contact", icon: <BsEnvelope size={32} />, iconFill: <BsEnvelopeFill size={32} /> },
 	];
 
@@ -76,7 +89,13 @@ export const Sidebar = () => {
 						openedMenu ? "block transition-all animate-fade-in-scale" : " hidden lg:flex"
 					}`}>
 					{sidebarItems.map((item, key) => (
-						<NavLink to={item.path} className={`${globalCss} ${active === item.path ? activeCss : ""}`} data-tooltip-id="tooltip" data-tooltip-content={item.label} data-tooltip-place="right" key={key}>
+						<NavLink
+							to={item.path}
+							className={`${globalCss} ${active === item.path ? activeCss : ""}`}
+							data-tooltip-id="tooltip"
+							data-tooltip-content={item.label}
+							data-tooltip-place="right"
+							key={key}>
 							{active === item.path ? item.iconFill : item.icon} {/* On vérifie si le chemin courrant correspond au composant concernés */}
 						</NavLink>
 					))}
@@ -86,7 +105,10 @@ export const Sidebar = () => {
 
 					<Separator decorative className="w-12" />
 
-					<Button variant="outline" size="icon" className="rounded-xl bg-secondary hover:bg-secondary/90 dark:bg-secondary dark:hover:bg-secondary/75 border border-secondary/20 dark:border-secondary/20 text-default hover:text-default">
+					<Button
+						variant="outline"
+						size="icon"
+						className="rounded-xl bg-secondary hover:bg-secondary/90 dark:bg-secondary dark:hover:bg-secondary/75 border border-secondary/20 dark:border-secondary/20 text-default hover:text-default">
 						<a download href={CVNadir} data-tooltip-id="tooltip" data-tooltip-content={"Télécharger mon CV"} data-tooltip-place="right">
 							<Download className="h-[1.4rem] w-[1.4rem]" />
 						</a>{" "}

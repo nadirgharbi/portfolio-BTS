@@ -44,6 +44,7 @@ interface StudiesProps {
 interface ProjectProps {
 	title: string;
 	description: string;
+	strongWords?: string;
 	tags: string[];
 	imageUrl: string;
 	hrefLink: string;

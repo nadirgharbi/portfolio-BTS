@@ -1,6 +1,7 @@
 import React from "react";
 import { Timeline } from "flowbite-react";
 import { Badge } from "../ui/badge";
+import { getBadgeBorderColor } from "@/lib/badgeUtils";
 
 export const Study: React.FC<StudyTimelineProps> = ({ title, description, school, location, period, status }) => {
 	return (
@@ -19,7 +20,7 @@ export const Study: React.FC<StudyTimelineProps> = ({ title, description, school
 						</div>
 						<div>
 							<Timeline.Body>
-								<Badge variant={"outline"} className={`${status === "Diplomé" ? "border-green-500 dark:border-green-400" : status === "Niveau" ? "border-amber-500 dark:border-amber-400" : "border-blue-500 dark:border-blue-400"} rounded whitespace-nowrap`}>
+								<Badge variant={"outline"} className={`${getBadgeBorderColor(status)} rounded whitespace-nowrap`}>
 									{status}
 								</Badge>
 							</Timeline.Body>

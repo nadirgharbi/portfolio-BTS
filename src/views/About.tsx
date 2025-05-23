@@ -12,17 +12,18 @@ export const About = () => {
 	const [ageNumber, setAgeNumber] = useState<number>(0);
 	const [projectsNumber, setProjectsNumber] = useState<number>(0);
 	const [experienceNumber, setExperienceNumber] = useState<number>(0);
+	const currYear = new Date().getFullYear();
 
 	// Compteur automatique pour augmenter l'age
 	useEffect(() => {
 		// pour l'age
 		const interval = setInterval(() => {
-			if (ageNumber < 23) {
+			if (ageNumber < currYear - 2000) {
 				setAgeNumber((prev) => prev + 1);
 			} else {
 				clearInterval(interval);
 			}
-		}, 50); // Interval de 30ms seconde
+		}, 50); // Interval de 50ms seconde
 
 		return () => clearInterval(interval);
 	}, [ageNumber]);
@@ -35,7 +36,7 @@ export const About = () => {
 			} else {
 				clearInterval(interval);
 			}
-		}, 100); // Interval de 30ms seconde
+		}, 100); // Interval de 100ms seconde
 
 		return () => clearInterval(interval);
 	}, [projectsNumber]);
@@ -43,12 +44,12 @@ export const About = () => {
 	useEffect(() => {
 		// pour les annees d'experiences
 		const interval = setInterval(() => {
-			if (experienceNumber < 2) {
+			if (experienceNumber < 4) {
 				setExperienceNumber((prev) => prev + 1);
 			} else {
 				clearInterval(interval);
 			}
-		}, 300); // Interval de 30ms seconde
+		}, 300); // Interval de 300ms seconde
 
 		return () => clearInterval(interval);
 	}, [experienceNumber]);
@@ -66,7 +67,8 @@ export const About = () => {
 							<Badge variant={"outline"} className="rounded-lg text-base font-mono">
 								Nadir
 							</Badge>{" "}
-							, étudiant en <span className="font-light">BTS SIO</span> option Solution Logicielles et Applications Métiers à l’école <span className="font-semibold">Maestris</span> à Toulon. Je suis actuellement au sein de l'entreprise{" "}
+							, étudiant en <span className="font-light">BTS SIO</span> option Solution Logicielles et Applications Métiers à l’école <span className="font-semibold">Maestris</span> à Toulon. Je suis
+							actuellement au sein de l'entreprise{" "}
 							<Badge variant={"outline"} className="rounded-lg text-base">
 								<a className="font-mono hover:text-secondary" href="/">
 									AVIS2SANTE
@@ -75,8 +77,9 @@ export const About = () => {
 							située à <span className="font-semibold">SIX-FOURS-LES-PLAGES</span>.
 						</p>
 						<p className="text-lg leading-relaxed">
-							<span className="font-light">Passionné</span> par le monde de l'informatique depuis mon plus jeune âge, mon parcours académique m'a permis d'acquérir des <span className="font-semibold">compétences approfondies</span> dans le développement de <span className="font-light">solutions web</span>{" "}
-							et <span className="font-semibold">d'applications mobile</span>.
+							<span className="font-light">Passionné</span> par le monde de l'informatique depuis mon plus jeune âge, mon parcours académique m'a permis d'acquérir des{" "}
+							<span className="font-semibold">compétences approfondies</span> dans le développement de <span className="font-light">solutions web</span> et{" "}
+							<span className="font-semibold">d'applications mobile</span>.
 						</p>
 					</div>
 
