@@ -1,15 +1,12 @@
 import myPic from "@/assets/me.png";
 import { BsCake2, BsPatchCheck, BsPersonCheck } from "react-icons/bs";
 import { Badge } from "../components/ui/badge";
-import { Separator } from "../components/ui/separator";
 import { useEffect, useState } from "react";
 import { Experiences } from "@/components/etc/Experiences";
 import { experiencesData, studiesData } from "@/lib/data";
 import { Studies } from "@/components/etc/Studies";
 import { BannerScroller } from "@/components/etc/BannerScroller";
-import { IoFootball } from "react-icons/io5";
-import { GiDragonBalls } from "react-icons/gi";
-import { FaLaptopCode, FaChess, FaMusic, FaTableTennisPaddleBall } from "react-icons/fa6";
+import { FaLaptopCode, FaChess, FaTableTennisPaddleBall } from "react-icons/fa6";
 
 export const About = () => {
 	const [ageNumber, setAgeNumber] = useState<number>(0);
@@ -113,18 +110,17 @@ export const About = () => {
 							{/* Sports en duel */}
 							<div className="flex flex-col w-[22rem] gap-3">
 								<FaTableTennisPaddleBall className="text-primary/75 dark:text-white/90 max-lg:mx-auto w-20 h-20" />
-								<p className="font-semibold text-black dark:text-white/90">Sports en duel</p>
-								<p className="lg:text-start font-light">
-									Étant de nature compétitive, j'aime particulièrement les sports en duel comme le tennis ou le ping-pong.
-								</p>
+								<p className="font-semibold text-black dark:text-white/90">Les sports en duel</p>
+								<p className="lg:text-start font-light">Étant de nature compétitive, j'aime particulièrement les sports en duel comme le tennis ou le ping-pong.</p>
 							</div>
 						</div>
 					</div>
 
 					{/* Mon objectif */}
-					<div>
+					{/* <div>
 						<p className="text-lg font-extrabold text-secondary tracking-wide">Mes objectifs</p>
-					</div>
+						<p>Actuellement, je poursuis</p>
+					</div> */}
 				</div>
 
 				{/* Right part */}
@@ -141,7 +137,7 @@ export const About = () => {
 					{/* Age */}
 					<div className="flex flex-col text-start md:flex-row items-center ">
 						<div className="flex flex-col max-lg:items-center max-lg:text-center lg:flex-row gap-3">
-							<BsCake2 size={60} className="" />
+							<BsCake2 size={52} className="" />
 							<div className="leading-5">
 								<p className="text-4xl font-extrabold">{ageNumber}</p>
 								<p className="font-light text-nowrap">ans</p>
@@ -152,7 +148,7 @@ export const About = () => {
 					{/* Nombre de projets */}
 					<div className="flex flex-col text-start md:flex-row items-center ">
 						<div className="flex flex-col max-lg:items-center max-lg:text-center lg:flex-row gap-3">
-							<BsPatchCheck size={60} className="" />
+							<BsPatchCheck size={52} className="" />
 							<div className="leading-5">
 								<p className="text-4xl font-extrabold">+ {projectsNumber}</p>
 								<p className="font-light text-nowrap">projets réalisés</p>
@@ -161,7 +157,7 @@ export const About = () => {
 					</div>
 					<div className="flex flex-col text-start md:flex-row items-center ">
 						<div className="flex flex-col max-lg:items-center max-lg:text-center lg:flex-row gap-3">
-							<BsPersonCheck size={60} className="" />
+							<BsPersonCheck size={52} className="" />
 							<div className="leading-5">
 								<p className="text-4xl font-extrabold">{experienceNumber}</p>
 								<p className="font-light text-nowrap">années d’expérience</p>

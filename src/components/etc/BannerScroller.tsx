@@ -1,8 +1,8 @@
 import { useEffect, ReactNode } from "react";
-import { FaCss3, FaFigma, FaGit, FaGitlab, FaHtml5, FaJava, FaJs, FaPython, FaReact, FaSymfony, FaDocker } from "react-icons/fa6";
-import { BiLogoTypescript, BiLogoTailwindCss, BiLogoVisualStudio } from "react-icons/bi";
+import { FaFigma, FaGit, FaGitlab, FaJava, FaJs, FaPython, FaReact, FaSymfony, FaDocker } from "react-icons/fa6";
+import { BiLogoTypescript, BiLogoTailwindCss } from "react-icons/bi";
 import { GrMysql } from "react-icons/gr";
-import { SiIntellijidea, SiInsomnia, SiPostman, SiRuby, SiAdonisjs } from "react-icons/si";
+import { SiInsomnia, SiPostman, SiRuby, SiAdonisjs } from "react-icons/si";
 import { NavLink } from "react-router-dom";
 
 export const BannerScroller = () => {

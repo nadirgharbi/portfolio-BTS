@@ -7,7 +7,6 @@ import { BsGear } from "react-icons/bs";
 import { VscTools } from "react-icons/vsc";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
 // import { Tooltip } from "react-tooltip";
-import { IconType } from "react-icons/lib";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 type SkillItem = {
