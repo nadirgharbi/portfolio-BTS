@@ -51,6 +51,7 @@ export const Sidebar = () => {
 
 	useEffect(() => {
 		setActive(location.pathname);
+		setOpenedMenu(false)
 	}, [location.pathname]);
 
 	useEffect(() => {
