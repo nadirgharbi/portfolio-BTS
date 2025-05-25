@@ -21,7 +21,7 @@ export const Home = () => {
 				{/* Introduction */}
 				<div className="flex flex-col items-center text-2xl gap-3">
 					<p className="text-3xl md:text-4xl">
-						Hey, je suis <span className="font-black text-secondary">Nadir</span>
+						Hey, je suis <span className="font-black text-secondary">Nadir </span>
 					</p>
 					<p className="text-xl md:text-2xl font-bold">
 						<Typewriter words={words} typeSpeed={40} deleteSpeed={70} delaySpeed={950} cursor loop />

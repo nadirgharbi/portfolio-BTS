@@ -12,7 +12,7 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
-    }, 
+    },
     extend: {
       colors: {
         default: "#fafbfb",
@@ -37,7 +37,7 @@ module.exports = {
           from: { transform: "rotate(45deg)", opacity: "50" },
           to: { transform: "rotate(90deg)", opacity: "100" },
         },
-        
+
         "fade-in": {
           from: { opacity: "0" },
           to: { opacity: "100" },
@@ -68,15 +68,22 @@ module.exports = {
           }
         },
         "not-found": {
-          "0%" : { transform: "rotate(0)" },
-          "25%" : { transform: "rotate(3deg)" },
-          "50%" : { transform: "rotate(0)" },
-          "75%" : { transform: "rotate(3deg)" },
-          "100%" : { transform: "rotate(0)" },
+          "0%": { transform: "rotate(0)" },
+          "25%": { transform: "rotate(3deg)" },
+          "50%": { transform: "rotate(0)" },
+          "75%": { transform: "rotate(3deg)" },
+          "100%": { transform: "rotate(0)" },
         },
         spin: {
-          from: {transform: 'rotate(0)'},
-          to: {transform: 'rotate(360deg)'},
+          from: { transform: 'rotate(0)' },
+          to: { transform: 'rotate(360deg)' },
+        },
+        shake: {
+          "0%": { tramsform: "rotate(0)" },
+          "25%": { tramsform: "rotate(30deg)" },
+          "50%": { tramsform: "rotate(0)" },
+          "75%": { tramsform: "rotate(-30deg)" },
+          "100%": { tramsform: "rotate(0deg)" },
         }
       },
       animation: {
@@ -93,6 +100,7 @@ module.exports = {
         "fade-in": "fade-in 1s",
         "not-found": "not-found 0.7s ease-in-out",
         "spin": "spin 1.5s linear infinite",
+        "shake": "shake 1s ease-in-out",
 
       },
     },

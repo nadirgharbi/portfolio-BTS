@@ -1,10 +1,9 @@
-import logoDark from "../../../public/logo-dark.png";
-import logoLight from "../../../public/logo-light.png";
+import logoDark from "@/assets/logo-dark.png";
+import logoLight from "@/assets/logo-light.png";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export const Header = () => {
-
 	const [isScrolled, setIsScrolled] = useState(false);
 	const changeNav = `${isScrolled ? "backdrop-blur-xl bg-default/50 dark:bg-primary/50 fixed shadow dark:shadow-default/10 px-8 lg:px-40 " : "top-5 absolute px-8 "}`;
 

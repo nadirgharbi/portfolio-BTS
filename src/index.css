@@ -50,3 +50,28 @@ div::-webkit-scrollbar-thumb {
     -webkit-box-shadow: 0 0 1px #09090b22;
     background-color: #313131;
 }
+
+/* Progressive tabs (skills section) */
+@keyframes progress-bar-fill {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.icon-progress-container::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    /* Ajustez pour la position sous l'icône */
+    left: 0;
+    height: 3px;
+    /* Hauteur de la barre de progression */
+    background-color: currentColor;
+    /* Prendra la couleur du texte (secondary si actif) */
+    animation: progress-bar-fill 5s linear forwards;
+    /* 'forwards' pour garder l'état final */
+}
