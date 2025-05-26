@@ -49,6 +49,8 @@ interface ProjectProps {
 	imageUrl: string;
 	hrefLink: string;
 	hasSource: boolean;
+	unavailable?: boolean
+	repoSource?: string
 }
 
 /** Pour plusieurs projets */

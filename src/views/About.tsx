@@ -12,16 +12,16 @@ export const About = () => {
 	const [ageNumber, setAgeNumber] = useState<number>(0);
 	const [projectsNumber, setProjectsNumber] = useState<number>(0);
 	const [experienceNumber, setExperienceNumber] = useState<number>(0);
-	const currYear = new Date().getFullYear();
+	const currAge = 24;
 
-	const studyInfo = { studyName: "Bachelor Concepteur Développeur d'Application en alternance", schoolName: "CESI", schoolLocation: "Aix-en-Provence" };
+	const studyInfo = { studyName: "Bachelor Concepteur Développeur d'Applications en alternance", schoolName: "CESI", schoolLocation: "Aix-en-Provence" };
 	const companyInfo = { name: "AVIS2SANTE", location: "SIX-FOURS-LES-PLAGES" };
 
 	// Compteur automatique pour augmenter l'age
 	useEffect(() => {
 		// pour l'age
 		const interval = setInterval(() => {
-			if (ageNumber < currYear - 2000) {
+			if (ageNumber < currAge) {
 				setAgeNumber((prev) => prev + 1);
 			} else {
 				clearInterval(interval);
@@ -73,8 +73,8 @@ export const About = () => {
 							<Badge variant={"outline"} className="rounded-lg text-base font-mono">
 								Nadir
 							</Badge>{" "}
-							, étudiant en <span className="font-light">{studyInfo.studyName}</span> <span className="font-semibold">à l'école du {studyInfo.schoolName}</span> à {studyInfo.schoolLocation}. Je suis
-							actuellement au sein de l'entreprise{" "}
+							, étudiant en <span className="font-light">{studyInfo.studyName}</span> <span className="font-semibold">à l'école {studyInfo.schoolName}</span> à {studyInfo.schoolLocation}. Je suis
+							actuellement en alternance au sein de l'entreprise{" "}
 							<Badge variant={"outline"} className="rounded-lg text-base">
 								<a className="font-mono hover:text-secondary" href="https://avis2sante.fr" target="_blank">
 									{companyInfo.name}

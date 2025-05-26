@@ -69,20 +69,24 @@ const projectsData = [
 	{
 		title: "API AdonisJS",
 		description:
-			"J'ai développé une API avec le framework AdonisJS afin de pouvoir communiquer avec le serveur et ainsi intéragir avec ma bases de données. Cela me permet d'utiliser mon API pour plusieurs projets différents.",
+			"Dans le cadre de mon BTS SIO, j'ai développé une API avec le framework AdonisJS (basé sur Express et Node.js) avec un système d'authentification par OAuth. Cet API était essentiel pour mes différents projets effectués en BTS et facilitait la récupération des données côté client.",
 		tags: ["React", "Typescript", "AdonisJS", "NodeJS", "NGINX"],
 		imageUrl: IconAPI,
 		hrefLink: "https://apiv1.nadir-gharbi.fr/",
-		hasSource: true,
+		hasSource: false,
+		unavailable: true,
+		repoSource: "https://github.com/nadirgharbi/portfolio-api",
 	},
 	{
 		title: "Todolist",
 		description:
-			"Comment ne pas se passer de la Todolist quand on debute dans le developpement web. Cette Todolist possède un système d'authentification avec lequelle il est possible de s'identifier et d'enregistrer des taches. ",
+			"Comment se passer de la Todolist quand on debute dans le developpement web ? Cette Todolist possède un système d'authentification avec lequel il est possible de s'identifier et enregistrer des tâches à faire. ",
 		tags: ["React", "Typescript", "Adonis"],
 		imageUrl: todoIcon,
 		hrefLink: "https://mytodo.nadir-gharbi.fr/",
-		hasSource: true,
+		hasSource: false,
+		unavailable: true,
+		repoSource: "https://github.com/nadirgharbi/react-todo-vite/tree/main",
 	},
 	{
 		title: "monmedecin.org",
@@ -97,7 +101,7 @@ const projectsData = [
 	},
 	{
 		title: "TicTacToe.jsx",
-		description: "Un TicTacToe version web ! Une version améliorée du projet tictactoe.py avec une interface épurée et avec la possibilité de se jouer à 2 joueurs.",
+		description: "Un TicTacToe version web ! Une version améliorée du projet tictactoe.py avec une interface épurée et la possibilité de jouer à 2 joueurs en local.",
 		tags: ["React", "ViteJS", "TailwindCSS", "AdonisJS"],
 		imageUrl: tictactoeReact,
 		hrefLink: "https://www.tictactoe.nadir-gharbi.fr/",
@@ -121,7 +125,8 @@ const projectsData = [
 	},
 	{
 		title: "tictactoe.py",
-		description: "tictactoe.py est une version du célèbre jeu du TicTacToe que j'ai réalisée en tant que projet personnel.",
+		description:
+			"tictactoe.py est une version du célèbre jeu TicTacToe que j'ai réalisé en tant que projet personnel. Ce projet m'a permis d'apprendre les bases de la programmation orientée objet et de maîtriser les principes SOLID.",
 		tags: ["Python", "PyGame", "Morpion"],
 		imageUrl: tictactoePy,
 		hrefLink: "https://github.com/nadirgharbi/TicTacToe",
@@ -156,7 +161,7 @@ const projectsData = [
 const studiesData = [
 	{
 		title: "Mastère MAALSI",
-		description: "Admis au Mastère professionnel Manager en Architecture et Applications Logicielles des SI en alternance. \nRythme: 3 semaine en entreprise / 1 semaine de cours",
+		description: "Admis en Mastère professionnel Manager en Architecture et Applications Logicielles des SI en alternance. \nRythme: 3 semaine en entreprise / 1 semaine en formation",
 		school: "CESI",
 		location: "Aix-en-Provence",
 		period: "2025 - 2027",
