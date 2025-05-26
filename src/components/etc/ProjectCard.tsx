@@ -1,7 +1,6 @@
 import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
-import { Tooltip, TooltipTrigger, TooltipContent } from "../ui/tooltip";
 
 export const ProjectCard: React.FC<ProjectProps> = ({ title, description, tags, imageUrl, hrefLink, hasSource, strongWords, unavailable, repoSource }) => {
 	return (
