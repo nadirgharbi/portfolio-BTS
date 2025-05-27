@@ -46,7 +46,7 @@ export const Skills = () => {
 		{ icon: <SiDjango className={logoCSS} />, alt: "Django", typeTech: "Framework", level: 2 },
 		{ icon: <FaJava className={logoCSS} />, alt: "Java", typeTech: "Language", level: 3 },
 		{ icon: <FaGit className={logoCSS} />, alt: "Git", typeTech: "Tools", level: 4 },
-		{ icon: <SiCsharp className={logoCSS} />, alt: "C#", typeTech: "Language", level: 3 },
+		{ icon: <SiCsharp className={logoCSS} />, alt: "C#", typeTech: "Language", level: 2 },
 		{ icon: <SiAdonisjs className={logoCSS} />, alt: "AdonisJS", typeTech: "Framework", level: 3 },
 		{ icon: <FaFigma className={logoCSS} />, alt: "Figma", typeTech: "Tools", level: 3 }, // Ou "Design"
 		{ icon: <FaGitlab className={logoCSS} />, alt: "GitLab", typeTech: "Tools", level: 4 },
