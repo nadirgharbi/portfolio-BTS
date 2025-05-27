@@ -7,6 +7,8 @@ import { BsGear } from "react-icons/bs";
 import { VscTools } from "react-icons/vsc";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import "@/styles/skills.css";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 type SkillItem = {
 	icon: ReactElement;
@@ -21,6 +23,7 @@ type TabType = (typeof TABS)[number];
 export const Skills = () => {
 	const [activeTab, setActiveTab] = useState<TabType>("Language");
 	const [hasUserSelected, setHasUserSelected] = useState(false);
+	const [isSortedByLevel, setIsSortedByLevel] = useState(false);
 	const intervalRef = useRef<NodeJS.Timeout | null>(null);
 	// Key unique pour forcer le re-render de l'animation
 	const [animationKey, setAnimationKey] = useState(0);
@@ -99,25 +102,53 @@ export const Skills = () => {
 		}
 	};
 
+	const sortedSkills = () => {
+		let filteredSkills = [...logoSkills];
+		if (activeTab !== "All") {
+			filteredSkills = filteredSkills.filter(skill => skill.typeTech === activeTab);
+		}
+		if (isSortedByLevel) {
+			filteredSkills.sort((a, b) => b.level - a.level);
+		}
+		return filteredSkills;
+	};
+
+	const handleSortChange = (value: string) => {
+		setHasUserSelected(true);
+		setIsSortedByLevel(value === "level");
+		setAnimationKey(prev => prev + 1);
+	};
+
 	return (
 		<div className="min-h-screen flex flex-col items-center px-6 lg:px-32 pt-40 gap-12 text-primary dark:text-default bg-white dark:bg-primary overflow-x-hidden">
 			<p className="text-3xl md:text-4xl font-extrabold">Compétences</p>
-			<div className="grid grid-cols-2 md:grid-cols-4 gap-10 p-12 w-screen md:w-auto md:relative z-[900]">
-				{TABS.map((tab) => (
-					<button key={tab} className={`grid justify-items-center gap-2 font-semibold ${activeTab === tab ? "text-secondary" : "text-primary dark:text-default"}`} onClick={() => handleTabClick(tab)}>
-						<div
-							// La clé unique ici est cruciale pour que React re-monte le composant
-							// et que l'animation CSS se relance.
-							key={`${tab}-${animationKey}`}
-							className={`relative ${activeTab === tab && !hasUserSelected ? "icon-progress-container" : ""}`}>
-							{tab === "Language" && <BiCode size={32} />}
-							{tab === "Framework" && <BsGear size={32} />}
-							{tab === "Tools" && <VscTools size={32} />}
-							{tab === "All" && <HiOutlineSquares2X2 size={34} />}
-						</div>
-						{getTabsName(tab)}
-					</button>
-				))}
+			<div className="flex flex-col items-center gap-6">
+				<div className="grid grid-cols-2 md:grid-cols-4 gap-10 p-12 w-auto md:relative z-[900]">
+					{TABS.map((tab) => (
+						<button key={tab} className={`grid justify-items-center gap-2 font-semibold ${activeTab === tab ? "text-secondary" : "text-primary dark:text-default"}`} onClick={() => handleTabClick(tab)}>
+							<div
+								// La clé unique ici est cruciale pour que React re-monte le composant
+								// et que l'animation CSS se relance.
+								key={`${tab}-${animationKey}`}
+								className={`relative ${activeTab === tab && !hasUserSelected ? "icon-progress-container" : ""}`}>
+								{tab === "Language" && <BiCode size={32} />}
+								{tab === "Framework" && <BsGear size={32} />}
+								{tab === "Tools" && <VscTools size={32} />}
+								{tab === "All" && <HiOutlineSquares2X2 size={34} />}
+							</div>
+							{getTabsName(tab)}
+						</button>
+					))}
+				</div>
+				<Select onValueChange={handleSortChange} defaultValue="default">
+					<SelectTrigger className="w-[180px] bg-primary/10 dark:bg-default/10">
+						<SelectValue placeholder="Trier par..." />
+					</SelectTrigger>
+					<SelectContent>
+						<SelectItem value="default">Tri par défaut</SelectItem>
+						<SelectItem value="level">Tri par niveau</SelectItem>
+					</SelectContent>
+				</Select>
 			</div>
 
 			{/* SKILLS GRID */}
@@ -125,36 +156,26 @@ export const Skills = () => {
 				{" "}
 				{/* delayDuration est optionnel */}
 				<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 justify-items-center gap-x-6 gap-y-10 py-12 md:py-16 relative w-full md:w-5/6 lg:w-4/5 mx-auto animate-fade-up z-[99]">
-					{logoSkills.map((logo) => {
-						const isVisible = activeTab === "All" || logo.typeTech === activeTab;
-						return (
-							// Chaque icône a son propre Tooltip
-							<Tooltip key={logo.alt}>
-								<TooltipTrigger asChild>
-									{/* Le div qui contient l'icône et gère l'opacité */}
-									<div
-										className={`flex flex-col items-center cursor-pointer transition-all duration-300 ease-in-out
-                                            ${isVisible ? "opacity-100 scale-100" : "opacity-30 scale-90 pointer-events-none"}`}
-										// pointer-events-none pour les éléments masqués afin d'éviter les tooltips fantômes
-									>
-										{logo.icon}
-										{/* Optionnel: afficher le nom sous l'icône aussi */}
-										{/* <span className="mt-1 text-xs text-center">{logo.alt}</span> */}
-									</div>
-								</TooltipTrigger>
-								{/* Le contenu du tooltip s'affiche uniquement si l'élément est visible */}
-								{isVisible && (
-									<TooltipContent side="top" className="mb-1 p-1 flex flex-col gap-1 items-center">
-										{" "}
-										{/* side="top" est généralement le défaut */}
-										<p className="font-semibold">{logo.icon}</p>
-										<p className="font-semibold">{logo.alt}</p>
-										<p className={`text-2xl ${renderStars(logo.level).includes("★") ? "text-secondary" : ""}`}>{renderStars(logo.level)}</p>
-									</TooltipContent>
-								)}
-							</Tooltip>
-						);
-					})}
+					{sortedSkills().map((logo, index) => (
+						<Tooltip key={`${logo.alt}-${animationKey}`}>
+							<TooltipTrigger asChild>
+								<div
+									className={`flex flex-col items-center cursor-pointer transition-all duration-300 ease-in-out transform`}
+									style={{
+										animation: `fadeInMove 0.3s ease-out ${index * 0.1}s both`
+									}}
+								>
+									{logo.icon}
+								</div>
+							</TooltipTrigger>
+							<TooltipContent side="top" className="mb-1 p-1 flex flex-col gap-1 items-center">
+								<p className="font-semibold">{logo.alt}</p>
+								<p className={`text-2xl ${renderStars(logo.level).includes("★") ? "text-secondary" : ""}`}>
+									{renderStars(logo.level)}
+								</p>
+							</TooltipContent>
+						</Tooltip>
+					))}
 				</div>
 			</TooltipProvider>
 		</div>
