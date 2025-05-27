@@ -1,34 +1,41 @@
 import { useEffect, ReactNode } from "react";
-import { FaFigma, FaGit, FaGitlab, FaJava, FaJs, FaPython, FaReact, FaSymfony, FaDocker } from "react-icons/fa6";
-import { BiLogoTypescript, BiLogoTailwindCss } from "react-icons/bi";
+import { FaFigma, FaGit, FaGitlab, FaJava, FaJs, FaPython, FaReact, FaSymfony, FaDocker, FaPhp, FaVuejs } from "react-icons/fa6";
+import { BiLogoTailwindCss, BiLogoVisualStudio } from "react-icons/bi";
 import { GrMysql } from "react-icons/gr";
-import { SiInsomnia, SiPostman, SiRuby, SiAdonisjs } from "react-icons/si";
+import { SiIntellijidea, SiInsomnia, SiPostman, SiAdonisjs, SiTypescript, SiNodedotjs, SiLaravel, SiCsharp, SiNextdotjs, SiExpo, SiDjango, SiVite, SiMariadb } from "react-icons/si";
 import { NavLink } from "react-router-dom";
 
 export const BannerScroller = () => {
 	const logoCSS: string = "text-primary/75 dark:text-default/75 w-20 h-20" as const;
 
 	const logoSkills: Array<{ icon: ReactNode; alt: string }> = [
-		{ icon: <FaReact className={logoCSS} />, alt: "React" }, // React
-		{ icon: <FaJs className={logoCSS} />, alt: "Javascript" }, // Javascript
-		{ icon: <BiLogoTypescript className={logoCSS} />, alt: "Typescript" }, // Typescript
-		// { icon: <FaHtml5 className={logoCSS} />, alt: "HTML" }, // HTML
-		{ icon: <SiAdonisjs className={logoCSS} />, alt: "Adonis" }, // Adonis
-		{ icon: <FaGit className={logoCSS} />, alt: "Git" }, // Git
-		{ icon: <GrMysql className={logoCSS} />, alt: "MySQL" }, // MySQL
-		// { icon: <BiLogoVisualStudio className={logoCSS} />, alt: "VS code" }, // VS code
-		{ icon: <FaFigma className={logoCSS} />, alt: "Figma" }, // Figma
-		{ icon: <BiLogoTailwindCss className={logoCSS} />, alt: "TailwindCSS" }, // TailwindCSS
-		// { icon: <SiIntellijidea className={logoCSS} />, alt: "IntelliJ" }, // IntelliJ
-		{ icon: <FaSymfony className={logoCSS} />, alt: "Symfony" }, // Symfony
-		{ icon: <FaJava className={logoCSS} />, alt: "Java" }, // Java
-		{ icon: <SiPostman className={logoCSS} />, alt: "Postman" }, // Postman
-		// { icon: <FaCss3 className={logoCSS} />, alt: "CSS3" }, // CSS3
-		{ icon: <FaGitlab className={logoCSS} />, alt: "Gitlab" }, // Gitlab
-		{ icon: <FaDocker className={logoCSS} />, alt: "Docker" }, // Docker
-		{ icon: <SiInsomnia className={logoCSS} />, alt: "Insomnia" }, // Insomnia
-		{ icon: <SiRuby className={logoCSS} />, alt: "Ruby" }, // Ruby
-		{ icon: <FaPython className={logoCSS} />, alt: "Python" }, // Python
+		{ icon: <FaReact className={logoCSS} />, alt: "React" },
+		{ icon: <FaJs className={logoCSS} />, alt: "Javascript" },
+		{ icon: <SiTypescript className={logoCSS} />, alt: "Typescript" },
+		{ icon: <SiNextdotjs className={logoCSS} />, alt: "Next.js" },
+		{ icon: <BiLogoTailwindCss className={logoCSS} />, alt: "TailwindCSS" }, // Changé en Tools (comme Figma) ou "Design" si vous créez cette catégorie
+		{ icon: <GrMysql className={logoCSS} />, alt: "MySQL" },
+		{ icon: <SiNodedotjs className={logoCSS} />, alt: "Node.js" }, // NodeJS est un environnement, "Tools" est ok
+		{ icon: <FaVuejs className={logoCSS} />, alt: "Vue.js" },
+		{ icon: <SiExpo className={logoCSS} />, alt: "Expo (React Native)" },
+		{ icon: <SiVite className={logoCSS} />, alt: "Vite" },
+		{ icon: <SiMariadb className={logoCSS} />, alt: "MariaDB" },
+		{ icon: <FaPhp className={logoCSS} />, alt: "PHP" },
+		{ icon: <BiLogoVisualStudio className={logoCSS} />, alt: "VS Code" },
+		{ icon: <SiIntellijidea className={logoCSS} />, alt: "IntelliJ IDEA" },
+		{ icon: <SiLaravel className={logoCSS} />, alt: "Laravel" },
+		{ icon: <FaPython className={logoCSS} />, alt: "Python" },
+		{ icon: <SiDjango className={logoCSS} />, alt: "Django" },
+		{ icon: <FaJava className={logoCSS} />, alt: "Java" },
+		{ icon: <FaGit className={logoCSS} />, alt: "Git" },
+		{ icon: <SiCsharp className={logoCSS} />, alt: "C#" },
+		{ icon: <SiAdonisjs className={logoCSS} />, alt: "AdonisJS" },
+		{ icon: <FaFigma className={logoCSS} />, alt: "Figma" }, // Ou "Design"
+		{ icon: <FaGitlab className={logoCSS} />, alt: "GitLab" },
+		{ icon: <FaSymfony className={logoCSS} />, alt: "Symfony" },
+		{ icon: <FaDocker className={logoCSS} />, alt: "Docker" },
+		{ icon: <SiInsomnia className={logoCSS} />, alt: "Insomnia" },
+		{ icon: <SiPostman className={logoCSS} />, alt: "Postman" },
 	] as const;
 
 	useEffect(() => {

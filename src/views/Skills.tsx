@@ -6,7 +6,6 @@ import { SiIntellijidea, SiInsomnia, SiPostman, SiAdonisjs, SiTypescript, SiNode
 import { BsGear } from "react-icons/bs";
 import { VscTools } from "react-icons/vsc";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
-// import { Tooltip } from "react-tooltip";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 type SkillItem = {
