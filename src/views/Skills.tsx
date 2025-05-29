@@ -29,6 +29,7 @@ import {
   SiDjango,
   SiVite,
   SiMariadb,
+  SiAngular
 } from "react-icons/si";
 import { BsGear } from "react-icons/bs";
 import { VscTools } from "react-icons/vsc";
@@ -77,6 +78,7 @@ export const Skills = () => {
     { icon: <FaJava className={logoCSS} />, alt: "Java", typeTech: "Language", level: 3 },
     { icon: <FaGit className={logoCSS} />, alt: "Git", typeTech: "Tools", level: 4 },
     { icon: <SiCsharp className={logoCSS} />, alt: "C#", typeTech: "Language", level: 2 },
+    { icon: <SiAngular className={logoCSS} />, alt: "Angular", typeTech: "Framework", level: 2 },
     { icon: <FaLinux className={logoCSS} />, alt: "Linux", typeTech: "Tools", level: 4 },
     { icon: <SiAdonisjs className={logoCSS} />, alt: "AdonisJS", typeTech: "Framework", level: 3 },
     { icon: <FaFigma className={logoCSS} />, alt: "Figma", typeTech: "Tools", level: 3 }, // Ou "Design"

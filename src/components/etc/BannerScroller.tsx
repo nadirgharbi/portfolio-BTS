@@ -2,7 +2,7 @@ import { useEffect, ReactNode } from "react";
 import { FaFigma, FaGit, FaGitlab, FaJava, FaJs, FaPython, FaReact, FaSymfony, FaDocker, FaPhp, FaVuejs } from "react-icons/fa6";
 import { BiLogoTailwindCss, BiLogoVisualStudio } from "react-icons/bi";
 import { GrMysql } from "react-icons/gr";
-import { SiIntellijidea, SiInsomnia, SiPostman, SiAdonisjs, SiTypescript, SiNodedotjs, SiLaravel, SiCsharp, SiNextdotjs, SiExpo, SiDjango, SiVite, SiMariadb } from "react-icons/si";
+import { SiIntellijidea, SiInsomnia, SiPostman, SiAdonisjs, SiTypescript, SiNodedotjs, SiLaravel, SiCsharp, SiNextdotjs, SiExpo, SiDjango, SiVite, SiMariadb, SiAngular } from "react-icons/si";
 import { NavLink } from "react-router-dom";
 
 export const BannerScroller = () => {
@@ -28,9 +28,10 @@ export const BannerScroller = () => {
 		{ icon: <SiDjango className={logoCSS} />, alt: "Django" },
 		{ icon: <FaJava className={logoCSS} />, alt: "Java" },
 		{ icon: <FaGit className={logoCSS} />, alt: "Git" },
+		{ icon: <SiAngular className={logoCSS} />, alt: "Angular" },
 		{ icon: <SiCsharp className={logoCSS} />, alt: "C#" },
 		{ icon: <SiAdonisjs className={logoCSS} />, alt: "AdonisJS" },
-		{ icon: <FaFigma className={logoCSS} />, alt: "Figma" }, // Ou "Design"
+		{ icon: <FaFigma className={logoCSS} />, alt: "Figma" },
 		{ icon: <FaGitlab className={logoCSS} />, alt: "GitLab" },
 		{ icon: <FaSymfony className={logoCSS} />, alt: "Symfony" },
 		{ icon: <FaDocker className={logoCSS} />, alt: "Docker" },
