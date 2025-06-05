@@ -83,7 +83,7 @@ export const Skills = () => {
     { icon: <SiAdonisjs className={logoCSS} />, alt: "AdonisJS", typeTech: "Framework", level: 3 },
     { icon: <FaFigma className={logoCSS} />, alt: "Figma", typeTech: "Tools", level: 3 }, // Ou "Design"
     { icon: <FaGitlab className={logoCSS} />, alt: "GitLab", typeTech: "Tools", level: 4 },
-    { icon: <FaSymfony className={logoCSS} />, alt: "Symfony", typeTech: "Framework", level: 4 },
+    { icon: <FaSymfony className={logoCSS} />, alt: "Symfony", typeTech: "Framework", level: 3 },
     { icon: <FaDocker className={logoCSS} />, alt: "Docker", typeTech: "Tools", level: 2 },
     { icon: <SiInsomnia className={logoCSS} />, alt: "Insomnia", typeTech: "Tools", level: 4 },
     { icon: <SiPostman className={logoCSS} />, alt: "Postman", typeTech: "Tools", level: 4 },
