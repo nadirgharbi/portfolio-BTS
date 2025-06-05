@@ -69,7 +69,7 @@ export const Skills = () => {
     { icon: <SiExpo className={logoCSS} />, alt: "Expo (React Native)", typeTech: "Framework", level: 4 },
     { icon: <SiVite className={logoCSS} />, alt: "Vite", typeTech: "Tools", level: 4 },
     { icon: <SiMariadb className={logoCSS} />, alt: "MariaDB", typeTech: "Tools", level: 3 },
-    { icon: <FaPhp className={logoCSS} />, alt: "PHP", typeTech: "Language", level: 4 },
+    { icon: <FaPhp className={logoCSS} />, alt: "PHP", typeTech: "Language", level: 3 },
     { icon: <BiLogoVisualStudio className={logoCSS} />, alt: "VS Code", typeTech: "Tools", level: 5 },
     { icon: <SiIntellijidea className={logoCSS} />, alt: "IntelliJ IDEA", typeTech: "Tools", level: 3 },
     { icon: <SiLaravel className={logoCSS} />, alt: "Laravel", typeTech: "Framework", level: 3 },
