@@ -72,6 +72,7 @@ export const Skills = () => {
     { icon: <FaPhp className={logoCSS} />, alt: "PHP", typeTech: "Language", level: 3 },
     { icon: <BiLogoVisualStudio className={logoCSS} />, alt: "VS Code", typeTech: "Tools", level: 5 },
     { icon: <SiIntellijidea className={logoCSS} />, alt: "IntelliJ IDEA", typeTech: "Tools", level: 3 },
+    { icon: <FaSymfony className={logoCSS} />, alt: "Symfony", typeTech: "Framework", level: 3 },
     { icon: <SiLaravel className={logoCSS} />, alt: "Laravel", typeTech: "Framework", level: 3 },
     { icon: <FaPython className={logoCSS} />, alt: "Python", typeTech: "Language", level: 4 },
     { icon: <SiDjango className={logoCSS} />, alt: "Django", typeTech: "Framework", level: 2 },
@@ -83,7 +84,6 @@ export const Skills = () => {
     { icon: <SiAdonisjs className={logoCSS} />, alt: "AdonisJS", typeTech: "Framework", level: 3 },
     { icon: <FaFigma className={logoCSS} />, alt: "Figma", typeTech: "Tools", level: 3 }, // Ou "Design"
     { icon: <FaGitlab className={logoCSS} />, alt: "GitLab", typeTech: "Tools", level: 4 },
-    { icon: <FaSymfony className={logoCSS} />, alt: "Symfony", typeTech: "Framework", level: 3 },
     { icon: <FaDocker className={logoCSS} />, alt: "Docker", typeTech: "Tools", level: 2 },
     { icon: <SiInsomnia className={logoCSS} />, alt: "Insomnia", typeTech: "Tools", level: 4 },
     { icon: <SiPostman className={logoCSS} />, alt: "Postman", typeTech: "Tools", level: 4 },
