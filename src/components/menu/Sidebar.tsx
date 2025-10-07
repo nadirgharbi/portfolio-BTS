@@ -21,6 +21,7 @@ import "react-tooltip/dist/react-tooltip.css";
 import { Download } from "lucide-react";
 import CVNadir from "../../assets/cv-nadir.pdf";
 import { Button } from "../ui/button";
+import ThemeSwitcher from "../theme/ThemeSwitcher";
 
 export const Sidebar = () => {
 	const location = useLocation();
@@ -86,7 +87,7 @@ export const Sidebar = () => {
 
 				{/* Menu */}
 				<div
-					className={`flex flex-col items-center justify-center gap-2 py-3 px-8 fixed z-[999] top-24 right-6 lg:top-auto lg:left-4 rounded-2xl w-14 bg-default dark:bg-primary text-primary dark:text-default border border-primary/15 dark:border-default/15 ${
+					className={`flex flex-col items-center justify-center gap-2 py-3 px-8 fixed z-[999] top-24 right-6 lg:top-auto lg:left-4 rounded-2xl w-14 bg-default dark:bg-primary text-primary dark:text-default border border-primary/15 dark:border-white/20 ${
 						openedMenu ? "block transition-all animate-fade-in-scale" : " hidden lg:flex"
 					}`}>
 					{sidebarItems.map((item, key) => (
@@ -109,7 +110,7 @@ export const Sidebar = () => {
 					<Button
 						variant="outline"
 						size="icon"
-						className="rounded-xl bg-secondary hover:bg-secondary/90 dark:bg-secondary dark:hover:bg-secondary/75 border border-secondary/20 dark:border-secondary/20 text-default hover:text-default">
+						className="rounded-xl bg-secondary hover:bg-secondary/90 dark:bg-secondary dark:hover:bg-secondary/75  text-default hover:text-default">
 						<a download href={CVNadir} data-tooltip-id="tooltip" data-tooltip-content={"Télécharger mon CV"} data-tooltip-place="right">
 							<Download className="h-[1.4rem] w-[1.4rem]" />
 						</a>{" "}
@@ -117,6 +118,9 @@ export const Sidebar = () => {
 
 					{/* Dark/Light Mode */}
 					<ModeToggle />
+
+					{/* Theme Switcher */}
+					<ThemeSwitcher />
 				</div>
 			</div>
 		</>

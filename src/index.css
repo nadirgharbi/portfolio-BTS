@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,9 +8,76 @@
 /* ========== GENERAL ========== */
 /* ============================= */
 
-* {
+:root {
+  --color-default: #fafbfb;
+  --color-primary: #09090b;
 
-    font-family: "Inter", sans-serif;
+  --color-secondary: rgb(112 112 255);
+  --color-secondary-80: rgb(112 112 255 / 0.8);
+  --color-secondary-30: rgb(112 112 255 / 0.3);
+
+  /* accent utilisé en "to" dans les gradients */
+  --color-accent-75: rgb(167 139 250 / 0.75); /* violet-400 */
+  --color-accent-70: rgb(167 139 250 / 0.7);
+}
+
+.theme-red {
+  --color-secondary: rgb(216 82 82);
+  --color-secondary-80: rgb(216 82 82 / 0.8);
+  --color-secondary-30: rgb(216 82 82 / 0.3);
+
+  --color-accent-75: rgb(255 153 153 / 0.75);
+  --color-accent-70: rgb(255 153 153 / 0.7);
+}
+
+.theme-green {
+  --color-secondary: rgb(61 158 61);
+  --color-secondary-80: rgb(61 158 61 / 0.8);
+  --color-secondary-30: rgb(61 158 61 / 0.3);
+
+  --color-accent-75: rgb(153 255 153 / 0.75);
+  --color-accent-70: rgb(153 255 153 / 0.7);
+}
+
+.theme-blue {
+  --color-secondary: rgb(71 136 221);
+  --color-secondary-80: rgb(71 136 221 / 0.8);
+  --color-secondary-30: rgb(71 136 221 / 0.3);
+
+  --color-accent-75: rgb(136 187 255 / 0.75);
+  --color-accent-70: rgb(136 187 255 / 0.7);
+}
+
+.theme-pink {
+  --color-secondary: rgb(204 83 200);
+  --color-secondary-80: rgb(204 83 200 / 0.8);
+  --color-secondary-30: rgb(204 83 200 / 0.3);
+
+  --color-accent-75: rgb(255 153 230 / 0.75);
+  --color-accent-70: rgb(255 153 230 / 0.7);
+}
+
+
+/* ============================= */
+/* ======== TRANSITIONS ======== */
+/* ============================= */
+
+/* Transition douce sur toutes les propriétés liées aux couleurs */
+:root,
+.dark {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    fill 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* ============================= */
+/* ======== TYPOGRAPHY ========= */
+/* ============================= */
+
+* {
+  font-family: "Inter", sans-serif;
 }
 
 /* =============================== */
@@ -31,7 +98,7 @@
 
 ::-webkit-scrollbar-thumb {
     -webkit-box-shadow: 0 0 1px #09090b22;
-    background-color: #7070FFdd;
+    background-color: var(--color-secondary);
 }
 
 /* DIV SCROLL BAR */
