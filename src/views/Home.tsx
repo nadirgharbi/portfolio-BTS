@@ -47,7 +47,7 @@ export const Home = () => {
 
 				{/* Buttons */}
 				<div className="flex flex-col lg:flex-row items-center gap-2">
-					<a download href={CVNadir} className="inline-flex items-center font-semibold gap-2 bg-secondary/90 hover:bg-secondary/90 dark:bg-secondary dark:hover:bg-secondary/90 text-default hover:text-default text-sm rounded-md whitespace-nowrap h-10 px-4 py-1">
+					<a download href={CVNadir} className="inline-flex items-center font-semibold gap-2 bg-secondary hover:bg-secondary/90 dark:bg-secondary dark:hover:bg-secondary/90 text-white hover:text-white text-sm rounded-md whitespace-nowrap h-10 px-4 py-1">
 						Télécharger mon CV
 						<Download size={18} />
 					</a>
