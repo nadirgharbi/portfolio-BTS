@@ -8,6 +8,7 @@ const THEMES = [
   { name: "green", color: "#3d9e3d" },
   { name: "blue", color: "#4788dd" },
   { name: "pink", color: "#cc53c8" },
+  { name: "yellow", color: "#ffde21" },
 ];
 
 export default function ThemeSwitcher() {
@@ -56,22 +57,22 @@ export default function ThemeSwitcher() {
 
       {/* Liste des couleurs */}
       <div
-  className={`flex flex-col gap-1.5 absolute max-md:left-1/2 left-16 max-md:-translate-x-28 mt-2 border border-primary/15 dark:border-white/20 p-3 rounded-xl transition-all duration-150
-    ${visibleList
-      ? "opacity-100 translate-y-0"
-      : "opacity-0 -translate-y-2 pointer-events-none"
+        className={`flex flex-col gap-1.5 absolute max-md:left-1/2 left-16 max-md:-translate-x-28 mt-2 border border-primary/15 dark:border-white/20 p-3 rounded-xl transition-all duration-150
+    ${
+      visibleList
+        ? "opacity-100 translate-y-0"
+        : "opacity-0 -translate-y-2 pointer-events-none"
     }`}
->
-
+      >
         {THEMES.map((t, i) => (
           <span
             key={i}
             onClick={() => handleThemeChange(t.name)}
             style={{
               backgroundColor: t.color,
-              transitionDelay: `${i * 80}ms`, // effet domino
+              transition: "all",
             }}
-            className="h-8 w-8 rounded-full cursor-pointer shadow-md border border-white/20 transform transition-all duration-150 hover:scale-125"
+            className="h-8 w-8 rounded-full cursor-pointer shadow-md border border-white/20 transform transition-all duration-0 hover:scale-125"
           />
         ))}
       </div>

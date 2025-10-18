@@ -1,0 +1,1 @@
+export const appVersion: string = "2.2.1"

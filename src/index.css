@@ -57,6 +57,15 @@
   --color-accent-70: rgb(255 153 230 / 0.7);
 }
 
+.theme-yellow {
+  --color-secondary: rgb(241, 196, 15);
+  --color-secondary-80: rgb(241 196 15 / 0.8);
+  --color-secondary-30: rgb(241 196 15 / 0.3);
+
+  --color-accent-75: rgb(241 196 15 / 0.75);
+  --color-accent-70: rgb(241 196 15 / 0.7);
+}
+
 
 /* ============================= */
 /* ======== TRANSITIONS ======== */

@@ -24,19 +24,32 @@ import {
   SiNodedotjs,
   SiLaravel,
   SiCsharp,
+  SiC,
   SiNextdotjs,
   SiExpo,
   SiDjango,
   SiVite,
   SiMariadb,
-  SiAngular
+  // SiAngular
 } from "react-icons/si";
 import { BsGear } from "react-icons/bs";
 import { VscTools } from "react-icons/vsc";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import "@/styles/skills.css";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Input } from "@/components/ui/input";
 
 type SkillItem = {
   icon: ReactElement;
@@ -55,38 +68,185 @@ export const Skills = () => {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   // Key unique pour forcer le re-render de l'animation
   const [animationKey, setAnimationKey] = useState(0);
+  const [query, setQuery] = useState<string>("");
 
   const logoCSS = "text-primary/75 dark:text-default/75 w-14 h-14";
   const logoSkills: ReadonlyArray<SkillItem> = [
-    { icon: <FaReact className={logoCSS} />, alt: "React", typeTech: "Framework", level: 4 },
-    { icon: <FaJs className={logoCSS} />, alt: "Javascript", typeTech: "Language", level: 5 },
-    { icon: <SiTypescript className={logoCSS} />, alt: "Typescript", typeTech: "Language", level: 5 },
-    { icon: <SiNextdotjs className={logoCSS} />, alt: "Next.js", typeTech: "Framework", level: 3 },
-    { icon: <BiLogoTailwindCss className={logoCSS} />, alt: "TailwindCSS", typeTech: "Tools", level: 4 }, // Changé en Tools (comme Figma) ou "Design" si vous créez cette catégorie
-    { icon: <GrMysql className={logoCSS} />, alt: "MySQL", typeTech: "Tools", level: 4 },
-    { icon: <SiNodedotjs className={logoCSS} />, alt: "Node.js", typeTech: "Tools", level: 3 }, // NodeJS est un environnement, "Tools" est ok
-    { icon: <FaVuejs className={logoCSS} />, alt: "Vue.js", typeTech: "Framework", level: 3 },
-    { icon: <SiExpo className={logoCSS} />, alt: "Expo (React Native)", typeTech: "Framework", level: 4 },
-    { icon: <SiVite className={logoCSS} />, alt: "Vite", typeTech: "Tools", level: 4 },
-    { icon: <SiMariadb className={logoCSS} />, alt: "MariaDB", typeTech: "Tools", level: 3 },
-    { icon: <FaPhp className={logoCSS} />, alt: "PHP", typeTech: "Language", level: 3 },
-    { icon: <BiLogoVisualStudio className={logoCSS} />, alt: "VS Code", typeTech: "Tools", level: 5 },
-    { icon: <SiIntellijidea className={logoCSS} />, alt: "IntelliJ IDEA", typeTech: "Tools", level: 3 },
-    { icon: <FaSymfony className={logoCSS} />, alt: "Symfony", typeTech: "Framework", level: 3 },
-    { icon: <SiLaravel className={logoCSS} />, alt: "Laravel", typeTech: "Framework", level: 3 },
-    { icon: <FaPython className={logoCSS} />, alt: "Python", typeTech: "Language", level: 4 },
-    { icon: <SiDjango className={logoCSS} />, alt: "Django", typeTech: "Framework", level: 2 },
-    { icon: <FaJava className={logoCSS} />, alt: "Java", typeTech: "Language", level: 3 },
-    { icon: <FaGit className={logoCSS} />, alt: "Git", typeTech: "Tools", level: 4 },
-    { icon: <SiCsharp className={logoCSS} />, alt: "C#", typeTech: "Language", level: 2 },
-    { icon: <SiAngular className={logoCSS} />, alt: "Angular", typeTech: "Framework", level: 2 },
-    { icon: <FaLinux className={logoCSS} />, alt: "Linux", typeTech: "Tools", level: 4 },
-    { icon: <SiAdonisjs className={logoCSS} />, alt: "AdonisJS", typeTech: "Framework", level: 3 },
-    { icon: <FaFigma className={logoCSS} />, alt: "Figma", typeTech: "Tools", level: 3 }, // Ou "Design"
-    { icon: <FaGitlab className={logoCSS} />, alt: "GitLab", typeTech: "Tools", level: 4 },
-    { icon: <FaDocker className={logoCSS} />, alt: "Docker", typeTech: "Tools", level: 2 },
-    { icon: <SiInsomnia className={logoCSS} />, alt: "Insomnia", typeTech: "Tools", level: 4 },
-    { icon: <SiPostman className={logoCSS} />, alt: "Postman", typeTech: "Tools", level: 4 },
+    {
+      icon: <FaReact className={logoCSS} />,
+      alt: "React",
+      typeTech: "Framework",
+      level: 4,
+    },
+    {
+      icon: <FaJs className={logoCSS} />,
+      alt: "Javascript",
+      typeTech: "Language",
+      level: 5,
+    },
+    {
+      icon: <SiTypescript className={logoCSS} />,
+      alt: "Typescript",
+      typeTech: "Language",
+      level: 5,
+    },
+    {
+      icon: <SiNextdotjs className={logoCSS} />,
+      alt: "Next.js",
+      typeTech: "Framework",
+      level: 3,
+    },
+    {
+      icon: <BiLogoTailwindCss className={logoCSS} />,
+      alt: "TailwindCSS",
+      typeTech: "Tools",
+      level: 4,
+    }, // Changé en Tools (comme Figma) ou "Design" si vous créez cette catégorie
+    {
+      icon: <GrMysql className={logoCSS} />,
+      alt: "MySQL",
+      typeTech: "Tools",
+      level: 4,
+    },
+    {
+      icon: <SiNodedotjs className={logoCSS} />,
+      alt: "Node.js",
+      typeTech: "Tools",
+      level: 3,
+    }, // NodeJS est un environnement, "Tools" est ok
+    {
+      icon: <FaVuejs className={logoCSS} />,
+      alt: "Vue.js",
+      typeTech: "Framework",
+      level: 2,
+    },
+    {
+      icon: <SiExpo className={logoCSS} />,
+      alt: "Expo (React Native)",
+      typeTech: "Framework",
+      level: 4,
+    },
+    {
+      icon: <SiVite className={logoCSS} />,
+      alt: "Vite",
+      typeTech: "Tools",
+      level: 4,
+    },
+    {
+      icon: <SiMariadb className={logoCSS} />,
+      alt: "MariaDB",
+      typeTech: "Tools",
+      level: 3,
+    },
+    {
+      icon: <FaPhp className={logoCSS} />,
+      alt: "PHP",
+      typeTech: "Language",
+      level: 3,
+    },
+    {
+      icon: <BiLogoVisualStudio className={logoCSS} />,
+      alt: "VS Code",
+      typeTech: "Tools",
+      level: 5,
+    },
+    {
+      icon: <SiIntellijidea className={logoCSS} />,
+      alt: "IntelliJ IDEA",
+      typeTech: "Tools",
+      level: 3,
+    },
+    {
+      icon: <FaSymfony className={logoCSS} />,
+      alt: "Symfony",
+      typeTech: "Framework",
+      level: 3,
+    },
+    {
+      icon: <SiLaravel className={logoCSS} />,
+      alt: "Laravel",
+      typeTech: "Framework",
+      level: 3,
+    },
+    {
+      icon: <FaPython className={logoCSS} />,
+      alt: "Python",
+      typeTech: "Language",
+      level: 4,
+    },
+    {
+      icon: <SiDjango className={logoCSS} />,
+      alt: "Django",
+      typeTech: "Framework",
+      level: 2,
+    },
+    {
+      icon: <FaJava className={logoCSS} />,
+      alt: "Java",
+      typeTech: "Language",
+      level: 3,
+    },
+    {
+      icon: <FaGit className={logoCSS} />,
+      alt: "Git",
+      typeTech: "Tools",
+      level: 4,
+    },
+    {
+      icon: <SiCsharp className={logoCSS} />,
+      alt: "C#",
+      typeTech: "Language",
+      level: 2,
+    },
+    {
+      icon: <SiC className={logoCSS} />,
+      alt: "C",
+      typeTech: "Language",
+      level: 2,
+    },
+    // { icon: <SiAngular className={logoCSS} />, alt: "Angular", typeTech: "Framework", level: 2 },
+    {
+      icon: <FaLinux className={logoCSS} />,
+      alt: "Linux",
+      typeTech: "Tools",
+      level: 4,
+    },
+    {
+      icon: <SiAdonisjs className={logoCSS} />,
+      alt: "AdonisJS",
+      typeTech: "Framework",
+      level: 3,
+    },
+    {
+      icon: <FaFigma className={logoCSS} />,
+      alt: "Figma",
+      typeTech: "Tools",
+      level: 3,
+    }, // Ou "Design"
+    {
+      icon: <FaGitlab className={logoCSS} />,
+      alt: "GitLab",
+      typeTech: "Tools",
+      level: 4,
+    },
+    {
+      icon: <FaDocker className={logoCSS} />,
+      alt: "Docker",
+      typeTech: "Tools",
+      level: 2,
+    },
+    {
+      icon: <SiInsomnia className={logoCSS} />,
+      alt: "Insomnia",
+      typeTech: "Tools",
+      level: 4,
+    },
+    {
+      icon: <SiPostman className={logoCSS} />,
+      alt: "Postman",
+      typeTech: "Tools",
+      level: 4,
+    },
   ];
 
   useEffect(() => {
@@ -132,15 +292,40 @@ export const Skills = () => {
     }
   };
 
+  const getActiveTab = () => {
+    switch (activeTab) {
+      case "Language":
+        return " dans les langages";
+      case "Framework":
+        return " dans les frameworks";
+      case "Tools":
+        return " dans les outils";
+      case "All":
+        return "";
+    }
+  };
+
   const sortedSkills = () => {
     let filteredSkills = [...logoSkills];
     if (activeTab !== "All") {
-      filteredSkills = filteredSkills.filter((skill) => skill.typeTech === activeTab);
+      filteredSkills = filteredSkills.filter(
+        (skill) => skill.typeTech === activeTab
+      );
     }
     if (isSortedByLevel) {
       filteredSkills.sort((a, b) => b.level - a.level);
     }
     return filteredSkills;
+  };
+
+  const skillSearched = () => {
+    if (query == "") {
+      return sortedSkills();
+    }
+
+    return sortedSkills().filter((skill) =>
+      skill.alt.toLowerCase().includes(query.toLowerCase())
+    );
   };
 
   const handleSortChange = (value: string) => {
@@ -152,13 +337,15 @@ export const Skills = () => {
   return (
     <div className="min-h-screen flex flex-col items-center px-6 lg:px-32 pt-40 gap-12 text-primary dark:text-default bg-white dark:bg-primary overflow-x-hidden">
       <p className="text-3xl md:text-4xl font-extrabold">Compétences</p>
-      <div className="flex flex-col items-center gap-6">
+      <div className="flex flex-col gap-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 p-12 w-auto md:relative z-[900]">
           {TABS.map((tab) => (
             <button
               key={tab}
               className={`grid justify-items-center gap-2 font-semibold ${
-                activeTab === tab ? "text-secondary" : "text-primary dark:text-default"
+                activeTab === tab
+                  ? "text-secondary"
+                  : "text-primary dark:text-default"
               }`}
               onClick={() => handleTabClick(tab)}
             >
@@ -166,7 +353,11 @@ export const Skills = () => {
                 // La clé unique ici est cruciale pour que React re-monte le composant
                 // et que l'animation CSS se relance.
                 key={`${tab}-${animationKey}`}
-                className={`relative ${activeTab === tab && !hasUserSelected ? "icon-progress-container" : ""}`}
+                className={`relative ${
+                  activeTab === tab && !hasUserSelected
+                    ? "icon-progress-container"
+                    : ""
+                }`}
               >
                 {tab === "Language" && <BiCode size={32} />}
                 {tab === "Framework" && <BsGear size={32} />}
@@ -177,23 +368,44 @@ export const Skills = () => {
             </button>
           ))}
         </div>
-        <Select onValueChange={handleSortChange} defaultValue="default">
-          <SelectTrigger className="w-[180px] bg-primary/10 dark:bg-default/10">
-            <SelectValue placeholder="Trier par..." />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="default">Tri par défaut</SelectItem>
-            <SelectItem value="level">Tri par niveau</SelectItem>
-          </SelectContent>
-        </Select>
+        <div className="flex flex-wrap w-full md:w-[32rem] mx-auto gap-2">
+          <Select onValueChange={handleSortChange} defaultValue="default">
+            <SelectTrigger className=" bg-primary/10 dark:bg-default/10">
+              <SelectValue placeholder="Trier par..." />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="default">Tri par défaut</SelectItem>
+              <SelectItem value="level">Tri par niveau</SelectItem>
+            </SelectContent>
+          </Select>
+          <Input
+            value={query}
+            onChange={(e) => {
+              setHasUserSelected(true);
+              setQuery(e.target.value);
+            }}
+            placeholder={`Rechercher une compétence${getActiveTab()}...`}
+          />
+        </div>
+        {query.trim() !== "" && (
+          <p className=" text-center">
+            {skillSearched().length} résultat(s) pour {query}
+          </p>
+        )}
       </div>
 
       {/* SKILLS GRID */}
       <TooltipProvider delayDuration={100}>
         {" "}
         {/* delayDuration est optionnel */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 justify-items-center gap-x-6 gap-y-10 py-12 md:py-16 relative w-full md:w-5/6 lg:w-4/5 mx-auto animate-fade-up z-[99]">
-          {sortedSkills().map((logo, index) => (
+        <div
+          className={`${
+            skillSearched().length > 0
+              ? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 justify-items-center gap-x-6 gap-y-10"
+              : "text-center"
+          } py-12 md:py-16 relative w-full md:w-5/6 lg:w-4/5 mx-auto animate-fade-up z-[99]`}
+        >
+          {skillSearched().map((logo, index) => (
             <Tooltip key={`${logo.alt}-${animationKey}`}>
               <TooltipTrigger asChild>
                 <div
@@ -205,9 +417,18 @@ export const Skills = () => {
                   {logo.icon}
                 </div>
               </TooltipTrigger>
-              <TooltipContent side="top" className="mb-1 p-1 flex flex-col gap-1 items-center">
+              <TooltipContent
+                side="top"
+                className="mb-1 p-1 flex flex-col gap-1 items-center"
+              >
                 <p className="font-semibold">{logo.alt}</p>
-                <p className={`text-2xl ${renderStars(logo.level).includes("★") ? "text-secondary" : ""}`}>
+                <p
+                  className={`text-2xl ${
+                    renderStars(logo.level).includes("★")
+                      ? "text-secondary"
+                      : ""
+                  }`}
+                >
                   {renderStars(logo.level)}
                 </p>
               </TooltipContent>
