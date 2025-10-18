@@ -19,7 +19,7 @@ import { ModeToggle } from "../theme/ModeToggle";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import { Download } from "lucide-react";
-import CVNadir from "../../assets/cv-nadir.pdf";
+import CVNadir from "../../assets/CV_NADIR.pdf";
 import { Button } from "../ui/button";
 import ThemeSwitcher from "../theme/ThemeSwitcher";
 

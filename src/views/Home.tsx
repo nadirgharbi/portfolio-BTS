@@ -4,11 +4,11 @@ import { Button } from "../components/ui/button";
 import { Typewriter } from "react-simple-typewriter";
 import { BsGithub, BsLinkedin, BsReddit } from "react-icons/bs";
 import { Download } from "lucide-react";
-import CVNadir from "@/assets/cv-nadir.pdf";
+import CVNadir from "@/assets/CV_NADIR.pdf";
 import { Tooltip } from "react-tooltip";
 
 export const Home = () => {
-	const words = ["Développeur Front", "Applications Web & Mobile", "UX/UI Designer", "Étudiant en alternance"];
+	const words = ["Développeur Fullstack.", "Concepteur d'applications Web & Mobile.", "Apprenti Ingénieur logiciel.", "Étudiant en architecture logicielle."];
 	return (
 		<>
 			<div className="h-screen flex flex-col justify-center items-center gap-6 px-4 py-12 lg:px-32 text-center text-primary dark:text-default bg-white dark:bg-primary">
@@ -24,7 +24,7 @@ export const Home = () => {
 						Hey, je suis <span className="font-black text-secondary">Nadir </span>
 					</p>
 					<p className="text-xl md:text-2xl font-bold">
-						<Typewriter words={words} typeSpeed={40} deleteSpeed={70} delaySpeed={950} cursor loop />
+						<Typewriter words={words} typeSpeed={45} deleteSpeed={70} delaySpeed={700} cursor loop />
 					</p>
 
 					{/* Badges */}
