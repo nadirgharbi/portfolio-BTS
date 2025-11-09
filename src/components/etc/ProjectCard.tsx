@@ -8,7 +8,7 @@ export const ProjectCard: React.FC<ProjectProps> = ({ title, description, tags, 
 		e.stopPropagation();
 		const link = document.createElement("a");
 		link.href = hrefLink;
-		link.download = hrefLink.split("/").pop() || "fichier.exe";
+		link.download = filename || "app.exe";
 		document.body.appendChild(link);
 		link.click();
 		link.remove();
