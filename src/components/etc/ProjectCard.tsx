@@ -2,7 +2,16 @@ import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 
-export const ProjectCard: React.FC<ProjectProps> = ({ title, description, tags, imageUrl, hrefLink, hasSource, strongWords, unavailable, repoSource }) => {
+export const ProjectCard: React.FC<ProjectProps> = ({ title, description, tags, imageUrl, hrefLink, hasSource, strongWords, unavailable, repoSource, isDownloadable, filename }) => {
+	const download = (url: string, filename: string) => {
+		  const a = document.createElement("a");
+		   a.href = url;
+		   a.download = filename;
+		   a.rel = "noopener";
+		   document.body.appendChild(a);
+		   a.click();
+		   a.remove();
+	}
 	return (
 		<>
 			<Card className="flex flex-col justify-between max-w-md pt-12 mb-20 bg-default hover:bg-primary/5 dark:bg-primary dark:hover:bg-default/5 transition-all rounded-lg relative z-[900]">
@@ -26,9 +35,13 @@ export const ProjectCard: React.FC<ProjectProps> = ({ title, description, tags, 
 				</div>
 				<CardFooter className="space-x-2 w-full">
 					{/* BUTTON */}
-					<Button variant={"outline"} disabled={!hasSource} onClick={() => window.open(hrefLink, "_blank")}>
-						{hasSource ? "Voir le projet" : "Projet Indisponible"}
+					{ hasSource && (
+						<Button variant={"outline"} 
+						disabled={!hasSource} 
+						onClick={isDownloadable ? () => download(hrefLink, filename as string) :() => window.open(hrefLink, "_blank")}>
+						{isDownloadable ? <a download={hrefLink.split("/").slice(3)} href={hrefLink}>Télécharger</a> : "Voir le projet"} 
 					</Button>
+					)}
 
 					{repoSource && (
 						<Button variant={"outline"} onClick={() => window.open(repoSource, "_blank")}>

@@ -116,8 +116,11 @@ const projectsData = [
       "tictactoe.py est une version du célèbre jeu TicTacToe que j'ai réalisé en tant que projet personnel. Ce projet m'a permis d'apprendre les bases de la programmation orientée objet et de maîtriser les principes SOLID.",
     tags: ["Python", "PyGame", "Morpion"],
     imageUrl: tictactoePy,
-    hrefLink: "https://github.com/nadirgharbi/TicTacToe",
+    repoSource: "https://github.com/nadirgharbi/TicTacToe",
+    hrefLink: "/src/projects/TicTacToe.exe",
     hasSource: true,
+    isDownloadable: true,
+    filename: "TicTacToe.exe"
   },
   {
     title: "tetris.py",

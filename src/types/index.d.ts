@@ -51,6 +51,8 @@ interface ProjectProps {
 	hasSource: boolean;
 	unavailable?: boolean
 	repoSource?: string
+	isDownloadable?: boolean
+	filename?: string
 }
 
 /** Pour plusieurs projets */
