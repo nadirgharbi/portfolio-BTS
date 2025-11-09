@@ -117,7 +117,7 @@ const projectsData = [
     tags: ["Python", "PyGame", "Morpion"],
     imageUrl: tictactoePy,
     repoSource: "https://github.com/nadirgharbi/TicTacToe",
-    hrefLink: "/src/projects/TicTacToe.exe",
+    hrefLink: "/downloads/TicTacToe.exe",
     hasSource: true,
     isDownloadable: true,
     filename: "TicTacToe.exe"
