@@ -1,4 +1,4 @@
-import myPic from "@/assets/me.png";
+import myPic from "@/assets/me.jpg";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 import { Typewriter } from "react-simple-typewriter";
@@ -8,13 +8,13 @@ import CVNadir from "@/assets/CV_NADIR.pdf";
 import { Tooltip } from "react-tooltip";
 
 export const Home = () => {
-	const words = ["Développeur Fullstack.", "Concepteur d'applications Web & Mobile.", "Apprenti Ingénieur logiciel.", "Étudiant en architecture logicielle."];
+	const words = ["Développeur Fullstack.", "Concepteur d'applications Web & Mobile.", "Apprenti Ingénieur logiciel.", "Étudiant en architecture logicielle des SI."];
 	return (
 		<>
 			<div className="h-screen flex flex-col justify-center items-center gap-6 px-4 py-12 lg:px-32 text-center text-primary dark:text-default bg-white dark:bg-primary">
 				{/* PP Image */}
-				<div className="animate-fade-in-scale">
-					<img src={myPic} alt="my-picture-profile" className="w-48 ring-4 ring-secondary rounded-full selection:bg-transparent" />
+				<div className="animate-fade-in-scale  selection:bg-transparent rounded-full ring-4 ring-secondary">
+					<img src={myPic} alt="my-picture-profile" className="rounded-full w-52 h-52 object-cover grayscale" />
 					<p className="absolute translate-x-28 -translate-y-10 text-5xl selection:bg-transparent">👋🏽</p>
 				</div>
 
@@ -47,7 +47,7 @@ export const Home = () => {
 
 				{/* Buttons */}
 				<div className="flex flex-col lg:flex-row items-center gap-2">
-					<a download href={CVNadir} className="inline-flex items-center font-semibold gap-2 bg-secondary hover:bg-secondary/90 dark:bg-secondary dark:hover:bg-secondary/90 text-white hover:text-white text-sm rounded-md whitespace-nowrap h-10 px-4 py-1">
+					<a download={"CV_NADIR_GHARBI"} href={CVNadir} className="inline-flex items-center font-semibold gap-2 bg-secondary hover:bg-secondary/90 dark:bg-secondary dark:hover:bg-secondary/90 text-white hover:text-white text-sm rounded-md whitespace-nowrap h-10 px-4 py-1">
 						Télécharger mon CV
 						<Download size={18} />
 					</a>

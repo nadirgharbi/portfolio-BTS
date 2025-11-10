@@ -19,7 +19,7 @@ const experiencesData = [
     description:
       "Au sein d'AVIS2SANTE, j'ai participé au développement de MonMedecin.org, une plateforme de téléconsultation en utilisant le framework React Native pour Web et mobile. J'ai été amené à réaliser des modules de téléconsultation vidéo, un système de prise de rendez-vous intelligent, ainsi qu'une messagerie sécurisée conforme aux normes RGPD et aux exigences des serveurs HDS (Hébergement de Données de Santé).",
     date: "Décembre 2023 - Octobre 2025",
-    latest: true,
+    latest: false,
   },
   {
     title: "Développeur front end",
@@ -137,29 +137,23 @@ const projectsData = [
       "J'ai réalisé ce projet lors de mon année en licence. C'est donc l'un de mes premiers projets aboutis en Python.",
     tags: ["Python", "PyGame", "Snake", "Arcade"],
     imageUrl: snakegame,
-    hrefLink: "https://github.com/nadirgharbi/PySnake",
+    repoSource: "https://github.com/nadirgharbi/PySnake",
+    hrefLink : "/downloads/PySnake.exe",
     hasSource: true,
-  },
-  {
-    title: "Validate Move Shower",
-    description:
-      "Un de mes premiers projets qui consiste uniquement à afficher les coups légaux aux échecs lors de la sélection d'un pion.",
-    tags: ["Python", "Tkinter", "Chess"],
-    imageUrl: chess,
-    hrefLink: "",
-    hasSource: false,
-  },
+    isDownloadable: true,
+    filename: "PySnake.exe"
+  }
 ];
 
 const studiesData = [
   {
     title: "Mastère MAALSI",
     description:
-      "Admis en Mastère professionnel Manager en Architecture et Applications Logicielles des SI en alternance. \nRythme: 3 semaine en entreprise / 1 semaine en formation",
+      "Mastère professionnel Manager en Architecture et Applications Logicielles des SI en alternance.",
     school: "CESI",
     location: "Aix-en-Provence",
     period: "2025 - 2027",
-    status: "Préparation",
+    status: "En cours",
   },
   {
     title: "Bachelor CDA",
@@ -167,7 +161,7 @@ const studiesData = [
     school: "CESI",
     location: "Aix-en-Provence",
     period: "2024 - 2025",
-    status: "En cours",
+    status: "Diplomé",
   },
   {
     title: "BTS SIO option SLAM",
@@ -195,22 +189,5 @@ const studiesData = [
   },
 ];
 
-const skillsData: string[] = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "TypeScript",
-  "Python",
-  "Tailwind",
-  "Figma",
-  "Git",
-  "GitLab",
-  "PHP",
-  "MySQL",
-  "Java",
-  "Django",
-];
-
 // Exports
-export { experiencesData, projectsData, studiesData, skillsData };
+export { experiencesData, projectsData, studiesData };

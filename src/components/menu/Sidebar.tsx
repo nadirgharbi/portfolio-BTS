@@ -111,7 +111,7 @@ export const Sidebar = () => {
 						variant="outline"
 						size="icon"
 						className="rounded-xl bg-secondary hover:bg-secondary/90 dark:bg-secondary dark:hover:bg-secondary/75  text-default hover:text-default">
-						<a download href={CVNadir} data-tooltip-id="tooltip" data-tooltip-content={"Télécharger mon CV"} data-tooltip-place="right">
+						<a download={"CV_NADIR_GHARBI"} href={CVNadir} data-tooltip-id="tooltip" data-tooltip-content={"Télécharger mon CV"} data-tooltip-place="right">
 							<Download className="h-[1.4rem] w-[1.4rem]" />
 						</a>{" "}
 					</Button>
