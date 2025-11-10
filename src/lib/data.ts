@@ -48,6 +48,7 @@ const projectsData = [
     imageUrl: legalConnectLogo,
     hrefLink: "https://gharbi.slameductoul.ovh/",
     hasSource: true,
+    type: "Site / Web App"
   },
   {
     title: "API AdonisJS",
@@ -59,6 +60,7 @@ const projectsData = [
     hasSource: false,
     unavailable: true,
     repoSource: "https://github.com/nadirgharbi/portfolio-api",
+    type: "Site / Web App"
   },
   {
     title: "Todolist",
@@ -70,6 +72,7 @@ const projectsData = [
     hasSource: false,
     unavailable: true,
     repoSource: "https://github.com/nadirgharbi/react-todo-vite/tree/main",
+    type: "Site / Web App"
   },
   {
     title: "monmedecin.org",
@@ -82,6 +85,7 @@ const projectsData = [
     imageUrl: MonmedecinMobile,
     hrefLink: "https://monmedecin.devi4pyo8kwgco9cctbuzgwvs8wtlnxha.avis2sante.net/",
     hasSource: true,
+    type: "Site / Web App"
   },
   {
     title: "TicTacToe.jsx",
@@ -91,6 +95,7 @@ const projectsData = [
     imageUrl: tictactoeReact,
     hrefLink: "https://www.tictactoe.nadir-gharbi.fr/",
     hasSource: true,
+    type: "Site / Web App"
   },
   {
     title: "CRM NGSTech",
@@ -100,6 +105,7 @@ const projectsData = [
     imageUrl: crmProject,
     hrefLink: "",
     hasSource: false,
+    type: "Site / Web App"
   },
   {
     title: "Landing Page NGSTech",
@@ -109,6 +115,7 @@ const projectsData = [
     imageUrl: LandingPage,
     hrefLink: "https://ngstech-conseil.com/",
     hasSource: true,
+    type: "Site / Web App"
   },
   {
     title: "tictactoe.py",
@@ -120,28 +127,34 @@ const projectsData = [
     hrefLink: "/downloads/TicTacToe.exe",
     hasSource: true,
     isDownloadable: true,
-    filename: "TicTacToe.exe"
+    filename: "TicTacToe.exe",
+    type: "Jeux"
   },
   {
-    title: "tetris.py",
+    title: "PyTris",
     description:
       "Tout comme le projet Morpyon, ce projet reprend le célèbre jeu Tetris. Il a été réalisé avec le langage Python et ses diverses librairies.",
-    tags: ["Python", "PyGame", "Tetris", "Arcade", "POO"],
+    tags: ["Python", "Pygame", "Tetris", "Arcade", "POO"],
     imageUrl: pytris,
-    hrefLink: "https://github.com/nadirgharbi/Pytris",
+    repoSource: "https://github.com/nadirgharbi/Pytris",
+    hrefLink : "/downloads/PyTris.exe",
     hasSource: true,
+    isDownloadable: true,
+    filename: "PyTris.exe",
+    type: "Jeux"
   },
   {
-    title: "snake.py",
+    title: "PySnake",
     description:
       "J'ai réalisé ce projet lors de mon année en licence. C'est donc l'un de mes premiers projets aboutis en Python.",
-    tags: ["Python", "PyGame", "Snake", "Arcade"],
+    tags: ["Python", "Pygame", "Snake", "Arcade"],
     imageUrl: snakegame,
     repoSource: "https://github.com/nadirgharbi/PySnake",
     hrefLink : "/downloads/PySnake.exe",
     hasSource: true,
     isDownloadable: true,
-    filename: "PySnake.exe"
+    filename: "PySnake.exe",
+    type: "Jeux"
   }
 ];
 

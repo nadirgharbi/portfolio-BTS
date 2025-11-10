@@ -53,6 +53,7 @@ interface ProjectProps {
 	repoSource?: string
 	isDownloadable?: boolean
 	filename?: string
+	type?: string
 }
 
 /** Pour plusieurs projets */

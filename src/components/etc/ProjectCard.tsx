@@ -15,6 +15,7 @@ export const ProjectCard: React.FC<ProjectProps> = ({
   repoSource,
   isDownloadable,
   filename,
+  type
 }) => {
   const handleDownload = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -30,7 +31,8 @@ export const ProjectCard: React.FC<ProjectProps> = ({
     <>
       <Card className="flex flex-col justify-between max-w-md pt-12 mb-20 bg-default hover:bg-primary/5 dark:bg-primary dark:hover:bg-default/5 transition-all rounded-lg relative z-[900]">
         <div>
-          <CardHeader>
+          <CardHeader className="flex flex-row justify-between">
+            <div>
             <img src={imageUrl} alt={imageUrl} className="w-28 absolute -translate-y-32" />
             <div className={"flex overflow py-3 gap-2 overflow-auto"}>
               {tags.map((tag, key) => (
@@ -38,6 +40,12 @@ export const ProjectCard: React.FC<ProjectProps> = ({
                   {tag}
                 </Badge>
               ))}
+            </div>
+
+            </div >
+            <div className="absolute -top-5 right-5">
+              <Badge variant={"outline"}>{type}</Badge>
+
             </div>
           </CardHeader>
           <CardContent className="space-y-2">
