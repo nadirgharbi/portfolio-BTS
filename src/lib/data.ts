@@ -3,7 +3,7 @@ import tictactoePy from "@/assets/tic-tac-toe-py.png";
 import pytris from "@/assets/tetris.png";
 import snakegame from "@/assets/snake.png";
 import tictactoeReact from "@/assets/tic-tac-toe.png";
-import chess from "@/assets/chess.png";
+// import chess from "@/assets/chess.png";
 import legalConnectLogo from "@/assets/fingerprint.png";
 import MonmedecinMobile from "@/assets/mobile-phone.png";
 import todoIcon from "@/assets/to-do-list.png";
